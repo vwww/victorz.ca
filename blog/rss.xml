@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Victor's Blog</title>
+		<description></description>		
+		<link>https://victorz.ca/blog</link>
+		<atom:link href="https://victorz.ca/blog/feed.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Zeno's Paradox for a Bouncing Ball</title>
+				<description>&lt;p&gt;If a ball is thrown up to a height $h$, falls to the ground, and retains a certain fraction $a$ of its energy when it bounces, it will stop bouncing after a certain amount of time. This is paradoxical as it will have bounced an infinite number of times when it stops.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;The fraction of retained kinetic energy is the same as the fraction of retained height:&lt;/p&gt;
+
+&lt;p&gt;\(E\_n=aE\_{n-1}\)&lt;br /&gt;
+\(mgh\_n=mgh\_{n-1}a\)&lt;br /&gt;
+\(h\_n=h\_{n-1}a\)&lt;br /&gt;
+\(h\_n=h\_1a^{n-1}\)&lt;/p&gt;
+
+&lt;p&gt;The total distance traveled must be finite, as it is a geometric series that converges:
+\(d=\displaystyle\sum\_{n=1}^\infty h\_n=\displaystyle\sum\_{n=0}^\infty a^nh\_1=\frac{h\_1}{1-a}\)&lt;/p&gt;
+
+&lt;p&gt;The time it takes for a ball to reach a certain height and come back down is:
+\(t\_n=\sqrt{\frac{8h\_n}{g}}=(\sqrt{a})^{n-1}\sqrt{\frac{8h\_1}{g}}=t_1\sqrt{a}^{n-1}\)&lt;/p&gt;
+
+&lt;p&gt;Time also converges and the total time is also finite:
+\(T=\displaystyle\sum\_{n=1}^\infty t\_n=\sqrt{\frac{8h\_1}{g}}\displaystyle\sum\_{n=0}^\infty (\sqrt{a})^n=\sqrt{\frac{8h\_1}{g}}\left(\frac{1}{1-\sqrt{a}}\right)=\frac{t_1}{1-\sqrt{a}}\)&lt;/p&gt;
+
+&lt;p&gt;After that amount of time, the ball has bounced an infinite number of times and has stopped bouncing. After each bounce, the ball’s distance is smaller, but the time is also smaller, so both the total time and distance converge to a finite value.&lt;/p&gt;
+</description>
+				<pubDate>Sat, 12 Jul 2014 19:42:00 -0600</pubDate>
+				<link>https://victorz.ca/blog/blog/2014/07/zeno-bounce</link>
+				<guid isPermaLink="true">https://victorz.ca/blog/blog/2014/07/zeno-bounce</guid>
+			</item>
+			<item>
+				<title>Uniformly Distributed Tweets</title>
+				<description>&lt;p&gt;For &lt;a href=&quot;https://victorz.ca/bots/grammar&quot;&gt;my Grammar bot&lt;/a&gt;, I added a new feature: &lt;mark&gt;GPS coordinates are added to the tweets&lt;/mark&gt;. This is &lt;mark&gt;just for fun&lt;/mark&gt; and serves no practical purpose.&lt;/p&gt;
+
+&lt;p&gt;However, I wanted the tweets to be &lt;mark&gt;uniformly distributed over a sphere&lt;/mark&gt;. Earth’s shape is not a sphere, but the error is under 1%.&lt;/p&gt;
+
+&lt;p&gt;$a$ and $b$ are random values uniformly distributed in $[-1,1]$
+\(latitude=\theta=\sin^{-1}(u)\)&lt;br /&gt;
+\(longitude=\phi=\pi v=(180^{\circ}) v\)&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;According to &lt;a href=&quot;https://mathworld.wolfram.com/SpherePointPicking.html&quot;&gt;Wolfram MathWorld&lt;/a&gt;, points are randomly distributed over a sphere if:&lt;/p&gt;
+
+&lt;p&gt;$\theta$ represents latitude and $\phi$ longitude.&lt;br /&gt;
+$u$ and $v$ are uniformly distributed in $[0,1]$&lt;/p&gt;
+
+&lt;p&gt;\(\theta=\cos^{-1}(2u-1)\)&lt;br /&gt;
+\(\phi=2\pi v\)&lt;/p&gt;
+
+&lt;p&gt;Adjusting $u$ and $v$, now distributed in $[-1,1]$, we get:
+\(\theta=\cos^{-1}(u)\)&lt;br /&gt;
+\(\phi=\pi (v + 1)\)&lt;/p&gt;
+
+&lt;p&gt;However, latitude is to be in -90 to 90 degrees, not 0 to 180 degrees, and longitude is to be in -180 to 180 degrees, not 0 to 360 degrees.
+\(\theta=\cos^{-1}(u)-\frac\pi2=-\sin^{-1}u\)&lt;br /&gt;
+\(\phi=\pi v\)&lt;/p&gt;
+
+&lt;p&gt;By spherical symmetry, the negative sign can be removed from latitude, and the distribution will remain the same.&lt;/p&gt;
+</description>
+				<pubDate>Fri, 21 Mar 2014 19:49:00 -0600</pubDate>
+				<link>https://victorz.ca/blog/blog/2014/03/uniform-tweets</link>
+				<guid isPermaLink="true">https://victorz.ca/blog/blog/2014/03/uniform-tweets</guid>
+			</item>
+			<item>
+				<title>Buffalo buffalo ...</title>
+				<description>&lt;p&gt;Although I have already proven that &lt;mark&gt;a repetition of the word 'buffalo' $n$ times is grammatically correct&lt;/mark&gt;, if $n \geq 2$, a year ago, I am now publishing this finding.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;‘buffalo’ is a &lt;mark&gt;plural noun, allowing the use of zero articles&lt;/mark&gt;&lt;/li&gt;
+  &lt;li&gt;‘buffalo’ is &lt;mark&gt;also a verb&lt;/mark&gt; that means to bully, confuse, deceive, or intimidate&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Theorem:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;mark&gt;Repeating $n$ times, where $n \geq 2$, any word that can be a noun or verb forms a grammatically valid sentence.&lt;/mark&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Proof:&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;A sentence containing &lt;mark&gt;2 instances&lt;/mark&gt; of the word &lt;mark&gt;is grammatically valid&lt;/mark&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;[&lt;sub&gt;S&lt;/sub&gt; [&lt;sub&gt;N&lt;/sub&gt; I] [&lt;sub&gt;V&lt;/sub&gt; am]]&lt;/p&gt;
+
+&lt;p&gt;The first instance acts as a noun, and the second acts as an intransitive verb.&lt;/p&gt;
+
+&lt;p&gt;[&lt;mark&gt;subject verb&lt;/mark&gt;]&lt;br /&gt;
+[&lt;sub&gt;S&lt;/sub&gt; [&lt;sub&gt;N&lt;/sub&gt; buffalo] [&lt;sub&gt;V&lt;/sub&gt; buffalo]]&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;A sentence containing &lt;mark&gt;3 instances&lt;/mark&gt; of the word &lt;mark&gt;is grammatically valid&lt;/mark&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;[&lt;sub&gt;S&lt;/sub&gt; [&lt;sub&gt;N&lt;/sub&gt; I] [&lt;sub&gt;VP&lt;/sub&gt; [&lt;sub&gt;V&lt;/sub&gt; am] [&lt;sub&gt;N&lt;/sub&gt; here]]]&lt;/p&gt;
+
+&lt;p&gt;[&lt;mark&gt;subject verb object&lt;/mark&gt;]&lt;br /&gt;
+[&lt;sub&gt;S&lt;/sub&gt; [&lt;sub&gt;N&lt;/sub&gt; buffalo] [&lt;sub&gt;VP&lt;/sub&gt; [&lt;sub&gt;V&lt;/sub&gt; buffalo] [&lt;sub&gt;N&lt;/sub&gt; buffalo]]]&lt;/p&gt;
+
+&lt;p&gt;The first instance acts as a noun, the second acts as a transitive verb, and the third acts as an object.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Adding 2 instances of the word to the first two examples allows it to remain valid–and potentially causes ambiguity–, but this process may be repeated.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This is accomplished by &lt;mark&gt;adding relative clauses&lt;/mark&gt;, whose head may be omitted when the modified noun acts as an object.&lt;/p&gt;
+
+&lt;p&gt;[&lt;sub&gt;N&lt;/sub&gt; person] -&amp;gt; [&lt;sub&gt;NP&lt;/sub&gt; [&lt;sub&gt;N&lt;/sub&gt; person] [&lt;sub&gt;CP&lt;/sub&gt; who/Ø [&lt;sub&gt;IP&lt;/sub&gt; [&lt;sub&gt;N&lt;/sub&gt; I] [&lt;sub&gt;V&lt;/sub&gt; am] ___]]]&lt;/p&gt;
+
+&lt;p&gt;Since &lt;mark&gt;the two previous examples have at least one noun&lt;/mark&gt;, and adding this kind of relative clause &lt;mark&gt;introduces another noun&lt;/mark&gt;, there will always be an &lt;mark&gt;available noun for a new relative clause&lt;/mark&gt;.&lt;/p&gt;
+
+&lt;p&gt;In the first example, this process may be repeated, as shown below:&lt;/p&gt;
+
+&lt;p&gt;[[subject [Ø noun verb ___]] verb]&lt;br /&gt;
+[&lt;sub&gt;S&lt;/sub&gt; [&lt;sub&gt;NP&lt;/sub&gt; [&lt;sub&gt;N&lt;/sub&gt; buffalo] [&lt;sub&gt;CP&lt;/sub&gt; whom/Ø [&lt;sub&gt;IP&lt;/sub&gt; [&lt;sub&gt;N&lt;/sub&gt; buffalo] [&lt;sub&gt;V&lt;/sub&gt; buffalo] ___]]] [&lt;sub&gt;V&lt;/sub&gt; buffalo]]&lt;br /&gt;
+[[subject [[Ø noun [Ø noun verb ___]] verb ___]] verb]&lt;br /&gt;
+[&lt;sub&gt;S&lt;/sub&gt; [&lt;sub&gt;NP&lt;/sub&gt; [&lt;sub&gt;N&lt;/sub&gt; buffalo] [&lt;sub&gt;CP&lt;/sub&gt; Ø [&lt;sub&gt;IP&lt;/sub&gt; [&lt;sub&gt;NP&lt;/sub&gt; [&lt;sub&gt;N&lt;/sub&gt; buffalo] [&lt;sub&gt;CP&lt;/sub&gt; Ø [&lt;sub&gt;IP&lt;/sub&gt; [&lt;sub&gt;N&lt;/sub&gt; buffalo] [&lt;sub&gt;V&lt;/sub&gt; buffalo] ___]]] [&lt;sub&gt;V&lt;/sub&gt; buffalo] ___]]] [&lt;sub&gt;V&lt;/sub&gt; buffalo]]&lt;/p&gt;
+
+&lt;p&gt;In the second example, this process can be applied to either the subject or object, which results in ambiguity.&lt;/p&gt;
+
+&lt;p&gt;[[subject [Ø noun verb ___]] verb object] or&lt;br /&gt;
+[subject verb [object [Ø noun verb ___]]]&lt;/p&gt;
+
+&lt;p&gt;It is proven that $n$ instances of the word is valid for&lt;/p&gt;
+
+&lt;p&gt;\(n = 2 + 2x, x \in \mathbb Z\_{\ge 0}\)&lt;br /&gt;
+\(n = 3 + 2x, x \in \mathbb Z\_{\ge 0}\)&lt;br /&gt;
+\(\therefore n = 2 + x, x \in \mathbb Z\_{\ge 0}\)&lt;/p&gt;
+
+&lt;p&gt;which shows what we wanted to prove:&lt;/p&gt;
+
+\[n \geq 2, n \in \mathbb Z\]
+</description>
+				<pubDate>Thu, 06 Mar 2014 16:06:00 -0700</pubDate>
+				<link>https://victorz.ca/blog/blog/2014/03/buffalo</link>
+				<guid isPermaLink="true">https://victorz.ca/blog/blog/2014/03/buffalo</guid>
+			</item>
+			<item>
+				<title>Partially Protecting Password Data in Transit</title>
+				<description>
+&lt;p&gt;&lt;mark&gt;**HTTP does not encrypt** any traffic&lt;/mark&gt;. Any of the &lt;mark&gt;**internet routers** can see and log your traffic&lt;/mark&gt;, and your passwords might be compromised if the server does nothing to alleviate this.&lt;/p&gt;
+
+&lt;p&gt;On my arcade, my login form requires JavaScript to be more secure, but it is not perfectly secure.&lt;/p&gt;
+
+&lt;div class=&quot;img-left&quot;&gt;
+&lt;img src=&quot;../../../assets/victorz/blog_images/2013/PasswordMessageHash1.png&quot; width=&quot;400&quot; alt=&quot;&quot; /&gt;
+&lt;span class=&quot;caption&quot;&gt;A diagram of the first transmission, &lt;mark&gt;&lt;strong&gt;unprotected&lt;/strong&gt; from interception&lt;/mark&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The &lt;mark&gt;**first transmission of the password might be intercepted, which is a vulnerability** of this method&lt;/mark&gt;.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;However, this is the only time when the password is at risk of interception. Also, the passwords cannot be protected at rest, since the password cannot be salted by the server. Comparing against salted hashes requires the original password to be transmitted. The hashing mere acts as a compression function, so &lt;mark&gt;it is **as if the server stored its passwords in plaintext**&lt;/mark&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;img-right&quot;&gt;
+&lt;img src=&quot;../../../assets/victorz/blog_images/2013/PasswordMessageHash2.png&quot; width=&quot;400&quot; alt=&quot;&quot; /&gt;
+&lt;span class=&quot;caption&quot;&gt;&lt;mark&gt;&lt;strong&gt;Protecting&lt;/strong&gt; passwords &lt;strong&gt;in transit&lt;/strong&gt;&lt;/mark&gt; by using a &lt;strong&gt;pre-shared secret&lt;/strong&gt;.&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;p&gt;During authentication, instead of repeating the first, only &lt;mark&gt;**a hash**&lt;/mark&gt; of [the password (for compression to make it easier to store at the server), fixed data, and a bunch of random data and timestamps] &lt;mark&gt;is sent, **from which the original password is not easily derived**&lt;/mark&gt;. This &lt;mark&gt;prevents **replay attacks**&lt;/mark&gt; as the timestamp must be recent (or exceed the last timestamp used, at risk of locking out), but users need to wait 1 second between logins, which is not an issue. Also, &lt;mark&gt;the request can also be denied if the **random data matches the previous**&lt;/mark&gt; data, at the risk of a collision. The random data helps to &lt;mark&gt;add more entropy and to **make reversing of the hash** more difficult&lt;/mark&gt;. Also, &lt;mark&gt;when the hash can be fully reversed, the **hash algorithm can be changed at any time to increase security, but the passwords must also be changed**&lt;/mark&gt;.&lt;/p&gt;
+
+&lt;p&gt;This hash can be &lt;mark&gt;rebuilt at and compared against&lt;/mark&gt; by the server, since the timestamps and random parts are transmitted in the clear, but the password is not. Basically, &lt;mark&gt;**this is a custom HMAC** that is used to sign a timestamp and a random number&lt;/mark&gt; that must not be the one previously used.&lt;/p&gt;
+</description>
+				<pubDate>Fri, 27 Sep 2013 20:39:00 -0600</pubDate>
+				<link>https://victorz.ca/blog/blog/2013/09/partially-protect-password-transit</link>
+				<guid isPermaLink="true">https://victorz.ca/blog/blog/2013/09/partially-protect-password-transit</guid>
+			</item>
+			<item>
+				<title>Python Goto Decorator Improved</title>
+				<description>&lt;p&gt;When I found &lt;a href=&quot;https://code.activestate.com/recipes/576944-the-goto-decorator/&quot;&gt;a &lt;mark&gt;nice hack to get GOTO statements&lt;/mark&gt; in Python&lt;/a&gt;, I decided to &lt;mark&gt;make my own version&lt;/mark&gt; of it. It has been &lt;mark&gt;tested on Python 2.7 but probably also works in Python 3&lt;/mark&gt;.&lt;/p&gt;
+
+&lt;p&gt;To use it, &lt;mark&gt;import goto from goto&lt;/mark&gt; and &lt;mark&gt;use the `@goto` decorator&lt;/mark&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;goto&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;goto&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;goto&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;goto&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;label&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# should be True
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;But first, you’ll need this code:&lt;/p&gt;
+
+&lt;p&gt;goto.py&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;#!/usr/bin/env python
+# Copyright 2013 Victor Zheng
+# Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+&lt;/span&gt;
+   &lt;span class=&quot;c1&quot;&gt;# https://www.apache.org/licenses/LICENSE-2.0
+&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# This is fast code that gives you GOTO functionality in functions with minimal start-up overhead!
+&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# Adapted from Carl Cerecke's MIT-licensed code:
+# https://code.activestate.com/recipes/576944-the-goto-decorator/
+&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# Caveats:
+# - With the block stack, you must push blocks for &quot;while&quot;, &quot;try&quot;
+# For example, to jump inside a while loop, a block must be simulated:
+# i = 10
+# while True:
+#  goto .insideLoop
+# i = 1 # dead code
+# while i &amp;gt; 0:
+#  label .insideLoop
+#  print i
+# - entering a &quot;for&quot; or &quot;except&quot; block is probably not supported
+# - &quot;cannot create code objects in restricted execution mode&quot;
+&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;dis&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MissingLabelError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;Exception&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+ &lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot;'goto' without matching 'label'.&quot;&quot;&quot;&lt;/span&gt;
+ &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;__init__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MissingLabelError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;__init__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Invalid jump to label %s'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;goto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+ &lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot;
+ A function decorator to add the goto command for a function.
+ Specify commands like so:
+ label .foo
+ goto .foo
+ &quot;&quot;&quot;&lt;/span&gt;
+
+ &lt;span class=&quot;n&quot;&gt;labels&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
+ &lt;span class=&quot;n&quot;&gt;gotos&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
+ &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+ &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;func_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;co_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+ &lt;span class=&quot;n&quot;&gt;new_code&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;func_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;co_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+ &lt;span class=&quot;n&quot;&gt;nop7&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;chr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dis&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;opmap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'NOP'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;
+ &lt;span class=&quot;c1&quot;&gt;# scan through the bytecodes to find the labels and gotos
+&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;op&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;ord&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;func_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;co_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;op&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dis&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;HAVE_ARGUMENT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+   &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+   &lt;span class=&quot;c1&quot;&gt;# foo .bar
+&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;# 0 LOAD_GLOBAL              0 (foo)
+&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;# 3 LOAD_ATTR                1 (bar)
+&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;# 6 POP_TOP
+&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;# = 7 bytes total
+&lt;/span&gt;   &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;op&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dis&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;opmap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'LOAD_GLOBAL'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;ord&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;func_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;co_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dis&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;opmap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'LOAD_ATTR'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;ord&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;func_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;co_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dis&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;opmap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'POP_TOP'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]):&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# check for label/goto
+&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;func_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;co_names&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+     &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;ord&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;func_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;co_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+     &lt;span class=&quot;nb&quot;&gt;ord&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;func_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;co_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'label'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+     &lt;span class=&quot;n&quot;&gt;labels&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;func_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;co_names&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;ord&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;func_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;co_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+      &lt;span class=&quot;nb&quot;&gt;ord&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;func_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;co_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+     &lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;
+     &lt;span class=&quot;c1&quot;&gt;# nop the code and move up
+&lt;/span&gt;     &lt;span class=&quot;n&quot;&gt;new_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nop7&lt;/span&gt;
+     &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;elif&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;func_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;co_names&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+     &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;ord&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;func_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;co_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+     &lt;span class=&quot;nb&quot;&gt;ord&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;func_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;co_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'goto'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+     &lt;span class=&quot;n&quot;&gt;gotos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;func_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;co_names&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;ord&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;func_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;co_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+      &lt;span class=&quot;nb&quot;&gt;ord&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;func_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;co_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+     &lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;
+     &lt;span class=&quot;c1&quot;&gt;# move up only (resolve all gotos in the next loop)
+&lt;/span&gt;     &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;
+
+ &lt;span class=&quot;c1&quot;&gt;# change gotos to jumps
+&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gotos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;label&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;labels&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+   &lt;span class=&quot;k&quot;&gt;raise&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MissingLabelError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Missing label: %s&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;labels&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# skip NOPs
+&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;new_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;chr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dis&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;opmap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'JUMP_ABSOLUTE'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;new_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;chr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;target&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;255&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;new_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;chr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;target&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;255&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;# no need to patch the last 4 bytes: they are unreachable
+&lt;/span&gt;
+ &lt;span class=&quot;c1&quot;&gt;# create new function from existing function
+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;newcode&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;func_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;func_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;co_argcount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;fn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;func_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;co_nlocals&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;fn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;func_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;co_stacksize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;fn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;func_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;co_flags&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;s&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;fn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;func_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;co_consts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;fn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;func_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;co_names&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;fn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;func_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;co_varnames&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;fn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;func_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;co_filename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;fn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;func_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;co_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;fn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;func_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;co_firstlineno&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;fn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;func_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;co_lnotab&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+ &lt;span class=&quot;n&quot;&gt;fn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;func_code&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;newcode&lt;/span&gt;
+ &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fn&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+				<pubDate>Tue, 13 Aug 2013 17:15:00 -0600</pubDate>
+				<link>https://victorz.ca/blog/blog/2013/08/python-goto-decorator</link>
+				<guid isPermaLink="true">https://victorz.ca/blog/blog/2013/08/python-goto-decorator</guid>
+			</item>
+			<item>
+				<title>Rewriting the Grammar Bot</title>
+				<description>&lt;p&gt;I have rewritten &lt;a href=&quot;https://victorz.ca/bots/grammar&quot;&gt;my Grammar bot&lt;/a&gt;. Previously, it had used &lt;mark&gt;regular expressions&lt;/mark&gt; to find errors, which means that it must check every character against the rules. In addition, &lt;mark&gt;Python 2.7 doesn't support variable-length lookbehinds&lt;/mark&gt;, which &lt;mark&gt;adds extra regular expression checks&lt;/mark&gt; for some rules. Also, &lt;mark&gt;it cannot provide good quotes if there is an overlap&lt;/mark&gt; between two matches.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;The new system works by &lt;mark&gt;splitting the text into words&lt;/mark&gt;. Punctuation is included with the spacers. After that, the words are, in a loop, checked against the rules.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This would be parsed as&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;[&lt;strong&gt;Lorem&lt;/strong&gt;, ( ), &lt;strong&gt;ipsum&lt;/strong&gt;, ( ), &lt;strong&gt;dolor&lt;/strong&gt;, ( ), &lt;strong&gt;sit&lt;/strong&gt;, ( ), &lt;strong&gt;amet&lt;/strong&gt;, (, ), &lt;strong&gt;consectetur&lt;/strong&gt;, ( ), &lt;strong&gt;adipisicing&lt;/strong&gt;, ( ), &lt;strong&gt;elit&lt;/strong&gt;, (, ), &lt;strong&gt;sed&lt;/strong&gt;, ( ), &lt;strong&gt;do&lt;/strong&gt;, ( ), &lt;strong&gt;eiusmod&lt;/strong&gt;, ( ), &lt;strong&gt;tempor&lt;/strong&gt;, ( ), &lt;strong&gt;incididunt&lt;/strong&gt;, ( ), &lt;strong&gt;ut&lt;/strong&gt;, ( ), &lt;strong&gt;labore&lt;/strong&gt;, ( ), &lt;strong&gt;et&lt;/strong&gt;, ( ), &lt;strong&gt;dolore&lt;/strong&gt;, ( ), &lt;strong&gt;magna&lt;/strong&gt;, ( ), &lt;strong&gt;aliqua&lt;/strong&gt;, (.), &lt;em&gt;(empty word)&lt;/em&gt;]&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;and then the words/spaces would be converted to objects so that flags can be set.&lt;/p&gt;
+
+&lt;p&gt;Each rule will check &lt;mark&gt;if the current word is a specific word, or in a small list&lt;/mark&gt;, so it can skip rules quickly. &lt;mark&gt;If a rule is matched&lt;/mark&gt;, it will &lt;mark&gt;mark the word as &quot;modified&quot; and some nearby words as &quot;automatic stop words&quot;, and the reason will be flagged&lt;/mark&gt;. Some rules will &lt;mark&gt;request a rerun&lt;/mark&gt; on specific other rules, which will result in another iteration over the rules list, but &lt;mark&gt;only some rules will be run the next time&lt;/mark&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;mark&gt;If at least one reason has been flagged&lt;/mark&gt;, it will proceed to &lt;mark&gt;build the correction list&lt;/mark&gt;. It will look at each correction and check a few nearby unflagged words and mark them as “stop words” and one “near word”, right beside the last stop word. If there is a &lt;mark&gt;one-word gap between two corrections, that gap will then be flagged&lt;/mark&gt;. Then it will build a list of corrections, which includes the &lt;mark&gt;continuous chains of flagged words and spaces in between&lt;/mark&gt; them.&lt;/p&gt;
+
+&lt;p&gt;The last step is to &lt;mark&gt;randomly generate a message for the user, and include an *english-join*ed version&lt;/mark&gt; of the correction list.&lt;/p&gt;
+
+&lt;p&gt;Although I must admit that &lt;mark&gt;the new method is not as good as before performance-wise, it delivers more accurate results&lt;/mark&gt;, so the performance loss can be considered a trade-off for a more accurate algorithm. And the new method has an advantage over the previous method. For example, this text would have been reported improperly:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;*Their is you’re own. (The[re] is you[r] own.)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The old system would issue a correction for &lt;em&gt;“is [your] own” and “[there] is you’re”&lt;/em&gt;. But the problem is that &lt;mark&gt;the quotes are done with the order of the rules, rather than the order in which they appear&lt;/mark&gt; in the text and that the &lt;mark&gt;overlap is not merged&lt;/mark&gt;. The new system would be able to issue a quote for &lt;em&gt;”[there] is [your] own”&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;In addition, this text would not be fully corrected until now:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;*Your you’re own. (You[‘re] you[r] own.)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The old system would detect that the user should have said &lt;em&gt;“Your [your] own”&lt;/em&gt; instead. However, &lt;mark&gt;the new system can do a second pass&lt;/mark&gt; and report &lt;em&gt;”[you’re your] own”&lt;/em&gt;.&lt;/p&gt;
+</description>
+				<pubDate>Thu, 08 Aug 2013 12:53:00 -0600</pubDate>
+				<link>https://victorz.ca/blog/blog/2013/08/your_grammar-rewrite</link>
+				<guid isPermaLink="true">https://victorz.ca/blog/blog/2013/08/your_grammar-rewrite</guid>
+			</item>
+			<item>
+				<title>Hacking a Flash Payload Crypter with 1 line of code</title>
+				<description>&lt;p&gt;If the flash file puts everything into a binary section and encrypts it, is there any way to decrypt it? If &lt;mark&gt;they cut off the header, you won't be able to memory-dump it&lt;/mark&gt;, but would you give up there? Of course not!&lt;/p&gt;
+
+&lt;p&gt;Somewhere, &lt;mark&gt;they have the decrypted data so that they can load it&lt;/mark&gt;. Just compile some code to &lt;mark&gt;intercept it&lt;/mark&gt;, and inject it:&lt;/p&gt;
+
+&lt;div class=&quot;language-as3 highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;FileReference&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;save&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;_loc_2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;dumped.swf&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In RABCDAsm (AS3), it looks like this:&lt;/p&gt;
+
+&lt;div class=&quot;language-nasm highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nf&quot;&gt;findpropstrict&lt;/span&gt;      &lt;span class=&quot;nv&quot;&gt;QName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PackageNamespace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;flash.net&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;), &quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;FileReference&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;constructprop&lt;/span&gt;       &lt;span class=&quot;nv&quot;&gt;QName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PackageNamespace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;flash.net&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;), &quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;FileReference&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;getlocal2&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;pushstring&lt;/span&gt;          &lt;span class=&quot;s&quot;&gt;&quot;dumped.swf&quot;&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;callpropvoid&lt;/span&gt;        &lt;span class=&quot;nv&quot;&gt;QName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PackageNamespace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;save&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;So just &lt;mark&gt;put that in the code before it is loaded (call to `loadBytes`) and replace `getlocal2`&lt;/mark&gt; with whatever will put the decrypted data onto the stack. &lt;mark&gt;Once the decrypted data is about to be loaded, you can save it to a file&lt;/mark&gt;.&lt;/p&gt;
+
+&lt;p&gt;In &lt;mark&gt;AS2, you'd have to create a server script to echo the file back with FileReference&lt;/mark&gt;, since it only accepts URL downloads. It’s &lt;mark&gt;still feasible&lt;/mark&gt; though, but &lt;mark&gt;writing to a SharedObject and extracting from that&lt;/mark&gt; might be easier.&lt;/p&gt;
+
+&lt;p&gt;In retrospection, I realized that &lt;mark&gt;I can also write a fake header&lt;/mark&gt; if I manage to locate the flash data.&lt;/p&gt;
+</description>
+				<pubDate>Tue, 23 Jul 2013 11:08:00 -0600</pubDate>
+				<link>https://victorz.ca/blog/blog/2013/07/hack-flash-as3-crypt</link>
+				<guid isPermaLink="true">https://victorz.ca/blog/blog/2013/07/hack-flash-as3-crypt</guid>
+			</item>
+			<item>
+				<title>Flasm (ActionScript 2) Bytecode Equivalents</title>
+				<description>&lt;p&gt;&lt;mark&gt;[Flasm](https://nowrap.de/flasm) allows people to disassemble flash files (.swf) into human-readable bytecode&lt;/mark&gt;. I have discovered some of the &lt;mark&gt;Flash compiler techniques and other interesting things&lt;/mark&gt;.&lt;/p&gt;
+
+&lt;p&gt;ActionScript // Flasm&lt;/p&gt;
+
+&lt;div class=&quot;language-as3 highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;Number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;POSITIVE_INFINITY&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// POSITIVE_INFINITY or POSITIVE_INFINITYF&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;Number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;NAN&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// _NAN or _NANF&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// push UNDEF / return&lt;/span&gt;
+&lt;span class=&quot;kr&quot;&gt;trace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// push x / trace&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// operators: push a / push b / [op]&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// bitwiseOr&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// bitwiseXor&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// bitwiseAnd&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// shiftLeft&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// shiftRight&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// add&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// subtract&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// multiply&lt;/span&gt;
+&lt;span class=&quot;sr&quot;&gt;/ /&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;divide&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// modulo&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;What I find &lt;mark&gt;the most interesting is how it compiles logical expressions&lt;/mark&gt;:&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;(&lt;em&gt;a &amp;amp;&amp;amp; b&lt;/em&gt;) or (_a&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;b_)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;div class=&quot;language-nasm highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nf&quot;&gt;push&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;dup&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;; only for &amp;amp;&amp;amp;&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;branchIfTrue&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;label1&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;pop&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;push&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;label1:&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;not&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;branchIfTrue&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;label2&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;&amp;gt;&amp;gt;[&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;body&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;branch&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;label3&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;; only if else is present&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;label2:&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;&amp;gt;&amp;gt;[&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;body&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;label3:&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;; only if else is present&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now, &lt;mark&gt;how does it compile a compound expression&lt;/mark&gt;?&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Let’s start with (&lt;em&gt;a [op1] b [op2] c&lt;/em&gt;), special case: (_[op1] ≠&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&lt;em&gt;), (&lt;/em&gt;[op2] ≠ &amp;amp;&amp;amp;_)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;div class=&quot;language-nasm highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nf&quot;&gt;push&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;dup&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;; only for [op1] == &amp;amp;&amp;amp;&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;branchIfTrue&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;label1&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;; special case: branchIfTrue label2&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;pop&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;push&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;label1:&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;; not in special case&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;dup&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;; only for [op2] == &amp;amp;&amp;amp;&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;branchIfTrue&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;new_label&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;pop&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;push&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;new_label:&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;not&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;branchIfTrue&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;label2&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;&amp;gt;&amp;gt;[&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;body&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;branch&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;label3&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;; only if else is present&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;label2:&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;&amp;gt;&amp;gt;[&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;body&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;label3:&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;; only if else is present&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;In the special case, operator precedence will cause (&lt;em&gt;b &amp;amp;&amp;amp; c&lt;/em&gt;) to be evaluated together. After testing (_a &amp;amp;&amp;amp; (b&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;c)_), I have discovered that the same thing as the special case occurs above.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;I’m still not so sure about why they compile the conditionals like this. But it is interesting how &lt;strong&gt;&lt;mark&gt;an *OR* operator can become an *AND* operator with one *not*&lt;/mark&gt; instruction&lt;/strong&gt;.&lt;/p&gt;
+</description>
+				<pubDate>Fri, 19 Jul 2013 18:55:00 -0600</pubDate>
+				<link>https://victorz.ca/blog/blog/2013/07/as2-bytecode</link>
+				<guid isPermaLink="true">https://victorz.ca/blog/blog/2013/07/as2-bytecode</guid>
+			</item>
+			<item>
+				<title>Split Infinitives: a non-error</title>
+				<description>&lt;p&gt;Some people are &lt;mark&gt;hypercritical and think *to boldly go* should be *to go boldly* or even the awkward *boldly to go*&lt;/mark&gt;. However, the argument is that English should follow Latin’s rules, but it is &lt;mark&gt;impossible to split infinitives in Latin, as there is no infinitive marker in Latin&lt;/mark&gt;, effectively making the argument invalid.&lt;/p&gt;
+
+&lt;p&gt;Also, &lt;mark&gt;wouldn't the effect of some sentences be destroyed&lt;/mark&gt;? There is no way to reword these without forming an awkward sentence:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;I need you all &lt;mark&gt;**to really pull**&lt;/mark&gt; your weight.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;We are determined &lt;mark&gt;**to completely and utterly eradicate**&lt;/mark&gt; the disease.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;I expect him &lt;mark&gt;**to completely and utterly fail**&lt;/mark&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;We are seeking a plan &lt;mark&gt;**to gradually, systematically, and economically relieve**&lt;/mark&gt; the burden.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;We expect our output &lt;mark&gt;**to more than double**&lt;/mark&gt; in a year.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;I want &lt;mark&gt;**to not see**&lt;/mark&gt; you anymore. (Well, maybe “I &lt;mark&gt;do not want to&lt;/mark&gt; see you anymore”)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Source: &lt;a href=&quot;https://en.wikipedia.org/wiki/Split_infinitive&quot;&gt;“Split infinitive” from &lt;em&gt;Wikipedia&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;mark&gt;Remember **to, whenever you want, split** infinitives&lt;/mark&gt;. To, regardless of what some prescriptivists say, split an infinitive is perfectly valid.&lt;/p&gt;
+</description>
+				<pubDate>Wed, 12 Jun 2013 19:21:00 -0600</pubDate>
+				<link>https://victorz.ca/blog/blog/2013/06/split-infinitives</link>
+				<guid isPermaLink="true">https://victorz.ca/blog/blog/2013/06/split-infinitives</guid>
+			</item>
+			<item>
+				<title>Digital Roots</title>
+				<description>&lt;p&gt;What &lt;mark&gt;happens to the digital root&lt;/mark&gt; as the numbers increase?&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;n&lt;/th&gt;
+      &lt;th&gt;dr(n)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;9&lt;/td&gt;
+      &lt;td&gt;9&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;10&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;11&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;12&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;18&lt;/td&gt;
+      &lt;td&gt;9&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;19&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; n | dr(n)
+---+------
+ 0 | 0
+ 1 | 1
+ 2 | 2
+ 3 | 3
+ 9 | 9
+10 | 1
+11 | 2
+12 | 3
+18 | 9
+19 | 1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;It looks like it is really just &lt;mark&gt;a cycle that goes from 1-9 over and over again&lt;/mark&gt; (except 0). This can be represented using &lt;mark&gt;modulus&lt;/mark&gt;.&lt;/p&gt;
+
+\[dr(x) = 1 + (x - 1) \bmod 9\]
+
+&lt;p&gt;What happens if n &amp;lt; 0? Well, &lt;mark&gt;I've decided to just use the absolute value&lt;/mark&gt; of it. That means that &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dr(-1) = 1&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Here is some PHP code:&lt;/p&gt;
+
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;dr(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$i&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;) = &quot;&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;abs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;See that? There is &lt;mark&gt;no need for looping and recursion (nor iteration)&lt;/mark&gt; to calculate the digital root. Why take O(≫ 1) time when you can take O(1) time?&lt;/p&gt;
+
+&lt;p&gt;Many languages handle negative modulus with truncation, but a special case must be created for some languages that use floored division:&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Python
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;dr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;abs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;dr(%d) = %d&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+				<pubDate>Thu, 23 May 2013 18:56:00 -0600</pubDate>
+				<link>https://victorz.ca/blog/blog/2013/05/dr-digital-root</link>
+				<guid isPermaLink="true">https://victorz.ca/blog/blog/2013/05/dr-digital-root</guid>
+			</item>
+	</channel>
+</rss>
