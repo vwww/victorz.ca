@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2024-06-04T20:54:45-06:00</updated><id>/feed.xml</id><entry><title type="html">Zeno’s Paradox for a Bouncing Ball</title><link href="/blog/2014/07/zeno-bounce" rel="alternate" type="text/html" title="Zeno’s Paradox for a Bouncing Ball" /><published>2014-07-12T19:42:00-06:00</published><updated>2014-07-12T19:42:00-06:00</updated><id>/blog/2014/07/zeno-bounce</id><content type="html" xml:base="/blog/2014/07/zeno-bounce"><![CDATA[<p>If a ball is thrown up to a height $h$, falls to the ground, and retains a certain fraction $a$ of its energy when it bounces, it will stop bouncing after a certain amount of time. This is paradoxical as it will have bounced an infinite number of times when it stops.</p>
+
+<!--more-->
+
+<p>The fraction of retained kinetic energy is the same as the fraction of retained height:</p>
+
+<p>\(E\_n=aE\_{n-1}\)<br />
+\(mgh\_n=mgh\_{n-1}a\)<br />
+\(h\_n=h\_{n-1}a\)<br />
+\(h\_n=h\_1a^{n-1}\)</p>
+
+<p>The total distance traveled must be finite, as it is a geometric series that converges:
+\(d=\displaystyle\sum\_{n=1}^\infty h\_n=\displaystyle\sum\_{n=0}^\infty a^nh\_1=\frac{h\_1}{1-a}\)</p>
+
+<p>The time it takes for a ball to reach a certain height and come back down is:
+\(t\_n=\sqrt{\frac{8h\_n}{g}}=(\sqrt{a})^{n-1}\sqrt{\frac{8h\_1}{g}}=t_1\sqrt{a}^{n-1}\)</p>
+
+<p>Time also converges and the total time is also finite:
+\(T=\displaystyle\sum\_{n=1}^\infty t\_n=\sqrt{\frac{8h\_1}{g}}\displaystyle\sum\_{n=0}^\infty (\sqrt{a})^n=\sqrt{\frac{8h\_1}{g}}\left(\frac{1}{1-\sqrt{a}}\right)=\frac{t_1}{1-\sqrt{a}}\)</p>
+
+<p>After that amount of time, the ball has bounced an infinite number of times and has stopped bouncing. After each bounce, the ball’s distance is smaller, but the time is also smaller, so both the total time and distance converge to a finite value.</p>]]></content><author><name></name></author><category term="Math" /><category term="Math" /><summary type="html"><![CDATA[If a ball is thrown up to a height $h$, falls to the ground, and retains a certain fraction $a$ of its energy when it bounces, it will stop bouncing after a certain amount of time. This is paradoxical as it will have bounced an infinite number of times when it stops.]]></summary></entry><entry><title type="html">Uniformly Distributed Tweets</title><link href="/blog/2014/03/uniform-tweets" rel="alternate" type="text/html" title="Uniformly Distributed Tweets" /><published>2014-03-21T19:49:00-06:00</published><updated>2014-03-21T19:49:00-06:00</updated><id>/blog/2014/03/uniform-tweets</id><content type="html" xml:base="/blog/2014/03/uniform-tweets"><![CDATA[<p>For <a href="https://victorz.ca/bots/grammar">my Grammar bot</a>, I added a new feature: <mark>GPS coordinates are added to the tweets</mark>. This is <mark>just for fun</mark> and serves no practical purpose.</p>
+
+<p>However, I wanted the tweets to be <mark>uniformly distributed over a sphere</mark>. Earth’s shape is not a sphere, but the error is under 1%.</p>
+
+<p>$a$ and $b$ are random values uniformly distributed in $[-1,1]$
+\(latitude=\theta=\sin^{-1}(u)\)<br />
+\(longitude=\phi=\pi v=(180^{\circ}) v\)</p>
+
+<!--more-->
+
+<p>According to <a href="https://mathworld.wolfram.com/SpherePointPicking.html">Wolfram MathWorld</a>, points are randomly distributed over a sphere if:</p>
+
+<p>$\theta$ represents latitude and $\phi$ longitude.<br />
+$u$ and $v$ are uniformly distributed in $[0,1]$</p>
+
+<p>\(\theta=\cos^{-1}(2u-1)\)<br />
+\(\phi=2\pi v\)</p>
+
+<p>Adjusting $u$ and $v$, now distributed in $[-1,1]$, we get:
+\(\theta=\cos^{-1}(u)\)<br />
+\(\phi=\pi (v + 1)\)</p>
+
+<p>However, latitude is to be in -90 to 90 degrees, not 0 to 180 degrees, and longitude is to be in -180 to 180 degrees, not 0 to 360 degrees.
+\(\theta=\cos^{-1}(u)-\frac\pi2=-\sin^{-1}u\)<br />
+\(\phi=\pi v\)</p>
+
+<p>By spherical symmetry, the negative sign can be removed from latitude, and the distribution will remain the same.</p>]]></content><author><name></name></author><category term="Programming" /><category term="Math" /><category term="Programming" /><summary type="html"><![CDATA[For my Grammar bot, I added a new feature: GPS coordinates are added to the tweets. This is just for fun and serves no practical purpose. However, I wanted the tweets to be uniformly distributed over a sphere. Earth’s shape is not a sphere, but the error is under 1%. $a$ and $b$ are random values uniformly distributed in $[-1,1]$ \(latitude=\theta=\sin^{-1}(u)\) \(longitude=\phi=\pi v=(180^{\circ}) v\)]]></summary></entry><entry><title type="html">Buffalo buffalo …</title><link href="/blog/2014/03/buffalo" rel="alternate" type="text/html" title="Buffalo buffalo …" /><published>2014-03-06T16:06:00-07:00</published><updated>2014-03-06T16:06:00-07:00</updated><id>/blog/2014/03/buffalo</id><content type="html" xml:base="/blog/2014/03/buffalo"><![CDATA[<p>Although I have already proven that <mark>a repetition of the word 'buffalo' $n$ times is grammatically correct</mark>, if $n \geq 2$, a year ago, I am now publishing this finding.</p>
+
+<ul>
+  <li>‘buffalo’ is a <mark>plural noun, allowing the use of zero articles</mark></li>
+  <li>‘buffalo’ is <mark>also a verb</mark> that means to bully, confuse, deceive, or intimidate</li>
+</ul>
+
+<p>Theorem:</p>
+<blockquote>
+  <p><mark>Repeating $n$ times, where $n \geq 2$, any word that can be a noun or verb forms a grammatically valid sentence.</mark></p>
+</blockquote>
+
+<p>Proof:</p>
+
+<!--more-->
+
+<blockquote>
+  <p>A sentence containing <mark>2 instances</mark> of the word <mark>is grammatically valid</mark>.</p>
+</blockquote>
+
+<p>[<sub>S</sub> [<sub>N</sub> I] [<sub>V</sub> am]]</p>
+
+<p>The first instance acts as a noun, and the second acts as an intransitive verb.</p>
+
+<p>[<mark>subject verb</mark>]<br />
+[<sub>S</sub> [<sub>N</sub> buffalo] [<sub>V</sub> buffalo]]</p>
+
+<blockquote>
+  <p>A sentence containing <mark>3 instances</mark> of the word <mark>is grammatically valid</mark>.</p>
+</blockquote>
+
+<p>[<sub>S</sub> [<sub>N</sub> I] [<sub>VP</sub> [<sub>V</sub> am] [<sub>N</sub> here]]]</p>
+
+<p>[<mark>subject verb object</mark>]<br />
+[<sub>S</sub> [<sub>N</sub> buffalo] [<sub>VP</sub> [<sub>V</sub> buffalo] [<sub>N</sub> buffalo]]]</p>
+
+<p>The first instance acts as a noun, the second acts as a transitive verb, and the third acts as an object.</p>
+
+<blockquote>
+  <p>Adding 2 instances of the word to the first two examples allows it to remain valid–and potentially causes ambiguity–, but this process may be repeated.</p>
+</blockquote>
+
+<p>This is accomplished by <mark>adding relative clauses</mark>, whose head may be omitted when the modified noun acts as an object.</p>
+
+<p>[<sub>N</sub> person] -&gt; [<sub>NP</sub> [<sub>N</sub> person] [<sub>CP</sub> who/Ø [<sub>IP</sub> [<sub>N</sub> I] [<sub>V</sub> am] ___]]]</p>
+
+<p>Since <mark>the two previous examples have at least one noun</mark>, and adding this kind of relative clause <mark>introduces another noun</mark>, there will always be an <mark>available noun for a new relative clause</mark>.</p>
+
+<p>In the first example, this process may be repeated, as shown below:</p>
+
+<p>[[subject [Ø noun verb ___]] verb]<br />
+[<sub>S</sub> [<sub>NP</sub> [<sub>N</sub> buffalo] [<sub>CP</sub> whom/Ø [<sub>IP</sub> [<sub>N</sub> buffalo] [<sub>V</sub> buffalo] ___]]] [<sub>V</sub> buffalo]]<br />
+[[subject [[Ø noun [Ø noun verb ___]] verb ___]] verb]<br />
+[<sub>S</sub> [<sub>NP</sub> [<sub>N</sub> buffalo] [<sub>CP</sub> Ø [<sub>IP</sub> [<sub>NP</sub> [<sub>N</sub> buffalo] [<sub>CP</sub> Ø [<sub>IP</sub> [<sub>N</sub> buffalo] [<sub>V</sub> buffalo] ___]]] [<sub>V</sub> buffalo] ___]]] [<sub>V</sub> buffalo]]</p>
+
+<p>In the second example, this process can be applied to either the subject or object, which results in ambiguity.</p>
+
+<p>[[subject [Ø noun verb ___]] verb object] or<br />
+[subject verb [object [Ø noun verb ___]]]</p>
+
+<p>It is proven that $n$ instances of the word is valid for</p>
+
+<p>\(n = 2 + 2x, x \in \mathbb Z\_{\ge 0}\)<br />
+\(n = 3 + 2x, x \in \mathbb Z\_{\ge 0}\)<br />
+\(\therefore n = 2 + x, x \in \mathbb Z\_{\ge 0}\)</p>
+
+<p>which shows what we wanted to prove:</p>
+
+\[n \geq 2, n \in \mathbb Z\]]]></content><author><name></name></author><category term="Grammar" /><category term="English" /><category term="Grammar" /><category term="Math" /><summary type="html"><![CDATA[Although I have already proven that a repetition of the word 'buffalo' $n$ times is grammatically correct, if $n \geq 2$, a year ago, I am now publishing this finding. ‘buffalo’ is a plural noun, allowing the use of zero articles ‘buffalo’ is also a verb that means to bully, confuse, deceive, or intimidate Theorem: Repeating $n$ times, where $n \geq 2$, any word that can be a noun or verb forms a grammatically valid sentence. Proof:]]></summary></entry><entry><title type="html">Partially Protecting Password Data in Transit</title><link href="/blog/2013/09/partially-protect-password-transit" rel="alternate" type="text/html" title="Partially Protecting Password Data in Transit" /><published>2013-09-27T20:39:00-06:00</published><updated>2013-09-27T20:39:00-06:00</updated><id>/blog/2013/09/partially-protect-password-transit</id><content type="html" xml:base="/blog/2013/09/partially-protect-password-transit"><![CDATA[<p><mark>**HTTP does not encrypt** any traffic</mark>. Any of the <mark>**internet routers** can see and log your traffic</mark>, and your passwords might be compromised if the server does nothing to alleviate this.</p>
+
+<p>On my arcade, my login form requires JavaScript to be more secure, but it is not perfectly secure.</p>
+
+<div class="img-left">
+<img src="../../../assets/victorz/blog_images/2013/PasswordMessageHash1.png" width="400" alt="" />
+<span class="caption">A diagram of the first transmission, <mark><strong>unprotected</strong> from interception</mark></span>
+</div>
+
+<p>The <mark>**first transmission of the password might be intercepted, which is a vulnerability** of this method</mark>.</p>
+
+<!--more-->
+
+<p>However, this is the only time when the password is at risk of interception. Also, the passwords cannot be protected at rest, since the password cannot be salted by the server. Comparing against salted hashes requires the original password to be transmitted. The hashing mere acts as a compression function, so <mark>it is **as if the server stored its passwords in plaintext**</mark>.</p>
+
+<div class="img-right">
+<img src="../../../assets/victorz/blog_images/2013/PasswordMessageHash2.png" width="400" alt="" />
+<span class="caption"><mark><strong>Protecting</strong> passwords <strong>in transit</strong></mark> by using a <strong>pre-shared secret</strong>.</span>
+</div>
+
+<p>During authentication, instead of repeating the first, only <mark>**a hash**</mark> of [the password (for compression to make it easier to store at the server), fixed data, and a bunch of random data and timestamps] <mark>is sent, **from which the original password is not easily derived**</mark>. This <mark>prevents **replay attacks**</mark> as the timestamp must be recent (or exceed the last timestamp used, at risk of locking out), but users need to wait 1 second between logins, which is not an issue. Also, <mark>the request can also be denied if the **random data matches the previous**</mark> data, at the risk of a collision. The random data helps to <mark>add more entropy and to **make reversing of the hash** more difficult</mark>. Also, <mark>when the hash can be fully reversed, the **hash algorithm can be changed at any time to increase security, but the passwords must also be changed**</mark>.</p>
+
+<p>This hash can be <mark>rebuilt at and compared against</mark> by the server, since the timestamps and random parts are transmitted in the clear, but the password is not. Basically, <mark>**this is a custom HMAC** that is used to sign a timestamp and a random number</mark> that must not be the one previously used.</p>]]></content><author><name></name></author><category term="Security" /><category term="Security" /><category term="Web" /><summary type="html"><![CDATA[**HTTP does not encrypt** any traffic. Any of the **internet routers** can see and log your traffic, and your passwords might be compromised if the server does nothing to alleviate this. On my arcade, my login form requires JavaScript to be more secure, but it is not perfectly secure. A diagram of the first transmission, unprotected from interception The **first transmission of the password might be intercepted, which is a vulnerability** of this method.]]></summary></entry><entry><title type="html">Python Goto Decorator Improved</title><link href="/blog/2013/08/python-goto-decorator" rel="alternate" type="text/html" title="Python Goto Decorator Improved" /><published>2013-08-13T17:15:00-06:00</published><updated>2013-08-13T17:15:00-06:00</updated><id>/blog/2013/08/python-goto-decorator</id><content type="html" xml:base="/blog/2013/08/python-goto-decorator"><![CDATA[<p>When I found <a href="https://code.activestate.com/recipes/576944-the-goto-decorator/">a <mark>nice hack to get GOTO statements</mark> in Python</a>, I decided to <mark>make my own version</mark> of it. It has been <mark>tested on Python 2.7 but probably also works in Python 3</mark>.</p>
+
+<p>To use it, <mark>import goto from goto</mark> and <mark>use the `@goto` decorator</mark>:</p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">goto</span> <span class="kn">import</span> <span class="n">goto</span>
+<span class="o">@</span><span class="n">goto</span>
+<span class="k">def</span> <span class="nf">test</span><span class="p">():</span>
+  <span class="n">goto</span> <span class="p">.</span><span class="n">end</span>
+  <span class="k">return</span> <span class="bp">False</span>
+  <span class="n">label</span> <span class="p">.</span><span class="n">end</span>
+  <span class="k">return</span> <span class="bp">True</span>
+<span class="k">print</span> <span class="n">test</span><span class="p">()</span> <span class="c1"># should be True
+</span></code></pre></div></div>
+
+<p>But first, you’ll need this code:</p>
+
+<p>goto.py</p>
+
+<!--more-->
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/usr/bin/env python
+# Copyright 2013 Victor Zheng
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+</span>
+   <span class="c1"># https://www.apache.org/licenses/LICENSE-2.0
+</span>
+<span class="c1"># Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+</span>
+<span class="c1"># This is fast code that gives you GOTO functionality in functions with minimal start-up overhead!
+</span>
+<span class="c1"># Adapted from Carl Cerecke's MIT-licensed code:
+# https://code.activestate.com/recipes/576944-the-goto-decorator/
+</span>
+<span class="c1"># Caveats:
+# - With the block stack, you must push blocks for "while", "try"
+# For example, to jump inside a while loop, a block must be simulated:
+# i = 10
+# while True:
+#  goto .insideLoop
+# i = 1 # dead code
+# while i &gt; 0:
+#  label .insideLoop
+#  print i
+# - entering a "for" or "except" block is probably not supported
+# - "cannot create code objects in restricted execution mode"
+</span>
+<span class="kn">import</span> <span class="nn">dis</span>
+
+<span class="k">class</span> <span class="nc">MissingLabelError</span><span class="p">(</span><span class="nb">Exception</span><span class="p">):</span>
+ <span class="s">"""'goto' without matching 'label'."""</span>
+ <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
+  <span class="nb">super</span><span class="p">(</span><span class="n">MissingLabelError</span><span class="p">,</span> <span class="bp">self</span><span class="p">).</span><span class="n">__init__</span><span class="p">(</span><span class="s">'Invalid jump to label %s'</span> <span class="o">%</span> <span class="p">(</span><span class="n">target</span><span class="p">))</span>
+
+<span class="k">def</span> <span class="nf">goto</span><span class="p">(</span><span class="n">fn</span><span class="p">):</span>
+ <span class="s">"""
+ A function decorator to add the goto command for a function.
+ Specify commands like so:
+ label .foo
+ goto .foo
+ """</span>
+
+ <span class="n">labels</span> <span class="o">=</span> <span class="p">{}</span>
+ <span class="n">gotos</span> <span class="o">=</span> <span class="p">{}</span>
+ <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+ <span class="n">end</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">fn</span><span class="p">.</span><span class="n">func_code</span><span class="p">.</span><span class="n">co_code</span><span class="p">)</span>
+ <span class="n">new_code</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">fn</span><span class="p">.</span><span class="n">func_code</span><span class="p">.</span><span class="n">co_code</span><span class="p">)</span>
+
+ <span class="n">nop7</span> <span class="o">=</span> <span class="p">[</span><span class="nb">chr</span><span class="p">(</span><span class="n">dis</span><span class="p">.</span><span class="n">opmap</span><span class="p">[</span><span class="s">'NOP'</span><span class="p">])]</span> <span class="o">*</span> <span class="mi">7</span>
+ <span class="c1"># scan through the bytecodes to find the labels and gotos
+</span> <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">end</span><span class="p">:</span>
+  <span class="n">op</span> <span class="o">=</span> <span class="nb">ord</span><span class="p">(</span><span class="n">fn</span><span class="p">.</span><span class="n">func_code</span><span class="p">.</span><span class="n">co_code</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+  <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+  <span class="k">if</span> <span class="n">op</span> <span class="o">&gt;</span> <span class="n">dis</span><span class="p">.</span><span class="n">HAVE_ARGUMENT</span><span class="p">:</span>
+   <span class="n">i</span> <span class="o">+=</span> <span class="mi">2</span>
+   <span class="c1"># foo .bar
+</span>   <span class="c1"># 0 LOAD_GLOBAL              0 (foo)
+</span>   <span class="c1"># 3 LOAD_ATTR                1 (bar)
+</span>   <span class="c1"># 6 POP_TOP
+</span>   <span class="c1"># = 7 bytes total
+</span>   <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">end</span> <span class="o">-</span> <span class="mi">7</span> <span class="o">+</span> <span class="mi">3</span> <span class="ow">and</span>
+    <span class="n">op</span> <span class="o">==</span> <span class="n">dis</span><span class="p">.</span><span class="n">opmap</span><span class="p">[</span><span class="s">'LOAD_GLOBAL'</span><span class="p">]</span> <span class="ow">and</span>
+    <span class="nb">ord</span><span class="p">(</span><span class="n">fn</span><span class="p">.</span><span class="n">func_code</span><span class="p">.</span><span class="n">co_code</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">==</span> <span class="n">dis</span><span class="p">.</span><span class="n">opmap</span><span class="p">[</span><span class="s">'LOAD_ATTR'</span><span class="p">]</span> <span class="ow">and</span>
+    <span class="nb">ord</span><span class="p">(</span><span class="n">fn</span><span class="p">.</span><span class="n">func_code</span><span class="p">.</span><span class="n">co_code</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">3</span><span class="p">])</span> <span class="o">==</span> <span class="n">dis</span><span class="p">.</span><span class="n">opmap</span><span class="p">[</span><span class="s">'POP_TOP'</span><span class="p">]):</span>
+    <span class="c1"># check for label/goto
+</span>    <span class="k">if</span> <span class="n">fn</span><span class="p">.</span><span class="n">func_code</span><span class="p">.</span><span class="n">co_names</span><span class="p">[</span>
+     <span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">fn</span><span class="p">.</span><span class="n">func_code</span><span class="p">.</span><span class="n">co_code</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">])</span> <span class="o">&lt;&lt;</span> <span class="mi">8</span><span class="p">)</span> <span class="o">+</span>
+     <span class="nb">ord</span><span class="p">(</span><span class="n">fn</span><span class="p">.</span><span class="n">func_code</span><span class="p">.</span><span class="n">co_code</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">2</span><span class="p">])</span>
+    <span class="p">]</span> <span class="o">==</span> <span class="s">'label'</span><span class="p">:</span>
+     <span class="n">labels</span><span class="p">[</span><span class="n">fn</span><span class="p">.</span><span class="n">func_code</span><span class="p">.</span><span class="n">co_names</span><span class="p">[</span>
+      <span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">fn</span><span class="p">.</span><span class="n">func_code</span><span class="p">.</span><span class="n">co_code</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">2</span><span class="p">])</span> <span class="o">&lt;&lt;</span> <span class="mi">8</span><span class="p">)</span> <span class="o">+</span>
+      <span class="nb">ord</span><span class="p">(</span><span class="n">fn</span><span class="p">.</span><span class="n">func_code</span><span class="p">.</span><span class="n">co_code</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">])</span>
+     <span class="p">]]</span> <span class="o">=</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">3</span>
+     <span class="c1"># nop the code and move up
+</span>     <span class="n">new_code</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">3</span><span class="p">:</span><span class="n">i</span><span class="o">-</span><span class="mi">3</span><span class="o">+</span><span class="mi">7</span><span class="p">]</span> <span class="o">=</span> <span class="n">nop7</span>
+     <span class="n">i</span> <span class="o">+=</span> <span class="mi">4</span>
+    <span class="k">elif</span> <span class="n">fn</span><span class="p">.</span><span class="n">func_code</span><span class="p">.</span><span class="n">co_names</span><span class="p">[</span>
+     <span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">fn</span><span class="p">.</span><span class="n">func_code</span><span class="p">.</span><span class="n">co_code</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">])</span> <span class="o">&lt;&lt;</span> <span class="mi">8</span><span class="p">)</span> <span class="o">+</span>
+     <span class="nb">ord</span><span class="p">(</span><span class="n">fn</span><span class="p">.</span><span class="n">func_code</span><span class="p">.</span><span class="n">co_code</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">2</span><span class="p">])</span>
+    <span class="p">]</span> <span class="o">==</span> <span class="s">'goto'</span><span class="p">:</span>
+     <span class="n">gotos</span><span class="p">[</span><span class="n">fn</span><span class="p">.</span><span class="n">func_code</span><span class="p">.</span><span class="n">co_names</span><span class="p">[</span>
+      <span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">fn</span><span class="p">.</span><span class="n">func_code</span><span class="p">.</span><span class="n">co_code</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">2</span><span class="p">])</span> <span class="o">&lt;&lt;</span> <span class="mi">8</span><span class="p">)</span> <span class="o">+</span>
+      <span class="nb">ord</span><span class="p">(</span><span class="n">fn</span><span class="p">.</span><span class="n">func_code</span><span class="p">.</span><span class="n">co_code</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">])</span>
+     <span class="p">]]</span> <span class="o">=</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">3</span>
+     <span class="c1"># move up only (resolve all gotos in the next loop)
+</span>     <span class="n">i</span> <span class="o">+=</span> <span class="mi">4</span>
+
+ <span class="c1"># change gotos to jumps
+</span> <span class="k">for</span> <span class="n">label</span><span class="p">,</span><span class="n">index</span> <span class="ow">in</span> <span class="n">gotos</span><span class="p">.</span><span class="n">items</span><span class="p">():</span>
+  <span class="k">if</span> <span class="n">label</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">labels</span><span class="p">:</span>
+   <span class="k">raise</span> <span class="n">MissingLabelError</span><span class="p">(</span><span class="s">"Missing label: %s"</span><span class="o">%</span><span class="n">label</span><span class="p">)</span>
+
+  <span class="n">target</span> <span class="o">=</span> <span class="n">labels</span><span class="p">[</span><span class="n">label</span><span class="p">]</span> <span class="o">+</span> <span class="mi">7</span> <span class="c1"># skip NOPs
+</span>  <span class="n">new_code</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">=</span> <span class="nb">chr</span><span class="p">(</span><span class="n">dis</span><span class="p">.</span><span class="n">opmap</span><span class="p">[</span><span class="s">'JUMP_ABSOLUTE'</span><span class="p">])</span>
+  <span class="n">new_code</span><span class="p">[</span><span class="n">index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="nb">chr</span><span class="p">(</span><span class="n">target</span> <span class="o">&amp;</span> <span class="mi">255</span><span class="p">)</span>
+  <span class="n">new_code</span><span class="p">[</span><span class="n">index</span> <span class="o">+</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="nb">chr</span><span class="p">((</span><span class="n">target</span> <span class="o">&gt;&gt;</span> <span class="mi">8</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mi">255</span><span class="p">)</span>
+  <span class="c1"># no need to patch the last 4 bytes: they are unreachable
+</span>
+ <span class="c1"># create new function from existing function
+</span> <span class="n">newcode</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="n">fn</span><span class="p">.</span><span class="n">func_code</span><span class="p">)(</span><span class="n">fn</span><span class="p">.</span><span class="n">func_code</span><span class="p">.</span><span class="n">co_argcount</span><span class="p">,</span>
+      <span class="n">fn</span><span class="p">.</span><span class="n">func_code</span><span class="p">.</span><span class="n">co_nlocals</span><span class="p">,</span>
+      <span class="n">fn</span><span class="p">.</span><span class="n">func_code</span><span class="p">.</span><span class="n">co_stacksize</span><span class="p">,</span>
+      <span class="n">fn</span><span class="p">.</span><span class="n">func_code</span><span class="p">.</span><span class="n">co_flags</span><span class="p">,</span>
+      <span class="s">''</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">new_code</span><span class="p">),</span>
+      <span class="n">fn</span><span class="p">.</span><span class="n">func_code</span><span class="p">.</span><span class="n">co_consts</span><span class="p">,</span>
+      <span class="n">fn</span><span class="p">.</span><span class="n">func_code</span><span class="p">.</span><span class="n">co_names</span><span class="p">,</span>
+      <span class="n">fn</span><span class="p">.</span><span class="n">func_code</span><span class="p">.</span><span class="n">co_varnames</span><span class="p">,</span>
+      <span class="n">fn</span><span class="p">.</span><span class="n">func_code</span><span class="p">.</span><span class="n">co_filename</span><span class="p">,</span>
+      <span class="n">fn</span><span class="p">.</span><span class="n">func_code</span><span class="p">.</span><span class="n">co_name</span><span class="p">,</span>
+      <span class="n">fn</span><span class="p">.</span><span class="n">func_code</span><span class="p">.</span><span class="n">co_firstlineno</span><span class="p">,</span>
+      <span class="n">fn</span><span class="p">.</span><span class="n">func_code</span><span class="p">.</span><span class="n">co_lnotab</span><span class="p">)</span>
+ <span class="n">fn</span><span class="p">.</span><span class="n">func_code</span> <span class="o">=</span> <span class="n">newcode</span>
+ <span class="k">return</span> <span class="n">fn</span>
+</code></pre></div></div>]]></content><author><name></name></author><category term="Programming" /><category term="Programming" /><category term="Python" /><summary type="html"><![CDATA[When I found a nice hack to get GOTO statements in Python, I decided to make my own version of it. It has been tested on Python 2.7 but probably also works in Python 3. To use it, import goto from goto and use the `@goto` decorator: from goto import goto @goto def test(): goto .end return False label .end return True print test() # should be True But first, you’ll need this code: goto.py]]></summary></entry><entry><title type="html">Rewriting the Grammar Bot</title><link href="/blog/2013/08/your_grammar-rewrite" rel="alternate" type="text/html" title="Rewriting the Grammar Bot" /><published>2013-08-08T12:53:00-06:00</published><updated>2013-08-08T12:53:00-06:00</updated><id>/blog/2013/08/your_grammar-rewrite</id><content type="html" xml:base="/blog/2013/08/your_grammar-rewrite"><![CDATA[<p>I have rewritten <a href="https://victorz.ca/bots/grammar">my Grammar bot</a>. Previously, it had used <mark>regular expressions</mark> to find errors, which means that it must check every character against the rules. In addition, <mark>Python 2.7 doesn't support variable-length lookbehinds</mark>, which <mark>adds extra regular expression checks</mark> for some rules. Also, <mark>it cannot provide good quotes if there is an overlap</mark> between two matches.</p>
+
+<!--more-->
+
+<p>The new system works by <mark>splitting the text into words</mark>. Punctuation is included with the spacers. After that, the words are, in a loop, checked against the rules.</p>
+
+<blockquote>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+</blockquote>
+
+<p>This would be parsed as</p>
+
+<blockquote>
+  <p>[<strong>Lorem</strong>, ( ), <strong>ipsum</strong>, ( ), <strong>dolor</strong>, ( ), <strong>sit</strong>, ( ), <strong>amet</strong>, (, ), <strong>consectetur</strong>, ( ), <strong>adipisicing</strong>, ( ), <strong>elit</strong>, (, ), <strong>sed</strong>, ( ), <strong>do</strong>, ( ), <strong>eiusmod</strong>, ( ), <strong>tempor</strong>, ( ), <strong>incididunt</strong>, ( ), <strong>ut</strong>, ( ), <strong>labore</strong>, ( ), <strong>et</strong>, ( ), <strong>dolore</strong>, ( ), <strong>magna</strong>, ( ), <strong>aliqua</strong>, (.), <em>(empty word)</em>]</p>
+</blockquote>
+
+<p>and then the words/spaces would be converted to objects so that flags can be set.</p>
+
+<p>Each rule will check <mark>if the current word is a specific word, or in a small list</mark>, so it can skip rules quickly. <mark>If a rule is matched</mark>, it will <mark>mark the word as "modified" and some nearby words as "automatic stop words", and the reason will be flagged</mark>. Some rules will <mark>request a rerun</mark> on specific other rules, which will result in another iteration over the rules list, but <mark>only some rules will be run the next time</mark>.</p>
+
+<p><mark>If at least one reason has been flagged</mark>, it will proceed to <mark>build the correction list</mark>. It will look at each correction and check a few nearby unflagged words and mark them as “stop words” and one “near word”, right beside the last stop word. If there is a <mark>one-word gap between two corrections, that gap will then be flagged</mark>. Then it will build a list of corrections, which includes the <mark>continuous chains of flagged words and spaces in between</mark> them.</p>
+
+<p>The last step is to <mark>randomly generate a message for the user, and include an *english-join*ed version</mark> of the correction list.</p>
+
+<p>Although I must admit that <mark>the new method is not as good as before performance-wise, it delivers more accurate results</mark>, so the performance loss can be considered a trade-off for a more accurate algorithm. And the new method has an advantage over the previous method. For example, this text would have been reported improperly:</p>
+
+<blockquote>
+  <p>*Their is you’re own. (The[re] is you[r] own.)</p>
+</blockquote>
+
+<p>The old system would issue a correction for <em>“is [your] own” and “[there] is you’re”</em>. But the problem is that <mark>the quotes are done with the order of the rules, rather than the order in which they appear</mark> in the text and that the <mark>overlap is not merged</mark>. The new system would be able to issue a quote for <em>”[there] is [your] own”</em>.</p>
+
+<p>In addition, this text would not be fully corrected until now:</p>
+
+<blockquote>
+  <p>*Your you’re own. (You[‘re] you[r] own.)</p>
+</blockquote>
+
+<p>The old system would detect that the user should have said <em>“Your [your] own”</em> instead. However, <mark>the new system can do a second pass</mark> and report <em>”[you’re your] own”</em>.</p>]]></content><author><name></name></author><category term="Programming" /><category term="English" /><category term="Grammar" /><category term="Programming" /><category term="Python" /><category term="Web" /><summary type="html"><![CDATA[I have rewritten my Grammar bot. Previously, it had used regular expressions to find errors, which means that it must check every character against the rules. In addition, Python 2.7 doesn't support variable-length lookbehinds, which adds extra regular expression checks for some rules. Also, it cannot provide good quotes if there is an overlap between two matches.]]></summary></entry><entry><title type="html">Hacking a Flash Payload Crypter with 1 line of code</title><link href="/blog/2013/07/hack-flash-as3-crypt" rel="alternate" type="text/html" title="Hacking a Flash Payload Crypter with 1 line of code" /><published>2013-07-23T11:08:00-06:00</published><updated>2013-07-23T11:08:00-06:00</updated><id>/blog/2013/07/hack-flash-as3-crypt</id><content type="html" xml:base="/blog/2013/07/hack-flash-as3-crypt"><![CDATA[<p>If the flash file puts everything into a binary section and encrypts it, is there any way to decrypt it? If <mark>they cut off the header, you won't be able to memory-dump it</mark>, but would you give up there? Of course not!</p>
+
+<p>Somewhere, <mark>they have the decrypted data so that they can load it</mark>. Just compile some code to <mark>intercept it</mark>, and inject it:</p>
+
+<div class="language-as3 highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="k">new</span> <span class="nx">FileReference</span><span class="p">()).</span><span class="nx">save</span><span class="p">(</span><span class="nx">_loc_2</span><span class="p">,</span> <span class="s2">"dumped.swf"</span><span class="p">)</span><span class="o">;</span>
+</code></pre></div></div>
+
+<p>In RABCDAsm (AS3), it looks like this:</p>
+
+<div class="language-nasm highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">findpropstrict</span>      <span class="nv">QName</span><span class="p">(</span><span class="nv">PackageNamespace</span><span class="p">(</span><span class="err">"</span><span class="nv">flash.net</span><span class="s">"), "</span><span class="nv">FileReference</span><span class="err">"</span><span class="p">)</span>
+<span class="nf">constructprop</span>       <span class="nv">QName</span><span class="p">(</span><span class="nv">PackageNamespace</span><span class="p">(</span><span class="err">"</span><span class="nv">flash.net</span><span class="s">"), "</span><span class="nv">FileReference</span><span class="err">"</span><span class="p">),</span> <span class="mi">0</span>
+<span class="nf">getlocal2</span>
+<span class="nf">pushstring</span>          <span class="s">"dumped.swf"</span>
+<span class="nf">callpropvoid</span>        <span class="nv">QName</span><span class="p">(</span><span class="nv">PackageNamespace</span><span class="p">(</span><span class="s">""</span><span class="p">),</span> <span class="s">"save"</span><span class="p">),</span> <span class="mi">2</span>
+</code></pre></div></div>
+
+<p>So just <mark>put that in the code before it is loaded (call to `loadBytes`) and replace `getlocal2`</mark> with whatever will put the decrypted data onto the stack. <mark>Once the decrypted data is about to be loaded, you can save it to a file</mark>.</p>
+
+<p>In <mark>AS2, you'd have to create a server script to echo the file back with FileReference</mark>, since it only accepts URL downloads. It’s <mark>still feasible</mark> though, but <mark>writing to a SharedObject and extracting from that</mark> might be easier.</p>
+
+<p>In retrospection, I realized that <mark>I can also write a fake header</mark> if I manage to locate the flash data.</p>]]></content><author><name></name></author><category term="Hacks" /><category term="ActionScript" /><category term="ActionScript-3" /><category term="Assembly" /><category term="Flash" /><category term="Hacks" /><category term="Security" /><category term="Web" /><summary type="html"><![CDATA[If the flash file puts everything into a binary section and encrypts it, is there any way to decrypt it? If they cut off the header, you won't be able to memory-dump it, but would you give up there? Of course not! Somewhere, they have the decrypted data so that they can load it. Just compile some code to intercept it, and inject it: (new FileReference()).save(_loc_2, "dumped.swf"); In RABCDAsm (AS3), it looks like this: findpropstrict QName(PackageNamespace("flash.net"), "FileReference") constructprop QName(PackageNamespace("flash.net"), "FileReference"), 0 getlocal2 pushstring "dumped.swf" callpropvoid QName(PackageNamespace(""), "save"), 2 So just put that in the code before it is loaded (call to `loadBytes`) and replace `getlocal2` with whatever will put the decrypted data onto the stack. Once the decrypted data is about to be loaded, you can save it to a file. In AS2, you'd have to create a server script to echo the file back with FileReference, since it only accepts URL downloads. It’s still feasible though, but writing to a SharedObject and extracting from that might be easier. In retrospection, I realized that I can also write a fake header if I manage to locate the flash data.]]></summary></entry><entry><title type="html">Flasm (ActionScript 2) Bytecode Equivalents</title><link href="/blog/2013/07/as2-bytecode" rel="alternate" type="text/html" title="Flasm (ActionScript 2) Bytecode Equivalents" /><published>2013-07-19T18:55:00-06:00</published><updated>2013-07-19T18:55:00-06:00</updated><id>/blog/2013/07/as2-bytecode</id><content type="html" xml:base="/blog/2013/07/as2-bytecode"><![CDATA[<p><mark>[Flasm](https://nowrap.de/flasm) allows people to disassemble flash files (.swf) into human-readable bytecode</mark>. I have discovered some of the <mark>Flash compiler techniques and other interesting things</mark>.</p>
+
+<p>ActionScript // Flasm</p>
+
+<div class="language-as3 highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Number</span><span class="p">.</span><span class="nx">POSITIVE_INFINITY</span> <span class="c1">// POSITIVE_INFINITY or POSITIVE_INFINITYF</span>
+<span class="nx">Number</span><span class="p">.</span><span class="nx">NAN</span> <span class="c1">// _NAN or _NANF</span>
+<span class="k">return</span><span class="o">;</span> <span class="c1">// push UNDEF / return</span>
+<span class="kr">trace</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="c1">// push x / trace</span>
+<span class="c1">// operators: push a / push b / [op]</span>
+<span class="o">|</span> <span class="c1">// bitwiseOr</span>
+<span class="o">^</span> <span class="c1">// bitwiseXor</span>
+<span class="o">&amp;</span> <span class="c1">// bitwiseAnd</span>
+<span class="o">&lt;&lt;</span> <span class="c1">// shiftLeft</span>
+<span class="o">&gt;&gt;</span> <span class="c1">// shiftRight</span>
+<span class="o">+</span> <span class="c1">// add</span>
+<span class="err">-</span> <span class="c1">// subtract</span>
+<span class="o">*</span> <span class="c1">// multiply</span>
+<span class="sr">/ /</span><span class="o">/</span> <span class="nx">divide</span>
+<span class="o">%</span> <span class="c1">// modulo</span>
+</code></pre></div></div>
+
+<p>What I find <mark>the most interesting is how it compiles logical expressions</mark>:</p>
+
+<!--more-->
+
+<table>
+  <tbody>
+    <tr>
+      <td>(<em>a &amp;&amp; b</em>) or (_a</td>
+      <td> </td>
+      <td>b_)</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="language-nasm highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">push</span> <span class="p">[</span><span class="nv">a</span><span class="p">]</span>
+<span class="nf">dup</span>
+<span class="nf">not</span> <span class="c1">; only for &amp;&amp;</span>
+<span class="nf">branchIfTrue</span> <span class="nv">label1</span>
+<span class="nf">pop</span>
+<span class="nf">push</span> <span class="p">[</span><span class="nv">b</span><span class="p">]</span>
+<span class="nl">label1:</span>
+<span class="nf">not</span>
+<span class="nf">branchIfTrue</span> <span class="nv">label2</span>
+<span class="err">&gt;&gt;[</span><span class="nf">body</span> <span class="nv">if</span> <span class="nv">true</span><span class="p">]</span><span class="o">&lt;&lt;</span>
+<span class="nf">branch</span> <span class="nv">label3</span> <span class="c1">; only if else is present</span>
+<span class="nl">label2:</span>
+<span class="err">&gt;&gt;[</span><span class="nf">body</span> <span class="nv">if</span> <span class="nv">false</span><span class="p">]</span><span class="o">&lt;&lt;</span>
+<span class="nl">label3:</span> <span class="c1">; only if else is present</span>
+</code></pre></div></div>
+
+<p>Now, <mark>how does it compile a compound expression</mark>?</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Let’s start with (<em>a [op1] b [op2] c</em>), special case: (_[op1] ≠</td>
+      <td> </td>
+      <td><em>), (</em>[op2] ≠ &amp;&amp;_)</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="language-nasm highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">push</span> <span class="p">[</span><span class="nv">a</span><span class="p">]</span>
+<span class="nf">dup</span>
+<span class="nf">not</span> <span class="c1">; only for [op1] == &amp;&amp;</span>
+<span class="nf">branchIfTrue</span> <span class="nv">label1</span> <span class="c1">; special case: branchIfTrue label2</span>
+<span class="nf">pop</span>
+<span class="nf">push</span> <span class="p">[</span><span class="nv">b</span><span class="p">]</span>
+<span class="nl">label1:</span> <span class="c1">; not in special case</span>
+<span class="err">{</span><span class="nf">dup</span><span class="err">}</span>
+<span class="nf">not</span> <span class="c1">; only for [op2] == &amp;&amp;</span>
+<span class="nf">branchIfTrue</span> <span class="err">{</span><span class="nv">new_label</span>
+<span class="nf">pop</span>
+<span class="nf">push</span> <span class="p">[</span><span class="nv">c</span><span class="p">]</span>
+<span class="nl">new_label:</span>
+<span class="nf">not</span>
+<span class="nf">branchIfTrue</span> <span class="nv">label2</span><span class="err">}</span>
+<span class="err">&gt;&gt;[</span><span class="nf">body</span> <span class="nv">if</span> <span class="nv">true</span><span class="p">]</span><span class="o">&lt;&lt;</span>
+<span class="nf">branch</span> <span class="nv">label3</span> <span class="c1">; only if else is present</span>
+<span class="nl">label2:</span>
+<span class="err">&gt;&gt;[</span><span class="nf">body</span> <span class="nv">if</span> <span class="nv">false</span><span class="p">]</span><span class="o">&lt;&lt;</span>
+<span class="nl">label3:</span> <span class="c1">; only if else is present</span>
+</code></pre></div></div>
+
+<table>
+  <tbody>
+    <tr>
+      <td>In the special case, operator precedence will cause (<em>b &amp;&amp; c</em>) to be evaluated together. After testing (_a &amp;&amp; (b</td>
+      <td> </td>
+      <td>c)_), I have discovered that the same thing as the special case occurs above.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>I’m still not so sure about why they compile the conditionals like this. But it is interesting how <strong><mark>an *OR* operator can become an *AND* operator with one *not*</mark> instruction</strong>.</p>]]></content><author><name></name></author><category term="Programming" /><category term="ActionScript" /><category term="ActionScript-2" /><category term="Assembly" /><category term="Flash" /><category term="Programming" /><category term="Web" /><summary type="html"><![CDATA[[Flasm](https://nowrap.de/flasm) allows people to disassemble flash files (.swf) into human-readable bytecode. I have discovered some of the Flash compiler techniques and other interesting things. ActionScript // Flasm Number.POSITIVE_INFINITY // POSITIVE_INFINITY or POSITIVE_INFINITYF Number.NAN // _NAN or _NANF return; // push UNDEF / return trace(x) // push x / trace // operators: push a / push b / [op] | // bitwiseOr ^ // bitwiseXor &amp; // bitwiseAnd &lt;&lt; // shiftLeft &gt;&gt; // shiftRight + // add - // subtract * // multiply / // divide % // modulo What I find the most interesting is how it compiles logical expressions:]]></summary></entry><entry><title type="html">Split Infinitives: a non-error</title><link href="/blog/2013/06/split-infinitives" rel="alternate" type="text/html" title="Split Infinitives: a non-error" /><published>2013-06-12T19:21:00-06:00</published><updated>2013-06-12T19:21:00-06:00</updated><id>/blog/2013/06/split-infinitives</id><content type="html" xml:base="/blog/2013/06/split-infinitives"><![CDATA[<p>Some people are <mark>hypercritical and think *to boldly go* should be *to go boldly* or even the awkward *boldly to go*</mark>. However, the argument is that English should follow Latin’s rules, but it is <mark>impossible to split infinitives in Latin, as there is no infinitive marker in Latin</mark>, effectively making the argument invalid.</p>
+
+<p>Also, <mark>wouldn't the effect of some sentences be destroyed</mark>? There is no way to reword these without forming an awkward sentence:</p>
+
+<blockquote>
+  <p>I need you all <mark>**to really pull**</mark> your weight.</p>
+</blockquote>
+
+<blockquote>
+  <p>We are determined <mark>**to completely and utterly eradicate**</mark> the disease.</p>
+</blockquote>
+
+<blockquote>
+  <p>I expect him <mark>**to completely and utterly fail**</mark>.</p>
+</blockquote>
+
+<blockquote>
+  <p>We are seeking a plan <mark>**to gradually, systematically, and economically relieve**</mark> the burden.</p>
+</blockquote>
+
+<blockquote>
+  <p>We expect our output <mark>**to more than double**</mark> in a year.</p>
+</blockquote>
+
+<blockquote>
+  <p>I want <mark>**to not see**</mark> you anymore. (Well, maybe “I <mark>do not want to</mark> see you anymore”)</p>
+</blockquote>
+
+<blockquote>
+  <p>Source: <a href="https://en.wikipedia.org/wiki/Split_infinitive">“Split infinitive” from <em>Wikipedia</em></a></p>
+</blockquote>
+
+<p><mark>Remember **to, whenever you want, split** infinitives</mark>. To, regardless of what some prescriptivists say, split an infinitive is perfectly valid.</p>]]></content><author><name></name></author><category term="English" /><category term="English" /><category term="Grammar" /><summary type="html"><![CDATA[Some people are hypercritical and think *to boldly go* should be *to go boldly* or even the awkward *boldly to go*. However, the argument is that English should follow Latin’s rules, but it is impossible to split infinitives in Latin, as there is no infinitive marker in Latin, effectively making the argument invalid. Also, wouldn't the effect of some sentences be destroyed? There is no way to reword these without forming an awkward sentence: I need you all **to really pull** your weight. We are determined **to completely and utterly eradicate** the disease. I expect him **to completely and utterly fail**. We are seeking a plan **to gradually, systematically, and economically relieve** the burden. We expect our output **to more than double** in a year. I want **to not see** you anymore. (Well, maybe “I do not want to see you anymore”) Source: “Split infinitive” from Wikipedia Remember **to, whenever you want, split** infinitives. To, regardless of what some prescriptivists say, split an infinitive is perfectly valid.]]></summary></entry><entry><title type="html">Digital Roots</title><link href="/blog/2013/05/dr-digital-root" rel="alternate" type="text/html" title="Digital Roots" /><published>2013-05-23T18:56:00-06:00</published><updated>2013-05-23T18:56:00-06:00</updated><id>/blog/2013/05/dr-digital-root</id><content type="html" xml:base="/blog/2013/05/dr-digital-root"><![CDATA[<p>What <mark>happens to the digital root</mark> as the numbers increase?</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>n</th>
+      <th>dr(n)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> n | dr(n)
+---+------
+ 0 | 0
+ 1 | 1
+ 2 | 2
+ 3 | 3
+ 9 | 9
+10 | 1
+11 | 2
+12 | 3
+18 | 9
+19 | 1
+</code></pre></div></div>
+
+<p>It looks like it is really just <mark>a cycle that goes from 1-9 over and over again</mark> (except 0). This can be represented using <mark>modulus</mark>.</p>
+
+\[dr(x) = 1 + (x - 1) \bmod 9\]
+
+<p>What happens if n &lt; 0? Well, <mark>I've decided to just use the absolute value</mark> of it. That means that <code class="language-plaintext highlighter-rouge">dr(-1) = 1</code>.</p>
+
+<p>Here is some PHP code:</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="k">for</span><span class="p">(</span><span class="nv">$i</span> <span class="o">=</span> <span class="o">-</span><span class="mi">11</span><span class="p">;</span> <span class="nv">$i</span> <span class="o">&lt;=</span> <span class="mi">20</span><span class="p">;</span> <span class="o">++</span><span class="nv">$i</span><span class="p">)</span>
+	<span class="k">echo</span> <span class="s2">"dr(</span><span class="nv">$i</span><span class="s2">) = "</span><span class="mf">.</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="nv">$i</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">9</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>See that? There is <mark>no need for looping and recursion (nor iteration)</mark> to calculate the digital root. Why take O(≫ 1) time when you can take O(1) time?</p>
+
+<p>Many languages handle negative modulus with truncation, but a special case must be created for some languages that use floored division:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Python
+</span><span class="k">def</span> <span class="nf">dr</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+  <span class="k">if</span> <span class="n">i</span><span class="p">:</span>
+    <span class="k">return</span> <span class="mi">1</span> <span class="o">+</span> <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">9</span>
+  <span class="k">return</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">11</span><span class="p">,</span> <span class="mi">20</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+  <span class="k">print</span> <span class="s">"dr(%d) = %d"</span> <span class="o">%</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">dr</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+</code></pre></div></div>]]></content><author><name></name></author><category term="Math" /><category term="Programming" /><category term="Math" /><category term="Programming" /><category term="PHP" /><category term="Python" /><summary type="html"><![CDATA[What happens to the digital root as the numbers increase? n dr(n) 0 0 1 1 2 2 3 3 9 9 10 1 11 2 12 3 18 9 19 1 n | dr(n) ---+------ 0 | 0 1 | 1 2 | 2 3 | 3 9 | 9 10 | 1 11 | 2 12 | 3 18 | 9 19 | 1 It looks like it is really just a cycle that goes from 1-9 over and over again (except 0). This can be represented using modulus. \[dr(x) = 1 + (x - 1) \bmod 9\] What happens if n &lt; 0? Well, I've decided to just use the absolute value of it. That means that dr(-1) = 1. Here is some PHP code: &lt;?php for($i = -11; $i &lt;= 20; ++$i) echo "dr($i) = ".(1 + (abs($i) - 1) % 9); See that? There is no need for looping and recursion (nor iteration) to calculate the digital root. Why take O(≫ 1) time when you can take O(1) time? Many languages handle negative modulus with truncation, but a special case must be created for some languages that use floored division: # Python def dr(i): if i: return 1 + (abs(i) - 1) % 9 return 0 for i in range(-11, 20 + 1): print "dr(%d) = %d" % (i, dr(i))]]></summary></entry></feed>
