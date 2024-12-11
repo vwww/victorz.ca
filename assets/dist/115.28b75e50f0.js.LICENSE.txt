@@ -1,0 +1,8 @@
+/**
+ * @license Highstock JS v12.0.2 (2024-12-04)
+ * @module highcharts/highstock
+ *
+ * (c) 2009-2024 Torstein Honsi
+ *
+ * License: www.highcharts.com/license
+ */
