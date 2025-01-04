@@ -1,0 +1,1017 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--
+    URL /code/UltraFastZeroPNG
+    PATH _code/UltraFastZeroPNG.md
+    -->
+    <title>Ultra-Fast Zero PNG &ndash; Victor&lsquo;s Site</title>
+
+    <link rel="canonical" href="https://victorz.ca/code/UltraFastZeroPNG">
+
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/victorz/favicon.ico">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" id="theme-switcher" href="../assets/dist/bootstrap_theme.css">
+    <meta name="theme-switcher" id="theme-bootstrap" content="../assets/dist/bootstrap.css">
+    <meta name="theme-switcher" id="theme-bootstrap2" content="../assets/dist/bootstrap_theme.css">
+    <meta name="theme-switcher" id="theme-bootswatch-cerulean" content="../assets/dist/bootswatch_cerulean.css">
+    <meta name="theme-switcher" id="theme-bootswatch-cosmo" content="../assets/dist/bootswatch_cosmo.css">
+    <meta name="theme-switcher" id="theme-bootswatch-cyborg" content="../assets/dist/bootswatch_cyborg.css">
+    <meta name="theme-switcher" id="theme-bootswatch-darkly" content="../assets/dist/bootswatch_darkly.css">
+    <meta name="theme-switcher" id="theme-bootswatch-flatly" content="../assets/dist/bootswatch_flatly.css">
+    <meta name="theme-switcher" id="theme-bootswatch-journal" content="../assets/dist/bootswatch_journal.css">
+    <meta name="theme-switcher" id="theme-bootswatch-litera" content="../assets/dist/bootswatch_litera.css">
+    <meta name="theme-switcher" id="theme-bootswatch-lumen" content="../assets/dist/bootswatch_lumen.css">
+    <meta name="theme-switcher" id="theme-bootswatch-lux" content="../assets/dist/bootswatch_lux.css">
+    <meta name="theme-switcher" id="theme-bootswatch-materia" content="../assets/dist/bootswatch_materia.css">
+    <meta name="theme-switcher" id="theme-bootswatch-minty" content="../assets/dist/bootswatch_minty.css">
+    <meta name="theme-switcher" id="theme-bootswatch-morph" content="../assets/dist/bootswatch_morph.css">
+    <meta name="theme-switcher" id="theme-bootswatch-pulse" content="../assets/dist/bootswatch_pulse.css">
+    <meta name="theme-switcher" id="theme-bootswatch-quartz" content="../assets/dist/bootswatch_quartz.css">
+    <meta name="theme-switcher" id="theme-bootswatch-sandstone" content="../assets/dist/bootswatch_sandstone.css">
+    <meta name="theme-switcher" id="theme-bootswatch-simplex" content="../assets/dist/bootswatch_simplex.css">
+    <meta name="theme-switcher" id="theme-bootswatch-sketchy" content="../assets/dist/bootswatch_sketchy.css">
+    <meta name="theme-switcher" id="theme-bootswatch-slate" content="../assets/dist/bootswatch_slate.css">
+    <meta name="theme-switcher" id="theme-bootswatch-solar" content="../assets/dist/bootswatch_solar.css">
+    <meta name="theme-switcher" id="theme-bootswatch-spacelab" content="../assets/dist/bootswatch_spacelab.css">
+    <meta name="theme-switcher" id="theme-bootswatch-superhero" content="../assets/dist/bootswatch_superhero.css">
+    <meta name="theme-switcher" id="theme-bootswatch-united" content="../assets/dist/bootswatch_united.css">
+    <meta name="theme-switcher" id="theme-bootswatch-vapor" content="../assets/dist/bootswatch_vapor.css">
+    <meta name="theme-switcher" id="theme-bootswatch-yeti" content="../assets/dist/bootswatch_yeti.css">
+    <meta name="theme-switcher" id="theme-bootswatch-zephyr" content="../assets/dist/bootswatch_zephyr.css">
+    <link rel="stylesheet" href="../assets/dist/global.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body class="d-flex flex-column h-100">
+    
+
+<nav class="navbar sticky-top navbar-expand-lg navbar-light text-bg-light">
+  <div class="container">
+    <a class="navbar-brand" href=".."><img src="../assets/victorz/logo.png" alt="logo"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link" href="../">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#nav/game" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Games</a>
+          <ul class="dropdown-menu" role="menu"><li><a class="dropdown-item" href="../game/">List</a></li>
+            <li class="dropdown-divider"></li>
+            <li class="dropdown-header">Downloadable</li>
+            <li><a class="dropdown-item"
+                href="https://acr.victorz.ca"
+                target="_blank"
+                title="ACR is a free-and-open-source first-person-shooter."
+              >AssaultCube Reloaded
+              <span class="badge text-bg-info">Ext</span>
+              </a>
+            </li>
+            <li><a class="dropdown-item"
+                href="https://re.victorz.ca"
+                target="_blank"
+                title="Realistic Red Eclipse, set in the present instead of future"
+              >Real Eclipse
+                <span class="badge text-bg-secondary">Planning</span>
+              <span class="badge text-bg-info">Ext</span>
+              </a>
+            </li>
+            <li class="dropdown-divider"></li>
+            <li class="dropdown-header">Browser Games</li>
+            <li><a class="dropdown-item"
+                href="https://games.victorz.ca"
+                target="_blank"
+                title="my arcade, full of hacked flash games!"
+              >Flash Arcade
+              <span class="badge text-bg-info">Ext</span>
+              </a>
+            </li>
+            <li><a class="dropdown-item"
+                href="../game/tetris"
+                title="Tetris, but don't let it tip over to one side"
+              >Balanced Tetris
+              </a>
+            </li>
+            <li><a class="dropdown-item"
+                href="../game/click"
+                title="Modern version of the first game I created"
+              >Clicking Game Remake
+              </a>
+            </li>
+            <li class="dropdown-divider"></li>
+            <li class="dropdown-header">Analysis</li>
+            <li><a class="dropdown-item"
+                href="../game/t3"
+                title="Analyze Tic-Tac-Toe in various variants and game states"
+              >Tic-Tac-Toe Analyzer
+              </a>
+            </li>
+            <li><a class="dropdown-item"
+                href="../game/fill"
+                title="Solve the game Fill efficiently"
+              >Fill Solver
+              </a>
+            </li>
+            <li><a class="dropdown-item"
+                href="../game/fill_browser"
+                title="Browse the level/stages of Fill v4.7.0"
+              >Fill Browser
+              </a>
+            </li>
+            <li><a class="dropdown-item"
+                href="../game/logic"
+                title="Logical puzzle grid (future) solver with sample solutions"
+              >Logic Grid Puzzles
+                <span class="badge text-bg-secondary">TODO</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#nav/game_mp" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Browser Games</a>
+          <ul class="dropdown-menu" role="menu"><li><a class="dropdown-item" href="../game/">List</a></li>
+            <li class="dropdown-divider"></li>
+            <li class="dropdown-header">Realtime Multiplayer</li>
+            <li><a class="dropdown-item"
+                href="../game/slime"
+                title="Don't let the ball hit your ground"
+              >Slime Volleyball
+                <span class="badge text-bg-secondary">Down</span>
+              </a>
+            </li>
+            <li><a class="dropdown-item"
+                href="../game/duel"
+                title="20% luck and 80% skill"
+              >Duel
+                <span class="badge text-bg-secondary">Down</span>
+              </a>
+            </li>
+            <li><a class="dropdown-item"
+                href="../game/hockey"
+                title="Score the puck on the opponent goal"
+              >Hockey
+                <span class="badge text-bg-secondary">TODO</span>
+              </a>
+            </li>
+            <li class="dropdown-divider"></li>
+            <li class="dropdown-header">Turn-Based Multiplayer</li>
+            <li><a class="dropdown-item"
+                href="../game/actionless"
+                title="Random winners, do no action"
+              >Actionless
+              </a>
+            </li>
+            <li><a class="dropdown-item"
+                href="../game/morra"
+                title="Pick a number, sum determines winner"
+              >Morra
+              </a>
+            </li>
+            <li><a class="dropdown-item"
+                href="../game/rps"
+                title="Pick a group"
+              >Rock Paper Scissors
+              </a>
+            </li>
+            <li><a class="dropdown-item"
+                href="../game/blackjack"
+                title="Get close to 21, but not over."
+              >Blackjack
+                <span class="badge text-bg-secondary">TODO</span>
+              </a>
+            </li>
+            <li><a class="dropdown-item"
+                href="../game/cheat"
+                title="Shed cards, possibly dishonestly."
+              >Cheat
+                <span class="badge text-bg-secondary">TODO</span>
+              </a>
+            </li>
+            <li><a class="dropdown-item"
+                href="../game/president"
+                title="Shed your cards first to be the President!"
+              >President
+                <span class="badge text-bg-secondary">TODO</span>
+              </a>
+            </li>
+            <li><a class="dropdown-item"
+                href="../game/discard"
+                title="Isomorphism of Love Letter"
+              >Discard
+                <span class="badge text-bg-success">NEW</span>
+              </a>
+            </li>
+            <li><a class="dropdown-item"
+                href="../game/t3_multi"
+                title="Get 3 in a row to win!"
+              >Tic-Tac-Toe
+                <span class="badge text-bg-success">NEW</span>
+              </a>
+            </li>
+            <li><a class="dropdown-item"
+                href="../game/ut3"
+                title="Win small local boards to win the big global board."
+              >Ultimate Tic-Tac-Toe
+                <span class="badge text-bg-success">NEW</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#nav/tools" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tools</a>
+          <ul class="dropdown-menu" role="menu"><li><a class="dropdown-item" href="../tools/">List</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a class="dropdown-item"
+                href="../tools/ip"
+                title="See your IP address"
+              >IP Address
+              </a>
+            </li>
+            <li><a class="dropdown-item"
+                href="../tools/ping"
+                title="Check your ping for HTTP requests"
+              >Ping
+              </a>
+            </li>
+            <li class="dropdown-divider"></li>
+            <li><a class="dropdown-item"
+                href="../tools/base"
+                title="Convert between bases 2 to 36"
+              >Base Converter
+              </a>
+            </li>
+            <li><a class="dropdown-item"
+                href="../tools/gcd"
+              >GCD/LCM Calculator
+              </a>
+            </li>
+            <li><a class="dropdown-item"
+                href="../tools/unit"
+              >Unit Converter
+              </a>
+            </li>
+            <li><a class="dropdown-item"
+                href="../tools/freq"
+                title="Measure frequency, like heart rate"
+              >Frequency
+              </a>
+            </li>
+            <li><a class="dropdown-item"
+                href="../tools/letter_count"
+                title="Count letter frequency in text"
+              >Letter Counter
+              </a>
+            </li>
+            <li><a class="dropdown-item"
+                href="../tools/encrypt"
+                title="Old encryption tools"
+              >Encryption Tools
+              </a>
+            </li>
+            <li><a class="dropdown-item"
+                href="../tools/time"
+                title="It's later than you think!"
+              >Time Perception
+              </a>
+            </li>
+            <li><a class="dropdown-item"
+                href="../tools/match_win"
+                title="Calculate the probability of winning first-to-n/best-of-(2n-1)"
+              >Match Win Calculator
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#nav/misc" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Misc</a>
+          <ul class="dropdown-menu" role="menu"><li><a class="dropdown-item" href="../misc/">List</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a class="dropdown-item"
+                href="../misc/dl"
+                title="file browser/directory listing of old binary files"
+              >Downloads
+              </a>
+            </li>
+            <li><a class="dropdown-item"
+                href="../misc/path"
+                title="Do you wonder how this site is configured?"
+              >Path
+              </a>
+            </li>
+            <li><a class="dropdown-item"
+                href="../blog/"
+                title="my old blog"
+              >Old Blog
+              </a>
+            </li>
+            <li class="dropdown-divider"></li>
+            <li><a class="dropdown-item"
+                href="../xkcd_map/"
+                title="an improved way to view the xkcd-1110 webcomic"
+              >XKCD #1110 Map
+                <span class="badge text-bg-primary">Fullscreen</span>
+              </a>
+            </li>
+            <li><a class="dropdown-item"
+                href="../misc/ggroups"
+                title="view chat text in ggroups.exe of SUPERHOT"
+              >ggroups.exe
+              </a>
+            </li>
+            <li><a class="dropdown-item"
+                href="../misc/starblast_mods"
+                title="view scrollable starblast.io schedule"
+              >Starblast Mods Schedule
+              </a>
+            </li>
+            <li><a class="dropdown-item"
+                href="../misc/starblast_upgrade"
+                title="view optimal starblast.io ship upgrades"
+              >Starblast Upgrade Optimizer
+              </a>
+            </li>
+            <li class="dropdown-divider"></li>
+            <li><a class="dropdown-item"
+                href="../misc/3d/"
+                title="Autodesk 3DS Max primitive and sample cloud renderings!"
+              >3D
+              </a>
+            </li>
+            <li><a class="dropdown-item"
+                href="../misc/ads"
+                title="Some advertisements&hellip;"
+              >Ads
+              </a>
+            </li>
+            <li><a class="dropdown-item"
+                href="../misc/calc"
+                title="Simulate a basic calculator."
+              >Basic Calculator
+              </a>
+            </li>
+            <li><a class="dropdown-item"
+                href="../misc/compound"
+                title="Plot a graph of compound interest."
+              >Compound Interest
+              </a>
+            </li>
+            <li><a class="dropdown-item"
+                href="../misc/music"
+                title="These pieces of &ldquo;music&rdquo; are more like noise."
+              >Music
+              </a>
+            </li>
+            <li><a class="dropdown-item"
+                href="../misc/rndvid"
+                title="Watch random pixels"
+              >Random Video
+              </a>
+            </li>
+            <li><a class="dropdown-item"
+                href="../misc/redirect"
+                title="Follow endless redirections! It never ends!"
+              >Redirect Loop (Endless)
+              </a>
+            </li>
+            <li><a class="dropdown-item"
+                href="../misc/streamdl"
+                title="Download faster than your internet speed!"
+              >Fast Infinite Downloads
+              </a>
+            </li>
+            <li><a class="dropdown-item"
+                href="../misc/seizure/"
+                title="Strobe lights (stroboscopic lamps) flash light between black and white."
+              >Seizure Generator (Strobe)
+              </a>
+            </li>
+            <li><a class="dropdown-item"
+                href="http://seizure.victorz.ca"
+                target="_blank"
+                title="This subdomain points to the seizure servers hosted by the U.S. Immigration and Customs Enforcement."
+              >Seizure Domain
+              <span class="badge text-bg-info">Ext</span>
+              </a>
+            </li>
+            <li class="dropdown-divider"></li>
+            <li class="dropdown-header">Jokes</li>
+            <li><a class="dropdown-item"
+                href="../misc/jokes/iq"
+                title="2-question IQ test"
+              >IQ Test
+              </a>
+            </li>
+            <li><a class="dropdown-item"
+                href="../misc/coding"
+                title="Practice on the most popular programming contest practice site!"
+              >Coding Contest
+              </a>
+            </li>
+            <li><a class="dropdown-item"
+                href="../misc/jokes/"
+                title="Some old jokes from ~2006-2007&hellip;"
+              >Old Jokes
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#nav/bots" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bots</a>
+          <ul class="dropdown-menu" role="menu"><li><a class="dropdown-item" href="../bots/">List</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a class="dropdown-item"
+                href="../bots/poke"
+                title="See the leaderboard of people who poke a bot that returned pokes automatically"
+              >Facebook Poke
+              </a>
+            </li>
+            <li class="dropdown-divider"></li>
+            <li class="dropdown-header">Twitter</li>
+            <li><a class="dropdown-item"
+                href="../bots/grammar"
+                title="@_grammar_ corrects users' grammar. It was suspended many times."
+              >Grammar
+              </a>
+            </li>
+            <li><a class="dropdown-item"
+                href="../bots/random"
+                title="[no account yet] spews a stream of random words."
+              >Random Words
+                <span class="badge text-bg-warning">Local</span>
+              </a>
+            </li>
+            <li><a class="dropdown-item"
+                href="../bots/recent"
+                title="@recentideas learns to tweet from recent tweets."
+              >Recent Ideas
+              </a>
+            </li>
+            <li><a class="dropdown-item"
+                href="../bots/prose"
+                title="@prosegen generates sentences from a grammar."
+              >Prose
+                <span class="badge text-bg-secondary">Future</span>
+                <span class="badge text-bg-warning">Local</span>
+              </a>
+            </li>
+            <li><a class="dropdown-item"
+                href="../bots/googuns"
+                title="@googuns_lulz is like other @googuns_ accounts, yet very different."
+              >GooGuns Lulz
+                <span class="badge text-bg-warning">Local</span>
+              </a>
+            </li>
+            <li><a class="dropdown-item"
+                href="../bots/bing_tomorrow"
+                title="@BingTomorrow can see the future! It can predict Bing's homepage image for tomorrow."
+              >Bing Tomorrow
+                <span class="badge text-bg-warning">Local</span>
+              </a>
+            </li>
+            <li><a class="dropdown-item"
+                href="../bots/spelling"
+                title="@Bot_Dictionary corrects users' spelling. Its output rate from random searches is quite low."
+              >Spelling
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="https://github.com/vwww/dev/blob/main/docs/pages/_code/UltraFastZeroPNG.md">Edit</a></li>
+        <li class="nav-item dropdown">
+          <a href="#nav/theme" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false">Theme</a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="../site/theme" class="dropdown-item">Theme Switcher</a></li>
+            <li class="dropdown-divider"></li>
+            <li id="theme-switcher-msg" class="btn-danger">
+              <button class="dropdown-item disabled" id="theme-switcher-msg-text">Cannot save</button>
+            </li>
+            <li class="dropdown-divider"></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootstrap">Bootstrap</button></li>
+            <li><button class="dropdown-item theme-switcher active" data-theme="bootstrap2">Bootstrap Theme</button></li>
+            <li class="dropdown-divider"></li>
+            <li class="dropdown-header">Bootswatch</li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-cerulean" title="A calm blue sky">Cerulean</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-cosmo" title="An ode to Metro">Cosmo</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-cyborg" title="Jet black and electric blue">Cyborg</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-darkly" title="Flatly in night mode">Darkly</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-flatly" title="Flat and modern">Flatly</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-journal" title="Crisp like a new sheet of paper">Journal</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-litera" title="The medium is the message">Litera</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-lumen" title="Light and shadow">Lumen</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-lux" title="A touch of class">Lux</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-materia" title="Material is the metaphor">Materia</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-minty" title="A fresh feel">Minty</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-morph" title="A neumorphic layer">Morph</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-pulse" title="A trace of purple">Pulse</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-quartz" title="A glassmorphic layer">Quartz</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-sandstone" title="A touch of warmth">Sandstone</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-simplex" title="Mini and minimalist">Simplex</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-sketchy" title="A hand-drawn look for mockups and mirth">Sketchy</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-slate" title="Shades of gunmetal gray">Slate</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-solar" title="A spin on Solarized">Solar</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-spacelab" title="Silvery and sleek">Spacelab</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-superhero" title="The brave and the blue">Superhero</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-united" title="Ubuntu orange and unique font">United</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-vapor" title="A cyberpunk aesthetic">Vapor</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-yeti" title="A friendly foundation">Yeti</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-zephyr" title="Breezy and beautiful">Zephyr</button></li>
+          </ul>
+        </li>
+
+        <li id="april-fools-joke-menu" class="dropdown d-none">
+          <a class="nav-link dropdown-toggle" href="#nav/language" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Language <span class="badge text-bg-warning">NEW</span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li class="dropdown-header">10 languages</li>
+            <li><button class="dropdown-item" onclick="return false">English</button></li>
+            <li><button class="dropdown-item" onclick="return false">English</button></li>
+            <li><button class="dropdown-item" onclick="return false">English</button></li>
+            <li><button class="dropdown-item" onclick="return false">English</button></li>
+            <li><button class="dropdown-item" onclick="return false">English</button></li>
+            <li><button class="dropdown-item" onclick="return false">English</button></li>
+            <li><button class="dropdown-item" onclick="return false">English</button></li>
+            <li><button class="dropdown-item" onclick="return false">English</button></li>
+            <li><button class="dropdown-item" onclick="return false">English</button></li>
+            <li><button class="dropdown-item" onclick="return false">English</button></li>
+            <li class="dropdown-divider"></li>
+            <li class="dropdown-header">April Fools!</li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a class="nav-link dropdown-toggle" href="#nav/mirror" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mirror</a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a class="dropdown-item" href="https://victorz.ca/code/UltraFastZeroPNG">victorz.ca</a></li>
+            <li><a class="dropdown-item" href="https://vwww.github.io/code/UltraFastZeroPNG">vwww.github.io</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+    <main class="flex-shrink-0 my-3">
+      <div class="container">
+        <nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="..">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Ultra-Fast Zero PNG</li>
+  </ol>
+</nav>
+<!-- TODO: find new ad provider -->
+<!-- <script src="//d.victorz.ca/a/main_head"></script> -->
+
+<div class="page-header">
+  <h1>Ultra-Fast Zero PNG</h1>
+  <hr class="my-3">
+</div>
+
+<p>UltraFastZeroPNG.c - <a href="raw/UltraFastZeroPNG.c">raw</a></p>
+<pre><code class="language-c">/*
+ * UltraFastZeroPNG.c
+ *
+ * This C99 program makes a huge PNG very fast.
+ *
+ * Copyright (c) 2017-2019 Victor Zheng
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.
+ */
+
+#define IMG_W (1 &lt;&lt; 20)
+#define IMG_H IMG_W
+
+#include &lt;stdio.h&gt;
+#include &lt;stdint.h&gt;
+#include &lt;time.h&gt;
+
+typedef uint8_t uchar;
+typedef uint_fast8_t uint8;
+typedef uint_fast16_t uint16;
+typedef uint_fast32_t uint32;
+typedef int_fast32_t int32;
+
+uint32 crcTable[0x100];
+void makeCRCtable()
+{
+#define POLY 0xedb88320 // reversed bit order
+	for (uint16 i = 0; i &lt;= 0xFF; ++i) {
+		uint32 r = i;
+		for (uint8 j = 8; j; --j)
+			r = (r &gt;&gt; 1) ^ (POLY &amp; (uint32)-((int32)r &amp; 1));
+		crcTable[i] = r;
+	}
+}
+
+// For more speed, do the negations outside of these functions
+
+uint32 crc32b(uint32 crc, const uchar c)
+{
+	return crcTable[c ^ (crc &amp; 0xFF)] ^ (crc &gt;&gt; 8);
+}
+
+uint32 crc32buf(uint32 crc, const uchar *buf, size_t len)
+{
+	while (len--)
+		crc = crc32b(crc, *buf++);
+	return crc;
+}
+
+// matrix[i] is the ith column of the 32x32 matrix
+// vec is a column vector
+uint32 gf2_matrix_multiply(const uint32 matrix[32], uint32 vec)
+{
+	uint32 r = 0;
+	for (const uint32 *m = matrix; vec; vec &gt;&gt;= 1, m++) {
+		if (vec &amp; 1)
+			r ^= *m;
+	}
+	return r;
+}
+
+void gf2_matrix_square(uint32 dst[32], const uint32 src[32])
+{
+	for (uint8 i = 0; i &lt; 32; i++)
+		dst[i] = gf2_matrix_multiply(src, src[i]);
+}
+
+uint32 crc32zero(uint32 crc, size_t num)
+{
+	uint32 matrix[2][32];
+	uint8 m = 0;
+
+	matrix[0][0] = POLY;
+	for (uint8 i = 1; i &lt; 32; i++)
+		matrix[0][i] = 1 &lt;&lt; (i - 1);
+
+	gf2_matrix_square(matrix[1], matrix[0]);
+	gf2_matrix_square(matrix[0], matrix[1]);
+
+	for (; num; num &gt;&gt;= 1) {
+		gf2_matrix_square(matrix[m ^ 1], matrix[m]);
+		m ^= 1;
+
+		if (num &amp; 1)
+			crc = gf2_matrix_multiply(matrix[m], crc);
+	}
+
+	return crc;
+}
+
+void fwriteBytes(const uchar *buf, size_t len, uint32 *crc, FILE *f)
+{
+	*crc = crc32buf(*crc, buf, len);
+	fwrite(buf, len, 1, f);
+}
+
+void fwriteZeros(size_t num, uint32 *crc, FILE *f)
+{
+	*crc = crc32zero(*crc, num);
+
+#if 1
+	// This works only if the system supports fseek past EOF
+	// and fills the gap with zero bytes.
+	fseek(f, num, SEEK_CUR);
+#else
+	static const uchar zeros[0x10000]; // initialized to 0
+
+	// Write 64K blocks first
+	for (size_t i = num &gt;&gt; 16; i; --i)
+		fwrite(zeros, sizeof(zeros), 1, f);
+
+	// Write last block
+	num &amp;= 0xFFFF;
+	fwrite(zeros, sizeof(char), num, f);
+#endif
+}
+
+#if 0
+size_t fwriteDEFLATEzeroFirstBlock(uint16 num, uint32 *crc, int last, FILE *f)
+{
+	if (!num)
+		return 0;
+
+	uchar header[5] = {
+		(uchar)(last ? 1 : 0),
+		(uchar)(num &gt;&gt; 0),
+		(uchar)(num &gt;&gt; 8),
+	};
+	header[3] = ~header[1];
+	header[4] = ~header[2];
+
+	fwriteBytes(header, sizeof(header), crc, f);
+	fwriteZeros(num, crc, f);
+	return sizeof(header) + num;
+}
+#endif
+
+size_t fwriteDEFLATEzeros(size_t num, uint32 *crc, FILE *f)
+{
+	if (!num)
+		return 0;
+
+	// L tree
+	// 0: 285 - length 258
+	// 10: 0 - literal 0
+	// 11: 256 - end of block
+	// codelengths: 2, 0 * 138, 0 * 117, 2, 0 * 28, 1, (0...)
+
+	// D tree
+	// 0: 1
+	// 1: unused
+	// codelengths: 1, (0...)
+
+	// code length tree
+	// 0: 18
+	// 10: 1
+	// 11: 2
+
+	// codelength codelengths in special order
+	// 16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15
+	// 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 2, (0)
+
+	// ------------------------------
+
+	// Last block -&gt; 1
+	// Dynamic Huffman block -&gt; 10
+	// HLIT = 286-257 = 29 -&gt; 11101
+	// HDIST = 1-1 = 0 -&gt; 00000
+	// HCLEN = 18-4 = 14 -&gt; 1110
+
+	// packed codelength codelengths:
+	//   000, 000, 001, 36 zero bits, 010, 000, 010
+	// packed L tree:
+	//   11, 0, 1111111, 0, 1101010, 11, 0, 0010001, 10 (reversed)
+	// packed D tree:
+	//   10 (reversed)
+
+	const uchar header[] = {
+		0xED, // 11101 10 1
+		0xC0, // 110 00000
+		0x81, // 1 000000 1-
+		0x00, // 000000 00-
+		0x00, // 00000000-
+		0x00, // 00000000-
+		0x00, // 00000000-
+		0x80, // 10 000000-
+		0xA0, // 1 010 000 0-
+		0xFD, // 111111 0 1-
+		0xA9, // 101010 0 1-
+		0x17, // 0001 0 11 1-
+	};
+	uint16 buf = 0x29; // 01 01 001-
+	uint8 bits = 7;
+
+	fwriteBytes(header, sizeof(header), crc, f);
+	size_t size = sizeof(header);
+
+	// If num is a multiple of 258, write 258 literals!
+	size_t q = (num - 1) / 258;
+	size_t r = ((num - 1) % 258) + 1;
+
+#define WRITE(v, s) { \
+	buf |= v &lt;&lt; bits; \
+	bits += s; \
+	if (bits &gt;= 8) { \
+		*crc = crc32b(*crc, buf &amp; 0xFF); \
+		fputc(buf &amp; 0xFF, f); \
+		++size; \
+		buf &gt;&gt;= 8; \
+		bits -= 8; \
+	} \
+}
+
+	while (r--) {
+		// write 10 (literal 0)
+		WRITE(1, 2);
+	}
+
+	while (q--) {
+		// write 00 (length 258, dist 1)
+		WRITE(0, 2);
+
+		if (!buf) {
+			// This is how to get high speed!
+			fwriteZeros(q &gt;&gt; 2, crc, f);
+			size += q &gt;&gt; 2;
+
+			// Use Duff's device instead of last 3 iterations
+			switch (q &amp; 3) {
+			case 3: WRITE(0, 2);
+			case 2: WRITE(0, 2);
+			case 1: WRITE(0, 2);
+			}
+			break; // q = 0;
+		}
+	}
+
+	// write 11 (end of block)
+	WRITE(3, 2);
+
+	// flush
+	if (bits) { // (this is always true)
+		*crc = crc32b(*crc, buf &amp; 0xFF);
+		fputc(buf &amp; 0xFF, f);
+		++size;
+	}
+
+	return size;
+}
+
+size_t fwriteZLIBzeros(size_t num, uint32 *crc, FILE *f)
+{
+	uchar header[2] = {
+		0x78, // 32K window size, DEFLATE
+		0x01, // &quot;compressor used fastest algorithm&quot;
+		// because recompression might be worthwhile
+	};
+	uint32 adler = ((num % 65521) &lt;&lt; 16) | 1;
+	uchar trailer[4] = {
+		(uchar)(adler &gt;&gt; 24),
+		(uchar)(adler &gt;&gt; 16),
+		(uchar)(adler &gt;&gt; 8),
+		(uchar)(adler &gt;&gt; 0),
+	};
+
+	fwriteBytes(header, sizeof(header), crc, f);
+	size_t sizeDEFLATE = fwriteDEFLATEzeros(num, crc, f);
+	fwriteBytes(trailer, sizeof(trailer), crc, f);
+
+	return sizeof(header) + sizeDEFLATE + sizeof(trailer);
+}
+
+void packInt32be(uint32 i, uchar *buf)
+{
+	buf[0] = (uchar)(i &gt;&gt; 24);
+	buf[1] = (uchar)(i &gt;&gt; 16);
+	buf[2] = (uchar)(i &gt;&gt; 8);
+	buf[3] = (uchar)(i &gt;&gt; 0);
+}
+
+int fwritePNG(uint32 width, uint32 height, FILE *f)
+{
+	const size_t numBytes = (1 + (size_t)width) * height;
+
+	// Signature
+	fwrite(&quot;\x89PNG\r\n\x1A\n&quot;, sizeof(char), 8, f);
+
+	// IHDR
+	uchar IHDR[] = {
+		'I',
+		'H',
+		'D',
+		'R',
+		(width &gt;&gt; 24) &amp; 0xFF,
+		(width &gt;&gt; 16) &amp; 0xFF,
+		(width &gt;&gt; 8) &amp; 0xFF,
+		(width &gt;&gt; 0) &amp; 0xFF,
+		(height &gt;&gt; 24) &amp; 0xFF,
+		(height &gt;&gt; 16) &amp; 0xFF,
+		(height &gt;&gt; 8) &amp; 0xFF,
+		(height &gt;&gt; 0) &amp; 0xFF,
+		8, // bitdepth
+		0, // colortype
+		0, // compresstype=zlib (only supported method)
+		0, // filtermethod=adaptive (only supported method)
+		0, // interlaced=no
+	};
+
+	uchar i32[4];
+	packInt32be(13, i32); // 17-4
+	fwrite(i32, sizeof(i32), 1, f);
+
+	uint32 crc = 0xFFFFFFFF;
+	fwriteBytes(IHDR, sizeof(IHDR), &amp;crc, f);
+
+	packInt32be(~crc, i32);
+	fwrite(i32, sizeof(i32), 1, f);
+
+	// IDAT
+	long IDAT_len_offset = ftell(f); // 33
+	fwrite(&quot;\0\0\0\0IDAT&quot;, sizeof(char), 8, f);
+
+	crc = 0xCA50F9E1; // ~CRC32(&quot;IDAT&quot;)
+	uint32 IDAT_len = (uint32)fwriteZLIBzeros(numBytes, &amp;crc, f);
+
+	packInt32be(~crc, i32);
+	fwrite(i32, sizeof(i32), 1, f);
+
+	// IEND
+	// 0x00000000 + &quot;IEND&quot; + CRC32(&quot;IEND&quot;)
+	fwrite(&quot;\0\0\0\0IEND\xae\x42\x60\x82&quot;, sizeof(char), 12, f);
+
+	// Set IDAT length
+	fseek(f, IDAT_len_offset, SEEK_SET);
+
+	packInt32be(IDAT_len, i32);
+	fwrite(i32, sizeof(i32), 1, f);
+
+	return ferror(f);
+}
+
+int main()
+{
+	makeCRCtable();
+
+	int ret = 0;
+	FILE *f = fopen(&quot;out.png&quot;, &quot;wb&quot;);
+	if (!f)
+		return -1;
+
+	clock_t before = clock();
+
+	ret = fwritePNG(IMG_W, IMG_H, f);
+
+	clock_t after = clock();
+
+	fclose(f);
+
+	double diff = (double)(after - before) / CLOCKS_PER_SEC;
+	double rate = ((1 + IMG_W) * (double)IMG_H) / diff;
+	rate = rate * 8 / 1024 / 1024 / 1024 / 1024;
+	printf(&quot;Compressed at %.2f Tbit/s (%.9f s)\n&quot;, rate, diff);
+
+	return ret;
+}
+
+</code></pre>
+<!-- TODO: find new ad provider -->
+<!-- <script src="//d.victorz.ca/a/main_foot"></script> -->
+
+      </div>
+    </main>
+
+    <footer class="footer mt-auto py-3 text-bg-light">
+      <div class="container">
+        <div class="mb-2">
+          &copy; 2005-<span id="copyyear">2025</span> Victor Zheng. All rights reserved.
+            <div class="badge-group me-2" title="This page was created on Friday, January 01, 2016 at 08:02 AM UTC">
+              <span class="badge text-bg-secondary">Created</span>
+              <span class="timeago badge text-bg-primary" title="2016-01-01 08:02:03 +0000"></span>
+            </div>
+        </div>
+        <div>
+          <script src="//d.victorz.ca/online.js?o=s"></script>
+
+          <a href=".."><img src="../assets/a/80-15.png" class="rounded" alt="Victor"></a>
+
+          <a href="https://validator.w3.org/check?uri=referer" referrerpolicy="unsafe-url" class="badge text-bg-primary" title="This site uses HTML5.">HTML5</a>
+
+          <a href="https://jigsaw.w3.org/css-validator/check/referer" referrerpolicy="unsafe-url" class="badge text-bg-primary" title="This site uses CSS.">CSS</a>
+
+          <div class="badge-group me-2" title="This site was last regenerated on Saturday, January 04, 2025 at 12:23 AM UTC">
+            <span class="badge text-bg-secondary">Regenerated</span>
+            <span class="timeago badge text-bg-primary" title="2025-01-04 00:23:31 +0000"></span>
+          </div>
+
+          <div class="badge-group me-2" title="This is how long it has been since my site started to exist.">
+            <span class="badge text-bg-dark">Site Age</span>
+            <span class="badge text-bg-light border"><strong id="uptime-years"></strong> (<b id="uptime-years-hex">many</b>) years</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+      <script src="../assets/dist/17.js"></script>
+      <script src="../assets/dist/69.js"></script>
+      <script src="../assets/dist/global.js"></script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0BP2YLW17T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0BP2YLW17T');
+</script>
+
+<!-- Cloudflare Web Analytics -->
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "b9f69fff6f404209a5c854844ad49d0b"}'></script>
+<!-- End Cloudflare Web Analytics -->
+
+  </body>
+</html>
