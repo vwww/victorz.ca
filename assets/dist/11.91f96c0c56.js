@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkvwww=self.webpackChunkvwww||[]).push([["11"],{42:function(n,t,u){u(3),u(13),u(12),u(8),u(5),u(7),u(9),u(22),u(6),u(20)},43:function(n,t,u){u(3),u(8),u(13),u(33),u(24),u(4),u(12),u(6)},24:function(n,t,u){u.d(t,{Wx:()=>e});let c=["touchstart","touchmove"];function e(n){return c.includes(n)}}}]);
