@@ -1,0 +1,9 @@
+"use strict";(self.webpackChunkvwww=self.webpackChunkvwww||[]).push([["2"],{49:function(e,t,n){n(4),n(8),n(21),n(32),n(34),n(17),n(20),n(6),n(9)},60:function(e,t,n){n(8),n(29),n(18),n(7)},22:function(e,t,n){n.d(t,{JN:()=>l,Ld:()=>r,iH:()=>c,qU:()=>i});var o=n(13),a="font-weight: bold",s="font-weight: normal";function i(e,t,n){o.Z?console.warn(`%c[svelte] hydration_attribute_changed
+%cThe \`${e}\` attribute on \`${t}\` changed its value between server and client renders. The client value, \`${n}\`, will be ignored in favour of the server value
+https://svelte.dev/e/hydration_attribute_changed`,a,s):console.warn("https://svelte.dev/e/hydration_attribute_changed")}function c(e){o.Z?console.warn(`%c[svelte] hydration_mismatch
+%c${e?`Hydration failed because the initial UI does not match what was rendered on the server. The error occurred near ${e}`:"Hydration failed because the initial UI does not match what was rendered on the server"}
+https://svelte.dev/e/hydration_mismatch`,a,s):console.warn("https://svelte.dev/e/hydration_mismatch")}function r(){o.Z?console.warn(`%c[svelte] lifecycle_double_unmount
+%cTried to unmount a component that was not mounted
+https://svelte.dev/e/lifecycle_double_unmount`,a,s):console.warn("https://svelte.dev/e/lifecycle_double_unmount")}function l(e){o.Z?console.warn(`%c[svelte] state_proxy_equality_mismatch
+%cReactive \`$state(...)\` proxies and the values they proxy have different identities. Because of this, comparisons with \`${e}\` will produce unexpected results
+https://svelte.dev/e/state_proxy_equality_mismatch`,a,s):console.warn("https://svelte.dev/e/state_proxy_equality_mismatch")}},34:function(e,t,n){n.d(t,{Wx:()=>a});let o=["touchstart","touchmove"];function a(e){return o.includes(e)}}}]);
