@@ -1,0 +1,820 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--
+    URL /misc/3d/basic/sectional
+    PATH misc/3d/basic/sectional.html
+    -->
+    <title>Sectional Perspective &ndash; Basic &ndash; 3D &ndash; Victor&lsquo;s Site</title>
+
+    <link rel="canonical" href="https://victorz.ca/misc/3d/basic/sectional">
+
+    <link rel="shortcut icon" type="image/x-icon" href="../../../assets/victorz/favicon.ico">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" id="theme-switcher" href="../../../assets/dist/bootstrap_theme.css">
+    <meta name="theme-switcher" id="theme-bootstrap" content="../../../assets/dist/bootstrap.css">
+    <meta name="theme-switcher" id="theme-bootstrap2" content="../../../assets/dist/bootstrap_theme.css">
+    <meta name="theme-switcher" id="theme-bootswatch-brite" content="../../../assets/dist/bootswatch_brite.css">
+    <meta name="theme-switcher" id="theme-bootswatch-cerulean" content="../../../assets/dist/bootswatch_cerulean.css">
+    <meta name="theme-switcher" id="theme-bootswatch-cosmo" content="../../../assets/dist/bootswatch_cosmo.css">
+    <meta name="theme-switcher" id="theme-bootswatch-cyborg" content="../../../assets/dist/bootswatch_cyborg.css">
+    <meta name="theme-switcher" id="theme-bootswatch-darkly" content="../../../assets/dist/bootswatch_darkly.css">
+    <meta name="theme-switcher" id="theme-bootswatch-flatly" content="../../../assets/dist/bootswatch_flatly.css">
+    <meta name="theme-switcher" id="theme-bootswatch-journal" content="../../../assets/dist/bootswatch_journal.css">
+    <meta name="theme-switcher" id="theme-bootswatch-litera" content="../../../assets/dist/bootswatch_litera.css">
+    <meta name="theme-switcher" id="theme-bootswatch-lumen" content="../../../assets/dist/bootswatch_lumen.css">
+    <meta name="theme-switcher" id="theme-bootswatch-lux" content="../../../assets/dist/bootswatch_lux.css">
+    <meta name="theme-switcher" id="theme-bootswatch-materia" content="../../../assets/dist/bootswatch_materia.css">
+    <meta name="theme-switcher" id="theme-bootswatch-minty" content="../../../assets/dist/bootswatch_minty.css">
+    <meta name="theme-switcher" id="theme-bootswatch-morph" content="../../../assets/dist/bootswatch_morph.css">
+    <meta name="theme-switcher" id="theme-bootswatch-pulse" content="../../../assets/dist/bootswatch_pulse.css">
+    <meta name="theme-switcher" id="theme-bootswatch-quartz" content="../../../assets/dist/bootswatch_quartz.css">
+    <meta name="theme-switcher" id="theme-bootswatch-sandstone" content="../../../assets/dist/bootswatch_sandstone.css">
+    <meta name="theme-switcher" id="theme-bootswatch-simplex" content="../../../assets/dist/bootswatch_simplex.css">
+    <meta name="theme-switcher" id="theme-bootswatch-sketchy" content="../../../assets/dist/bootswatch_sketchy.css">
+    <meta name="theme-switcher" id="theme-bootswatch-slate" content="../../../assets/dist/bootswatch_slate.css">
+    <meta name="theme-switcher" id="theme-bootswatch-solar" content="../../../assets/dist/bootswatch_solar.css">
+    <meta name="theme-switcher" id="theme-bootswatch-spacelab" content="../../../assets/dist/bootswatch_spacelab.css">
+    <meta name="theme-switcher" id="theme-bootswatch-superhero" content="../../../assets/dist/bootswatch_superhero.css">
+    <meta name="theme-switcher" id="theme-bootswatch-united" content="../../../assets/dist/bootswatch_united.css">
+    <meta name="theme-switcher" id="theme-bootswatch-vapor" content="../../../assets/dist/bootswatch_vapor.css">
+    <meta name="theme-switcher" id="theme-bootswatch-yeti" content="../../../assets/dist/bootswatch_yeti.css">
+    <meta name="theme-switcher" id="theme-bootswatch-zephyr" content="../../../assets/dist/bootswatch_zephyr.css">
+    <link rel="stylesheet" href="../../../assets/dist/global.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body class="d-flex flex-column h-100">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="../../.."><img src="../../../assets/victorz/logo.png" alt="logo"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link" href="../../../">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#nav/game" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Games</a>
+          <ul class="dropdown-menu" role="menu"><li><a class="dropdown-item" href="../../../game/">List</a></li>
+            <li class="dropdown-divider"></li>
+            <li class="dropdown-header">Downloadable</li>
+            <li>
+              <a class="dropdown-item"
+                href="https://acr.victorz.ca"
+                target="_blank"
+                title="ACR is a free-and-open-source first-person-shooter."
+              >AssaultCube Reloaded
+              <span class="badge text-bg-info">&#8599;</span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="https://re.victorz.ca"
+                target="_blank"
+                title="Realistic Red Eclipse, set in the present instead of future"
+              >Real Eclipse
+                <span class="badge text-bg-secondary">TODO</span>
+              <span class="badge text-bg-info">&#8599;</span>
+              </a>
+            </li>
+            <li class="dropdown-divider"></li>
+            <li class="dropdown-header">Browser Games</li>
+            <li>
+              <a class="dropdown-item"
+                href="https://games.victorz.ca"
+                target="_blank"
+                title="my arcade, full of hacked flash games!"
+              >Flash Arcade
+              <span class="badge text-bg-info">&#8599;</span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../game/tetris"
+                title="Tetris, but don't let it tip over to one side"
+              >Balanced Tetris
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../game/click"
+                title="Modern version of the first game I created"
+              >Clicking Game Remake
+              </a>
+            </li>
+            <li class="dropdown-divider"></li>
+            <li class="dropdown-header">Analysis</li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../game/t3"
+                title="Analyze Tic-Tac-Toe in various variants and game states"
+              >Tic-Tac-Toe Analyzer
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../game/fill"
+                title="Solve the game Fill efficiently"
+              >Fill Solver
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../game/fill_browser"
+                title="Browse the level/stages of Fill v4.7.0"
+              >Fill Browser
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../game/logic"
+                title="Logical puzzle grid (future) solver with sample solutions"
+              >Logic Grid Puzzles
+                <span class="badge text-bg-secondary">TODO</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#nav/game_mp" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Multiplayer</a>
+          <ul class="dropdown-menu" role="menu"><li><a class="dropdown-item" href="../../../game/">List</a></li>
+            <li class="dropdown-divider"></li>
+            <li class="dropdown-header">Realtime Multiplayer</li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../game/slime"
+                title="Make the ball hit enemy ground"
+              >Slime Volleyball
+                <span class="badge text-bg-success">Revived</span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../game/duel"
+                title="20% luck and 80% skill"
+              >Duel
+                <span class="badge text-bg-primary">Beta</span>
+                <span class="badge text-bg-success">Revived</span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../game/hockey"
+                title="Score the puck on the opponent goal"
+              >Hockey
+                <span class="badge text-bg-secondary">TODO</span>
+              </a>
+            </li>
+            <li class="dropdown-divider"></li>
+            <li class="dropdown-header">Turn-Based Multiplayer</li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../game/actionless"
+                title="Random winners, do no action"
+              >Actionless
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../game/morra"
+                title="Pick a number, sum determines winner"
+              >Morra
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../game/rps"
+                title="Pick a group"
+              >Rock Paper Scissors
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../game/blackjack"
+                title="Get close to 21, but not over."
+              >Blackjack
+                <span class="badge text-bg-success">NEW</span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../game/cribbage"
+                title="Matching card game for 2-4 players."
+              >Cribbage
+                <span class="badge text-bg-success">NEW</span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../game/cheat"
+                title="Shed cards, possibly dishonestly."
+              >Cheat
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../game/president"
+                title="Shed your cards first to be the President!"
+              >President
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../game/discard"
+                title="Isomorphism of Love Letter"
+              >Discard
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../game/t3_multi"
+                title="Get 3 in a line to win!"
+              >Tic-Tac-Toe
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../game/ut3"
+                title="Win small boards to win the big board."
+              >Ultimate Tic-Tac-Toe
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#nav/tools" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tools</a>
+          <ul class="dropdown-menu" role="menu"><li><a class="dropdown-item" href="../../../tools/">List</a></li>
+            <li class="dropdown-divider"></li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../tools/ip"
+                title="See your IP address"
+              >IP Address
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../tools/ping"
+                title="Check your ping for HTTP requests"
+              >Ping
+              </a>
+            </li>
+            <li class="dropdown-divider"></li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../tools/base"
+                title="Convert between bases 2 to 36"
+              >Base Converter
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../tools/gcd"
+              >GCD/LCM Calculator
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../tools/unit"
+              >Unit Converter
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../tools/freq"
+                title="Measure frequency, like heart rate"
+              >Frequency
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../tools/letter_count"
+                title="Count letter frequency in text"
+              >Letter Counter
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../tools/encrypt"
+                title="Old encryption tools"
+              >Encryption Tools
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../tools/time"
+                title="It's later than you think!"
+              >Time Perception
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../tools/match_win"
+                title="Calculate the probability of winning first-to-n/best-of-(2n-1)"
+              >Match Win Calculator
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../tools/fund_compare"
+                title="Compare outcomes of holding funds"
+              >Fund Comparison
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link active dropdown-toggle" href="#nav/misc" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Misc</a>
+          <ul class="dropdown-menu" role="menu"><li><a class="dropdown-item" href="../../../misc/">List</a></li>
+            <li class="dropdown-divider"></li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../misc/dl"
+                title="file browser/directory listing of old binary files"
+              >Downloads
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../misc/path"
+                title="Do you wonder how this site is configured?"
+              >Path
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../blog/"
+                title="my old blog"
+              >Old Blog
+              </a>
+            </li>
+            <li class="dropdown-divider"></li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../xkcd_map/"
+                title="an improved way to view the xkcd-1110 webcomic"
+              >XKCD #1110 Map
+                <span class="badge text-bg-primary">⛶</span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../misc/ggroups"
+                title="view chat text in ggroups.exe of SUPERHOT"
+              >ggroups.exe
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../misc/orbs"
+                title="view orbits in orbs.it"
+              >Orbs Viewer
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../misc/starblast_mods"
+                title="view scrollable starblast.io schedule"
+              >Starblast Mods Schedule
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../misc/starblast_upgrade"
+                title="view optimal starblast.io ship upgrades"
+              >Starblast Upgrade Optimizer
+              </a>
+            </li>
+            <li class="dropdown-divider"></li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../misc/3d/"
+                title="Autodesk 3DS Max primitive and sample cloud renderings!"
+              >3D
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../misc/ads"
+                title="Some advertisements&hellip;"
+              >Ads
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../misc/calc"
+                title="Simulate a basic calculator."
+              >Basic Calculator
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../misc/compound"
+                title="Plot a graph of compound interest."
+              >Compound Interest
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../misc/music"
+                title="These pieces of &ldquo;music&rdquo; are more like noise."
+              >Music
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../misc/rndvid"
+                title="Watch random pixels"
+              >Random Video
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../misc/redirect"
+                title="Follow endless redirections! It never ends!"
+              >Redirect Loop (Endless)
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../misc/streamdl"
+                title="Download faster than your internet speed!"
+              >Fast Infinite Downloads
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../misc/strobe"
+                title="Strobe lights (stroboscopic lamps) flash light between black and white."
+              >Strobe (Seizure Generator)
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="http://seizure.victorz.ca"
+                target="_blank"
+                title="This subdomain points to the seizure servers hosted by the U.S. Immigration and Customs Enforcement."
+              >Seizure Domain
+              <span class="badge text-bg-info">&#8599;</span>
+              </a>
+            </li>
+            <li class="dropdown-divider"></li>
+            <li class="dropdown-header">Jokes</li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../misc/jokes/iq"
+                title="2-question IQ test"
+              >IQ Test
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../misc/coding"
+                title="Practice on the most popular programming contest practice site!"
+              >Coding Contest
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../misc/jokes/"
+                title="Some old jokes from ~2006-2007&hellip;"
+              >Old Jokes
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#nav/bots" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bots</a>
+          <ul class="dropdown-menu" role="menu"><li><a class="dropdown-item" href="../../../bots/">List</a></li>
+            <li class="dropdown-divider"></li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../bots/poke"
+                title="See the leaderboard of people who poke a bot that returned pokes automatically"
+              >Facebook Poke
+              </a>
+            </li>
+            <li class="dropdown-divider"></li>
+            <li class="dropdown-header">Twitter</li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../bots/grammar"
+                title="@_grammar_ corrects users' grammar. It was suspended many times."
+              >Grammar
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../bots/random"
+                title="This bot spews a stream of random words."
+              >Random Words
+                <span class="badge text-bg-warning">Local</span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../bots/recent"
+                title="@recentideas learns to tweet from recent tweets."
+              >Recent Ideas
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../bots/prose"
+                title="@prosegen generates sentences from a grammar."
+              >Prose
+                <span class="badge text-bg-secondary">TODO</span>
+                <span class="badge text-bg-warning">Local</span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../bots/googuns"
+                title="@googuns_lulz is like other @googuns_ accounts, yet very different."
+              >GooGuns Lulz
+                <span class="badge text-bg-warning">Local</span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../bots/bing_tomorrow"
+                title="@BingTomorrow can see the future! It can predict Bing's homepage image for tomorrow."
+              >Bing Tomorrow
+                <span class="badge text-bg-warning">Local</span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../../../bots/spelling"
+                title="@Bot_Dictionary corrects users' spelling. Its output rate from random searches is quite low."
+              >Spelling
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="https://github.com/vwww/dev/blob/main/docs/pages/misc/3d/basic/sectional.html">Edit</a></li>
+        <li class="nav-item dropdown">
+          <a href="#nav/theme" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false">Theme</a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="../../../site/theme" class="dropdown-item">Theme Switcher</a></li>
+            <li class="dropdown-divider"></li>
+            <li id="theme-switcher-msg" class="bg-danger">
+              <button class="dropdown-item disabled" id="theme-switcher-msg-text">Cannot save</button>
+            </li>
+            <li class="dropdown-divider"></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootstrap">Bootstrap</button></li>
+            <li><button class="dropdown-item theme-switcher active" data-theme="bootstrap2">Bootstrap Theme</button></li>
+            <li class="dropdown-divider"></li>
+            <li class="dropdown-header">Bootswatch</li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-brite" title="Neobrutalist form">Brite</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-cerulean" title="A calm blue sky">Cerulean</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-cosmo" title="An ode to Metro">Cosmo</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-cyborg" title="Jet black and electric blue">Cyborg</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-darkly" title="Flatly in night mode">Darkly</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-flatly" title="Flat and modern">Flatly</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-journal" title="Crisp like a new sheet of paper">Journal</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-litera" title="The medium is the message">Litera</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-lumen" title="Light and shadow">Lumen</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-lux" title="A touch of class">Lux</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-materia" title="Material is the metaphor">Materia</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-minty" title="A fresh feel">Minty</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-morph" title="A neumorphic layer">Morph</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-pulse" title="A trace of purple">Pulse</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-quartz" title="A glassmorphic layer">Quartz</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-sandstone" title="A touch of warmth">Sandstone</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-simplex" title="Mini and minimalist">Simplex</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-sketchy" title="A hand-drawn look for mockups and mirth">Sketchy</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-slate" title="Shades of gunmetal gray">Slate</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-solar" title="A spin on Solarized">Solar</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-spacelab" title="Silvery and sleek">Spacelab</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-superhero" title="The brave and the blue">Superhero</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-united" title="Ubuntu orange and unique font">United</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-vapor" title="A cyberpunk aesthetic">Vapor</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-yeti" title="A friendly foundation">Yeti</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-zephyr" title="Breezy and beautiful">Zephyr</button></li>
+          </ul>
+        </li>
+
+        <li id="april-fools-joke-menu" class="dropdown d-none">
+          <a class="nav-link dropdown-toggle" href="#nav/language" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Language <span class="badge text-bg-warning">NEW</span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li class="dropdown-header">10 languages</li>
+            <li><button class="dropdown-item" onclick="return false">English</button></li>
+            <li><button class="dropdown-item" onclick="return false">English</button></li>
+            <li><button class="dropdown-item" onclick="return false">English</button></li>
+            <li><button class="dropdown-item" onclick="return false">English</button></li>
+            <li><button class="dropdown-item" onclick="return false">English</button></li>
+            <li><button class="dropdown-item" onclick="return false">English</button></li>
+            <li><button class="dropdown-item" onclick="return false">English</button></li>
+            <li><button class="dropdown-item" onclick="return false">English</button></li>
+            <li><button class="dropdown-item" onclick="return false">English</button></li>
+            <li><button class="dropdown-item" onclick="return false">English</button></li>
+            <li class="dropdown-divider"></li>
+            <li class="dropdown-header">April Fools!</li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a class="nav-link dropdown-toggle" href="#nav/mirror" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mirror</a>
+          <ul class="dropdown-menu" role="menu" id="mirror-list">
+            <li><a class="dropdown-item" href="https://victorz.ca/misc/3d/basic/sectional" rel="nofollow">victorz.ca</a></li>
+            <li><a class="dropdown-item" href="https://vwww.github.io/misc/3d/basic/sectional" rel="nofollow">vwww.github.io</a></li>
+            <li><a class="dropdown-item" href="https://vwww.pages.dev/misc/3d/basic/sectional" rel="nofollow">vwww.pages.dev</a></li>
+            <li><a class="dropdown-item" href="https://v-z.pages.dev/misc/3d/basic/sectional" rel="nofollow">v-z.pages.dev</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+    <main class="flex-shrink-0 my-3">
+      <div class="container">
+        <nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="../../..">Home</a></li>
+        <li class="breadcrumb-item">
+          <a href="../../../misc/">Misc</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a href="../../../misc/3d/">3D</a>
+        </li>
+    <li class="breadcrumb-item active" aria-current="page">Sectional Perspective &ndash; Basic &ndash; 3D</li>
+  </ol>
+</nav>
+<div class="container row">
+  <!-- left content -->
+  <div class="col-12 col-sm-7 col-md-8 col-lg-9">
+    <div class="page-header">
+      <h1>Sectional Persp(ective) <small>(Basic revit architecture.rvt)</small></h1>
+      <hr class="my-3">
+    </div>
+    <h3>Environments</h3>
+<div class="row"><div class="col-lg-6 d-flex align-items-center">
+    <div class="flex-shrink-0">
+      <a href="https://vwww.github.io/3d/basic/sectional/none.png">
+        <img src="https://vwww.github.io/3d/basic/sectional_/none.png" width="60" height="60" alt="">
+      </a>
+    </div>
+    <div class="flex-grow-1 ms-3">
+      <h5><a href="https://vwww.github.io/3d/basic/sectional/none.png">None</a> <small>(none)</small></h5>
+      <p>No environment applied.</p>
+    </div>
+  </div><div class="col-lg-6 d-flex align-items-center">
+    <div class="flex-shrink-0">
+      <a href="https://vwww.github.io/3d/basic/sectional/field.png">
+        <img src="https://vwww.github.io/3d/basic/sectional_/field.png" width="60" height="60" alt="">
+      </a>
+    </div>
+    <div class="flex-grow-1 ms-3">
+      <h5><a href="https://vwww.github.io/3d/basic/sectional/field.png">Farm Field</a> <small>(field)</small></h5>
+      <p>A field on a farm.</p>
+    </div>
+  </div><div class="col-lg-6 d-flex align-items-center">
+    <div class="flex-shrink-0">
+      <a href="https://vwww.github.io/3d/basic/sectional/crossroads.png">
+        <img src="https://vwww.github.io/3d/basic/sectional_/crossroads.png" width="60" height="60" alt="">
+      </a>
+    </div>
+    <div class="flex-grow-1 ms-3">
+      <h5><a href="https://vwww.github.io/3d/basic/sectional/crossroads.png">Crossroads</a> <small>(crossroads)</small></h5>
+      <p>A 4-way intersection.</p>
+    </div>
+  </div><div class="col-lg-6 d-flex align-items-center">
+    <div class="flex-shrink-0">
+      <a href="https://vwww.github.io/3d/basic/sectional/boardwalk.png">
+        <img src="https://vwww.github.io/3d/basic/sectional_/boardwalk.png" width="60" height="60" alt="">
+      </a>
+    </div>
+    <div class="flex-grow-1 ms-3">
+      <h5><a href="https://vwww.github.io/3d/basic/sectional/boardwalk.png">Boardwalk</a> <small>(boardwalk)</small></h5>
+      <p>A bridge on the dock.</p>
+    </div>
+  </div><div class="col-lg-6 d-flex align-items-center">
+    <div class="flex-shrink-0">
+      <a href="https://vwww.github.io/3d/basic/sectional/riverbank.png">
+        <img src="https://vwww.github.io/3d/basic/sectional_/riverbank.png" width="60" height="60" alt="">
+      </a>
+    </div>
+    <div class="flex-grow-1 ms-3">
+      <h5><a href="https://vwww.github.io/3d/basic/sectional/riverbank.png">Riverbank Pond</a> <small>(riverbank)</small></h5>
+      <p>A pond near a river.</p>
+    </div>
+  </div><div class="col-lg-6 d-flex align-items-center">
+    <div class="flex-shrink-0">
+      <a href="https://vwww.github.io/3d/basic/sectional/seaport.png">
+        <img src="https://vwww.github.io/3d/basic/sectional_/seaport.png" width="60" height="60" alt="">
+      </a>
+    </div>
+    <div class="flex-grow-1 ms-3">
+      <h5><a href="https://vwww.github.io/3d/basic/sectional/seaport.png">Seaport</a> <small>(seaport)</small></h5>
+      <p>An estate near the sea.</p>
+    </div>
+  </div>
+</div>
+  </div>
+
+  <!-- right nav -->
+  <div class="col-12 col-sm-5 col-md-4 col-lg-3">
+    <h2>Files</h2>
+    <div class="list-group mb-3">
+      <a href="../../../misc/3d/"
+          class="list-group-item">
+        Home
+      </a>
+      <a href="../../../misc/3d/advanced/"
+          class="list-group-item">
+        Advanced revit architecture.rvt
+      </a>
+      <a href="../../../misc/3d/basic/"
+          class="list-group-item active">
+        Basic revit architecture.rvt
+      </a>
+      <a href="../../../misc/3d/coffee/"
+          class="list-group-item">
+        Coffee maker.dwg
+      </a>
+      <a href="../../../misc/3d/diaphanous/"
+          class="list-group-item">
+        Diaphanous house.dwg
+      </a>
+    </div>
+    <!-- Active Item -->
+    <h3>Views</h3>
+
+    <div class="list-group">
+      <a href="../../../misc/3d/basic/" class="list-group-item">Overview</a>
+      <a href="../../../misc/3d/basic/aerial.html" class="list-group-item">Aerial</a>
+      <a href="../../../misc/3d/basic/fireplace.html" class="list-group-item">Fireplace</a>
+      <a href="../../../misc/3d/basic/ground.html" class="list-group-item">Ground Approach</a>
+      <a href="../../../misc/3d/basic/kitchen.html" class="list-group-item">Kitchen</a>
+      <a href="../../../misc/3d/basic/sectional.html" class="list-group-item active">Sectional Persp(ective)</a>
+    </div>
+  </div>
+</div>
+
+      </div>
+    </main>
+
+    <footer class="footer mt-auto py-3 text-bg-light">
+      <div class="container">
+        <div class="mb-2">
+          &copy; 2005-<span id="copyyear">2026</span> Victor Zheng. All rights reserved.
+          The source code is licensed under the <a href="https://github.com/vwww/dev/blob/main/LICENSE.md" rel="nofollow">GPL v3</a>.
+        </div>
+        <div>
+          <script src="//d.victorz.ca/online.js?o=s"></script>
+
+          <a href="../../.."><img src="../../../assets/a/80-15.png" class="rounded" alt="Victor"></a>
+
+          <a href="https://validator.w3.org/check?uri=referer" referrerpolicy="unsafe-url" class="badge text-bg-primary" title="This site uses HTML5.">HTML5</a>
+
+          <a href="https://jigsaw.w3.org/css-validator/check/referer" referrerpolicy="unsafe-url" class="badge text-bg-primary" title="This site uses CSS.">CSS</a>
+
+          <div class="badge-group me-2" title="This site was last regenerated on Monday, 2026 January 26 at 03:14 AM UTC">
+            <span class="badge text-bg-secondary">Regenerated</span>
+            <span class="timeago badge text-bg-primary" title="2026-01-26 03:14:52 +0000"></span>
+          </div>
+
+          <div class="badge-group me-2" title="This is how long it has been since my site started to exist.">
+            <span class="badge text-bg-dark">Site Age</span>
+            <span class="badge text-bg-light border"><strong id="uptime-years"></strong> (<b id="uptime-years-hex">many</b>) years</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+      <script src="../../../assets/dist/24.1ce44310e7.js"></script>
+      <script src="../../../assets/dist/79.dc58103897.js"></script>
+      <script src="../../../assets/dist/global.42d301da35.js"></script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0BP2YLW17T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0BP2YLW17T');
+</script>
+
+<!-- Cloudflare Web Analytics -->
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "b9f69fff6f404209a5c854844ad49d0b"}'></script>
+<!-- End Cloudflare Web Analytics -->
+
+  </body>
+</html>

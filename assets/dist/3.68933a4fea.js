@@ -1,0 +1,13 @@
+"use strict";(self.webpackChunkvwww=self.webpackChunkvwww||[]).push([["3"],{59(e,t,n){n(4),n(9),n(13),n(40),n(42),n(23),n(12),n(6),n(10)},14(e,t,n){n.d(t,{CF:()=>h,Cy:()=>r,YY:()=>i,eZ:()=>c,mx:()=>u,ns:()=>d,zn:()=>l});var o=n(7),a="font-weight: bold",s="font-weight: normal";function r(e,t){o.A?console.warn(`%c[svelte] await_waterfall
+%cAn async derived, \`${e}\` (${t}) was not read immediately after it resolved. This often indicates an unnecessary waterfall, which can slow down your app
+https://svelte.dev/e/await_waterfall`,a,s):console.warn("https://svelte.dev/e/await_waterfall")}function l(e,t,n){o.A?console.warn(`%c[svelte] hydration_attribute_changed
+%cThe \`${e}\` attribute on \`${t}\` changed its value between server and client renders. The client value, \`${n}\`, will be ignored in favour of the server value
+https://svelte.dev/e/hydration_attribute_changed`,a,s):console.warn("https://svelte.dev/e/hydration_attribute_changed")}function c(e){o.A?console.warn(`%c[svelte] hydration_mismatch
+%c${e?`Hydration failed because the initial UI does not match what was rendered on the server. The error occurred near ${e}`:"Hydration failed because the initial UI does not match what was rendered on the server"}
+https://svelte.dev/e/hydration_mismatch`,a,s):console.warn("https://svelte.dev/e/hydration_mismatch")}function i(){o.A?console.warn(`%c[svelte] lifecycle_double_unmount
+%cTried to unmount a component that was not mounted
+https://svelte.dev/e/lifecycle_double_unmount`,a,s):console.warn("https://svelte.dev/e/lifecycle_double_unmount")}function d(e){o.A?console.warn(`%c[svelte] state_proxy_equality_mismatch
+%cReactive \`$state(...)\` proxies and the values they proxy have different identities. Because of this, comparisons with \`${e}\` will produce unexpected results
+https://svelte.dev/e/state_proxy_equality_mismatch`,a,s):console.warn("https://svelte.dev/e/state_proxy_equality_mismatch")}function u(){o.A?console.warn(`%c[svelte] state_proxy_unmount
+%cTried to unmount a state proxy, rather than a component
+https://svelte.dev/e/state_proxy_unmount`,a,s):console.warn("https://svelte.dev/e/state_proxy_unmount")}function h(){o.A?console.warn("%c[svelte] svelte_boundary_reset_noop\n%cA `<svelte:boundary>` `reset` function only resets the boundary the first time it is called\nhttps://svelte.dev/e/svelte_boundary_reset_noop",a,s):console.warn("https://svelte.dev/e/svelte_boundary_reset_noop")}},42(e,t,n){n.d(t,{GY:()=>a});let o=["touchstart","touchmove"];function a(e){return o.includes(e)}}}]);

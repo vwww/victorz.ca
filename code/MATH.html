@@ -1,0 +1,854 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--
+    URL /code/MATH
+    PATH _code/MATH.md
+    -->
+    <title>MATH &ndash; Victor&lsquo;s Site</title>
+
+    <link rel="canonical" href="https://victorz.ca/code/MATH">
+
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/victorz/favicon.ico">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" id="theme-switcher" href="../assets/dist/bootstrap_theme.css">
+    <meta name="theme-switcher" id="theme-bootstrap" content="../assets/dist/bootstrap.css">
+    <meta name="theme-switcher" id="theme-bootstrap2" content="../assets/dist/bootstrap_theme.css">
+    <meta name="theme-switcher" id="theme-bootswatch-brite" content="../assets/dist/bootswatch_brite.css">
+    <meta name="theme-switcher" id="theme-bootswatch-cerulean" content="../assets/dist/bootswatch_cerulean.css">
+    <meta name="theme-switcher" id="theme-bootswatch-cosmo" content="../assets/dist/bootswatch_cosmo.css">
+    <meta name="theme-switcher" id="theme-bootswatch-cyborg" content="../assets/dist/bootswatch_cyborg.css">
+    <meta name="theme-switcher" id="theme-bootswatch-darkly" content="../assets/dist/bootswatch_darkly.css">
+    <meta name="theme-switcher" id="theme-bootswatch-flatly" content="../assets/dist/bootswatch_flatly.css">
+    <meta name="theme-switcher" id="theme-bootswatch-journal" content="../assets/dist/bootswatch_journal.css">
+    <meta name="theme-switcher" id="theme-bootswatch-litera" content="../assets/dist/bootswatch_litera.css">
+    <meta name="theme-switcher" id="theme-bootswatch-lumen" content="../assets/dist/bootswatch_lumen.css">
+    <meta name="theme-switcher" id="theme-bootswatch-lux" content="../assets/dist/bootswatch_lux.css">
+    <meta name="theme-switcher" id="theme-bootswatch-materia" content="../assets/dist/bootswatch_materia.css">
+    <meta name="theme-switcher" id="theme-bootswatch-minty" content="../assets/dist/bootswatch_minty.css">
+    <meta name="theme-switcher" id="theme-bootswatch-morph" content="../assets/dist/bootswatch_morph.css">
+    <meta name="theme-switcher" id="theme-bootswatch-pulse" content="../assets/dist/bootswatch_pulse.css">
+    <meta name="theme-switcher" id="theme-bootswatch-quartz" content="../assets/dist/bootswatch_quartz.css">
+    <meta name="theme-switcher" id="theme-bootswatch-sandstone" content="../assets/dist/bootswatch_sandstone.css">
+    <meta name="theme-switcher" id="theme-bootswatch-simplex" content="../assets/dist/bootswatch_simplex.css">
+    <meta name="theme-switcher" id="theme-bootswatch-sketchy" content="../assets/dist/bootswatch_sketchy.css">
+    <meta name="theme-switcher" id="theme-bootswatch-slate" content="../assets/dist/bootswatch_slate.css">
+    <meta name="theme-switcher" id="theme-bootswatch-solar" content="../assets/dist/bootswatch_solar.css">
+    <meta name="theme-switcher" id="theme-bootswatch-spacelab" content="../assets/dist/bootswatch_spacelab.css">
+    <meta name="theme-switcher" id="theme-bootswatch-superhero" content="../assets/dist/bootswatch_superhero.css">
+    <meta name="theme-switcher" id="theme-bootswatch-united" content="../assets/dist/bootswatch_united.css">
+    <meta name="theme-switcher" id="theme-bootswatch-vapor" content="../assets/dist/bootswatch_vapor.css">
+    <meta name="theme-switcher" id="theme-bootswatch-yeti" content="../assets/dist/bootswatch_yeti.css">
+    <meta name="theme-switcher" id="theme-bootswatch-zephyr" content="../assets/dist/bootswatch_zephyr.css">
+    <link rel="stylesheet" href="../assets/dist/global.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body class="d-flex flex-column h-100">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href=".."><img src="../assets/victorz/logo.png" alt="logo"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link" href="../">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#nav/game" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Games</a>
+          <ul class="dropdown-menu" role="menu"><li><a class="dropdown-item" href="../game/">List</a></li>
+            <li class="dropdown-divider"></li>
+            <li class="dropdown-header">Downloadable</li>
+            <li>
+              <a class="dropdown-item"
+                href="https://acr.victorz.ca"
+                target="_blank"
+                title="ACR is a free-and-open-source first-person-shooter."
+              >AssaultCube Reloaded
+              <span class="badge text-bg-info">&#8599;</span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="https://re.victorz.ca"
+                target="_blank"
+                title="Realistic Red Eclipse, set in the present instead of future"
+              >Real Eclipse
+                <span class="badge text-bg-secondary">TODO</span>
+              <span class="badge text-bg-info">&#8599;</span>
+              </a>
+            </li>
+            <li class="dropdown-divider"></li>
+            <li class="dropdown-header">Browser Games</li>
+            <li>
+              <a class="dropdown-item"
+                href="https://games.victorz.ca"
+                target="_blank"
+                title="my arcade, full of hacked flash games!"
+              >Flash Arcade
+              <span class="badge text-bg-info">&#8599;</span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../game/tetris"
+                title="Tetris, but don't let it tip over to one side"
+              >Balanced Tetris
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../game/click"
+                title="Modern version of the first game I created"
+              >Clicking Game Remake
+              </a>
+            </li>
+            <li class="dropdown-divider"></li>
+            <li class="dropdown-header">Analysis</li>
+            <li>
+              <a class="dropdown-item"
+                href="../game/t3"
+                title="Analyze Tic-Tac-Toe in various variants and game states"
+              >Tic-Tac-Toe Analyzer
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../game/fill"
+                title="Solve the game Fill efficiently"
+              >Fill Solver
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../game/fill_browser"
+                title="Browse the level/stages of Fill v4.7.0"
+              >Fill Browser
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../game/logic"
+                title="Logical puzzle grid (future) solver with sample solutions"
+              >Logic Grid Puzzles
+                <span class="badge text-bg-secondary">TODO</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#nav/game_mp" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Multiplayer</a>
+          <ul class="dropdown-menu" role="menu"><li><a class="dropdown-item" href="../game/">List</a></li>
+            <li class="dropdown-divider"></li>
+            <li class="dropdown-header">Realtime Multiplayer</li>
+            <li>
+              <a class="dropdown-item"
+                href="../game/slime"
+                title="Make the ball hit enemy ground"
+              >Slime Volleyball
+                <span class="badge text-bg-success">Revived</span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../game/duel"
+                title="20% luck and 80% skill"
+              >Duel
+                <span class="badge text-bg-primary">Beta</span>
+                <span class="badge text-bg-success">Revived</span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../game/hockey"
+                title="Score the puck on the opponent goal"
+              >Hockey
+                <span class="badge text-bg-secondary">TODO</span>
+              </a>
+            </li>
+            <li class="dropdown-divider"></li>
+            <li class="dropdown-header">Turn-Based Multiplayer</li>
+            <li>
+              <a class="dropdown-item"
+                href="../game/actionless"
+                title="Random winners, do no action"
+              >Actionless
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../game/morra"
+                title="Pick a number, sum determines winner"
+              >Morra
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../game/rps"
+                title="Pick a group"
+              >Rock Paper Scissors
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../game/blackjack"
+                title="Get close to 21, but not over."
+              >Blackjack
+                <span class="badge text-bg-success">NEW</span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../game/cribbage"
+                title="Matching card game for 2-4 players."
+              >Cribbage
+                <span class="badge text-bg-success">NEW</span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../game/cheat"
+                title="Shed cards, possibly dishonestly."
+              >Cheat
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../game/president"
+                title="Shed your cards first to be the President!"
+              >President
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../game/discard"
+                title="Isomorphism of Love Letter"
+              >Discard
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../game/t3_multi"
+                title="Get 3 in a line to win!"
+              >Tic-Tac-Toe
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../game/ut3"
+                title="Win small boards to win the big board."
+              >Ultimate Tic-Tac-Toe
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#nav/tools" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tools</a>
+          <ul class="dropdown-menu" role="menu"><li><a class="dropdown-item" href="../tools/">List</a></li>
+            <li class="dropdown-divider"></li>
+            <li>
+              <a class="dropdown-item"
+                href="../tools/ip"
+                title="See your IP address"
+              >IP Address
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../tools/ping"
+                title="Check your ping for HTTP requests"
+              >Ping
+              </a>
+            </li>
+            <li class="dropdown-divider"></li>
+            <li>
+              <a class="dropdown-item"
+                href="../tools/base"
+                title="Convert between bases 2 to 36"
+              >Base Converter
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../tools/gcd"
+              >GCD/LCM Calculator
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../tools/unit"
+              >Unit Converter
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../tools/freq"
+                title="Measure frequency, like heart rate"
+              >Frequency
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../tools/letter_count"
+                title="Count letter frequency in text"
+              >Letter Counter
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../tools/encrypt"
+                title="Old encryption tools"
+              >Encryption Tools
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../tools/time"
+                title="It's later than you think!"
+              >Time Perception
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../tools/match_win"
+                title="Calculate the probability of winning first-to-n/best-of-(2n-1)"
+              >Match Win Calculator
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../tools/fund_compare"
+                title="Compare outcomes of holding funds"
+              >Fund Comparison
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#nav/misc" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Misc</a>
+          <ul class="dropdown-menu" role="menu"><li><a class="dropdown-item" href="../misc/">List</a></li>
+            <li class="dropdown-divider"></li>
+            <li>
+              <a class="dropdown-item"
+                href="../misc/dl"
+                title="file browser/directory listing of old binary files"
+              >Downloads
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../misc/path"
+                title="Do you wonder how this site is configured?"
+              >Path
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../blog/"
+                title="my old blog"
+              >Old Blog
+              </a>
+            </li>
+            <li class="dropdown-divider"></li>
+            <li>
+              <a class="dropdown-item"
+                href="../xkcd_map/"
+                title="an improved way to view the xkcd-1110 webcomic"
+              >XKCD #1110 Map
+                <span class="badge text-bg-primary">⛶</span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../misc/ggroups"
+                title="view chat text in ggroups.exe of SUPERHOT"
+              >ggroups.exe
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../misc/orbs"
+                title="view orbits in orbs.it"
+              >Orbs Viewer
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../misc/starblast_mods"
+                title="view scrollable starblast.io schedule"
+              >Starblast Mods Schedule
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../misc/starblast_upgrade"
+                title="view optimal starblast.io ship upgrades"
+              >Starblast Upgrade Optimizer
+              </a>
+            </li>
+            <li class="dropdown-divider"></li>
+            <li>
+              <a class="dropdown-item"
+                href="../misc/3d/"
+                title="Autodesk 3DS Max primitive and sample cloud renderings!"
+              >3D
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../misc/ads"
+                title="Some advertisements&hellip;"
+              >Ads
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../misc/calc"
+                title="Simulate a basic calculator."
+              >Basic Calculator
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../misc/compound"
+                title="Plot a graph of compound interest."
+              >Compound Interest
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../misc/music"
+                title="These pieces of &ldquo;music&rdquo; are more like noise."
+              >Music
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../misc/rndvid"
+                title="Watch random pixels"
+              >Random Video
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../misc/redirect"
+                title="Follow endless redirections! It never ends!"
+              >Redirect Loop (Endless)
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../misc/streamdl"
+                title="Download faster than your internet speed!"
+              >Fast Infinite Downloads
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../misc/strobe"
+                title="Strobe lights (stroboscopic lamps) flash light between black and white."
+              >Strobe (Seizure Generator)
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="http://seizure.victorz.ca"
+                target="_blank"
+                title="This subdomain points to the seizure servers hosted by the U.S. Immigration and Customs Enforcement."
+              >Seizure Domain
+              <span class="badge text-bg-info">&#8599;</span>
+              </a>
+            </li>
+            <li class="dropdown-divider"></li>
+            <li class="dropdown-header">Jokes</li>
+            <li>
+              <a class="dropdown-item"
+                href="../misc/jokes/iq"
+                title="2-question IQ test"
+              >IQ Test
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../misc/coding"
+                title="Practice on the most popular programming contest practice site!"
+              >Coding Contest
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../misc/jokes/"
+                title="Some old jokes from ~2006-2007&hellip;"
+              >Old Jokes
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#nav/bots" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bots</a>
+          <ul class="dropdown-menu" role="menu"><li><a class="dropdown-item" href="../bots/">List</a></li>
+            <li class="dropdown-divider"></li>
+            <li>
+              <a class="dropdown-item"
+                href="../bots/poke"
+                title="See the leaderboard of people who poke a bot that returned pokes automatically"
+              >Facebook Poke
+              </a>
+            </li>
+            <li class="dropdown-divider"></li>
+            <li class="dropdown-header">Twitter</li>
+            <li>
+              <a class="dropdown-item"
+                href="../bots/grammar"
+                title="@_grammar_ corrects users' grammar. It was suspended many times."
+              >Grammar
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../bots/random"
+                title="This bot spews a stream of random words."
+              >Random Words
+                <span class="badge text-bg-warning">Local</span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../bots/recent"
+                title="@recentideas learns to tweet from recent tweets."
+              >Recent Ideas
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../bots/prose"
+                title="@prosegen generates sentences from a grammar."
+              >Prose
+                <span class="badge text-bg-secondary">TODO</span>
+                <span class="badge text-bg-warning">Local</span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../bots/googuns"
+                title="@googuns_lulz is like other @googuns_ accounts, yet very different."
+              >GooGuns Lulz
+                <span class="badge text-bg-warning">Local</span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../bots/bing_tomorrow"
+                title="@BingTomorrow can see the future! It can predict Bing's homepage image for tomorrow."
+              >Bing Tomorrow
+                <span class="badge text-bg-warning">Local</span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item"
+                href="../bots/spelling"
+                title="@Bot_Dictionary corrects users' spelling. Its output rate from random searches is quite low."
+              >Spelling
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="https://github.com/vwww/dev/blob/main/docs/pages/_code/MATH.md">Edit</a></li>
+        <li class="nav-item dropdown">
+          <a href="#nav/theme" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false">Theme</a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="../site/theme" class="dropdown-item">Theme Switcher</a></li>
+            <li class="dropdown-divider"></li>
+            <li id="theme-switcher-msg" class="bg-danger">
+              <button class="dropdown-item disabled" id="theme-switcher-msg-text">Cannot save</button>
+            </li>
+            <li class="dropdown-divider"></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootstrap">Bootstrap</button></li>
+            <li><button class="dropdown-item theme-switcher active" data-theme="bootstrap2">Bootstrap Theme</button></li>
+            <li class="dropdown-divider"></li>
+            <li class="dropdown-header">Bootswatch</li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-brite" title="Neobrutalist form">Brite</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-cerulean" title="A calm blue sky">Cerulean</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-cosmo" title="An ode to Metro">Cosmo</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-cyborg" title="Jet black and electric blue">Cyborg</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-darkly" title="Flatly in night mode">Darkly</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-flatly" title="Flat and modern">Flatly</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-journal" title="Crisp like a new sheet of paper">Journal</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-litera" title="The medium is the message">Litera</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-lumen" title="Light and shadow">Lumen</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-lux" title="A touch of class">Lux</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-materia" title="Material is the metaphor">Materia</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-minty" title="A fresh feel">Minty</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-morph" title="A neumorphic layer">Morph</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-pulse" title="A trace of purple">Pulse</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-quartz" title="A glassmorphic layer">Quartz</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-sandstone" title="A touch of warmth">Sandstone</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-simplex" title="Mini and minimalist">Simplex</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-sketchy" title="A hand-drawn look for mockups and mirth">Sketchy</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-slate" title="Shades of gunmetal gray">Slate</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-solar" title="A spin on Solarized">Solar</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-spacelab" title="Silvery and sleek">Spacelab</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-superhero" title="The brave and the blue">Superhero</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-united" title="Ubuntu orange and unique font">United</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-vapor" title="A cyberpunk aesthetic">Vapor</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-yeti" title="A friendly foundation">Yeti</button></li>
+            <li><button class="dropdown-item theme-switcher" data-theme="bootswatch-zephyr" title="Breezy and beautiful">Zephyr</button></li>
+          </ul>
+        </li>
+
+        <li id="april-fools-joke-menu" class="dropdown d-none">
+          <a class="nav-link dropdown-toggle" href="#nav/language" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Language <span class="badge text-bg-warning">NEW</span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li class="dropdown-header">10 languages</li>
+            <li><button class="dropdown-item" onclick="return false">English</button></li>
+            <li><button class="dropdown-item" onclick="return false">English</button></li>
+            <li><button class="dropdown-item" onclick="return false">English</button></li>
+            <li><button class="dropdown-item" onclick="return false">English</button></li>
+            <li><button class="dropdown-item" onclick="return false">English</button></li>
+            <li><button class="dropdown-item" onclick="return false">English</button></li>
+            <li><button class="dropdown-item" onclick="return false">English</button></li>
+            <li><button class="dropdown-item" onclick="return false">English</button></li>
+            <li><button class="dropdown-item" onclick="return false">English</button></li>
+            <li><button class="dropdown-item" onclick="return false">English</button></li>
+            <li class="dropdown-divider"></li>
+            <li class="dropdown-header">April Fools!</li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a class="nav-link dropdown-toggle" href="#nav/mirror" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mirror</a>
+          <ul class="dropdown-menu" role="menu" id="mirror-list">
+            <li><a class="dropdown-item" href="https://victorz.ca/code/MATH" rel="nofollow">victorz.ca</a></li>
+            <li><a class="dropdown-item" href="https://vwww.github.io/code/MATH" rel="nofollow">vwww.github.io</a></li>
+            <li><a class="dropdown-item" href="https://vwww.pages.dev/code/MATH" rel="nofollow">vwww.pages.dev</a></li>
+            <li><a class="dropdown-item" href="https://v-z.pages.dev/code/MATH" rel="nofollow">v-z.pages.dev</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+    <main class="flex-shrink-0 my-3">
+      <div class="container">
+        <nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="..">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">MATH</li>
+  </ol>
+</nav>
+
+<!-- TODO: find new ad provider -->
+<!-- <script src="//d.victorz.ca/a/main_head"></script> -->
+
+<div class="page-header">
+  <h1>MATH</h1>
+  <hr class="my-3">
+</div>
+
+<p>4*MATH=HTAM</p>
+<p>MATH.py</p>
+<pre class="language-py" tabindex="0" data-language="py"><code class="language-py"><span class="token comment"># N*[MATH]=[HTAM]</span>
+<span class="token comment"># MATH -> ABCD</span>
+<span class="token comment"># N(1000A+100B+10C+D)=1000D+100C+10B+A</span>
+<span class="token comment"># (1000N-1)A+10(10N-1)B=10(10-N)C+(1000-N)D</span>
+count <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token number">9</span>
+<span class="token keyword">for</span> N <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">for</span> A <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">for</span> B <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+      <span class="token keyword">for</span> C <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">for</span> D <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token number">1000</span><span class="token operator">*</span>N<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">*</span>A <span class="token operator">+</span> <span class="token number">10</span><span class="token operator">*</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token operator">*</span>N<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">*</span>B <span class="token operator">==</span> <span class="token number">10</span><span class="token operator">*</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token operator">-</span>N<span class="token punctuation">)</span><span class="token operator">*</span>C <span class="token operator">+</span> <span class="token punctuation">(</span><span class="token number">1000</span><span class="token operator">-</span>N<span class="token punctuation">)</span><span class="token operator">*</span>D<span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"%d*%d%d%d%d=%d%d%d%d"</span> <span class="token operator">%</span> <span class="token punctuation">(</span>N<span class="token punctuation">,</span> A<span class="token punctuation">,</span> B<span class="token punctuation">,</span> C<span class="token punctuation">,</span> D<span class="token punctuation">,</span> D<span class="token punctuation">,</span> C<span class="token punctuation">,</span> B<span class="token punctuation">,</span> A<span class="token punctuation">)</span><span class="token punctuation">)</span>
+            count<span class="token punctuation">[</span>N<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">+=</span> <span class="token number">1</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>count<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"done"</span><span class="token punctuation">)</span></code></pre>
+<p>Output</p>
+<pre><code>1*0000=0000
+1*0110=0110
+1*0220=0220
+1*0330=0330
+1*0440=0440
+1*0550=0550
+1*0660=0660
+1*0770=0770
+1*0880=0880
+1*0990=0990
+1*1001=1001
+1*1111=1111
+1*1221=1221
+1*1331=1331
+1*1441=1441
+1*1551=1551
+1*1661=1661
+1*1771=1771
+1*1881=1881
+1*1991=1991
+1*2002=2002
+1*2112=2112
+1*2222=2222
+1*2332=2332
+1*2442=2442
+1*2552=2552
+1*2662=2662
+1*2772=2772
+1*2882=2882
+1*2992=2992
+1*3003=3003
+1*3113=3113
+1*3223=3223
+1*3333=3333
+1*3443=3443
+1*3553=3553
+1*3663=3663
+1*3773=3773
+1*3883=3883
+1*3993=3993
+1*4004=4004
+1*4114=4114
+1*4224=4224
+1*4334=4334
+1*4444=4444
+1*4554=4554
+1*4664=4664
+1*4774=4774
+1*4884=4884
+1*4994=4994
+1*5005=5005
+1*5115=5115
+1*5225=5225
+1*5335=5335
+1*5445=5445
+1*5555=5555
+1*5665=5665
+1*5775=5775
+1*5885=5885
+1*5995=5995
+1*6006=6006
+1*6116=6116
+1*6226=6226
+1*6336=6336
+1*6446=6446
+1*6556=6556
+1*6666=6666
+1*6776=6776
+1*6886=6886
+1*6996=6996
+1*7007=7007
+1*7117=7117
+1*7227=7227
+1*7337=7337
+1*7447=7447
+1*7557=7557
+1*7667=7667
+1*7777=7777
+1*7887=7887
+1*7997=7997
+1*8008=8008
+1*8118=8118
+1*8228=8228
+1*8338=8338
+1*8448=8448
+1*8558=8558
+1*8668=8668
+1*8778=8778
+1*8888=8888
+1*8998=8998
+1*9009=9009
+1*9119=9119
+1*9229=9229
+1*9339=9339
+1*9449=9449
+1*9559=9559
+1*9669=9669
+1*9779=9779
+1*9889=9889
+1*9999=9999
+2*0000=0000
+3*0000=0000
+4*0000=0000
+4*2178=8712
+5*0000=0000
+6*0000=0000
+7*0000=0000
+8*0000=0000
+9*0000=0000
+9*1089=9801
+[100, 1, 1, 2, 1, 1, 1, 1, 2]
+done
+</code></pre>
+
+
+
+<!-- TODO: find new ad provider -->
+<!-- <script src="//d.victorz.ca/a/main_foot"></script> -->
+
+
+      </div>
+    </main>
+
+    <footer class="footer mt-auto py-3 text-bg-light">
+      <div class="container">
+        <div class="mb-2">
+          &copy; 2005-<span id="copyyear">2026</span> Victor Zheng. All rights reserved.
+            <div class="badge-group me-2" title="This page was created on Saturday, 2015 January 10 at 04:10 PM UTC">
+              <span class="badge text-bg-secondary">Created</span>
+              <span class="timeago badge text-bg-primary" title="2015-01-10 16:10:21 +0000"></span>
+            </div>
+          The source code is licensed under the <a href="https://github.com/vwww/dev/blob/main/LICENSE.md" rel="nofollow">GPL v3</a>.
+        </div>
+        <div>
+          <script src="//d.victorz.ca/online.js?o=s"></script>
+
+          <a href=".."><img src="../assets/a/80-15.png" class="rounded" alt="Victor"></a>
+
+          <a href="https://validator.w3.org/check?uri=referer" referrerpolicy="unsafe-url" class="badge text-bg-primary" title="This site uses HTML5.">HTML5</a>
+
+          <a href="https://jigsaw.w3.org/css-validator/check/referer" referrerpolicy="unsafe-url" class="badge text-bg-primary" title="This site uses CSS.">CSS</a>
+
+          <div class="badge-group me-2" title="This site was last regenerated on Monday, 2026 January 26 at 03:14 AM UTC">
+            <span class="badge text-bg-secondary">Regenerated</span>
+            <span class="timeago badge text-bg-primary" title="2026-01-26 03:14:52 +0000"></span>
+          </div>
+
+          <div class="badge-group me-2" title="This is how long it has been since my site started to exist.">
+            <span class="badge text-bg-dark">Site Age</span>
+            <span class="badge text-bg-light border"><strong id="uptime-years"></strong> (<b id="uptime-years-hex">many</b>) years</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+      <script src="../assets/dist/24.1ce44310e7.js"></script>
+      <script src="../assets/dist/79.dc58103897.js"></script>
+      <script src="../assets/dist/global.42d301da35.js"></script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0BP2YLW17T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0BP2YLW17T');
+</script>
+
+<!-- Cloudflare Web Analytics -->
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "b9f69fff6f404209a5c854844ad49d0b"}'></script>
+<!-- End Cloudflare Web Analytics -->
+
+  </body>
+</html>
