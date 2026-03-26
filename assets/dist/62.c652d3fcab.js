@@ -1,0 +1,17 @@
+"use strict";(self.webpackChunkvwww=self.webpackChunkvwww||[]).push([["62"],{14(e,t,n){n.d(t,{CF:()=>w,Cy:()=>l,Y9:()=>c,YY:()=>d,_2:()=>r,eZ:()=>h,mx:()=>u,ns:()=>v,zn:()=>i});var a=n(7),o="font-weight: bold",s="font-weight: normal";function r(e){a.A?console.warn(`%c[svelte] await_reactivity_loss
+%cDetected reactivity loss when reading \`${e}\`. This happens when state is read in an async function after an earlier \`await\`
+https://svelte.dev/e/await_reactivity_loss`,o,s):console.warn("https://svelte.dev/e/await_reactivity_loss")}function l(e,t){a.A?console.warn(`%c[svelte] await_waterfall
+%cAn async derived, \`${e}\` (${t}) was not read immediately after it resolved. This often indicates an unnecessary waterfall, which can slow down your app
+https://svelte.dev/e/await_waterfall`,o,s):console.warn("https://svelte.dev/e/await_waterfall")}function i(e,t,n){a.A?console.warn(`%c[svelte] hydration_attribute_changed
+%cThe \`${e}\` attribute on \`${t}\` changed its value between server and client renders. The client value, \`${n}\`, will be ignored in favour of the server value
+https://svelte.dev/e/hydration_attribute_changed`,o,s):console.warn("https://svelte.dev/e/hydration_attribute_changed")}function c(e){a.A?console.warn(`%c[svelte] hydration_html_changed
+%c${e?`The value of an \`{@html ...}\` block ${e} changed between server and client renders. The client value will be ignored in favour of the server value`:"The value of an `{@html ...}` block changed between server and client renders. The client value will be ignored in favour of the server value"}
+https://svelte.dev/e/hydration_html_changed`,o,s):console.warn("https://svelte.dev/e/hydration_html_changed")}function h(e){a.A?console.warn(`%c[svelte] hydration_mismatch
+%c${e?`Hydration failed because the initial UI does not match what was rendered on the server. The error occurred near ${e}`:"Hydration failed because the initial UI does not match what was rendered on the server"}
+https://svelte.dev/e/hydration_mismatch`,o,s):console.warn("https://svelte.dev/e/hydration_mismatch")}function d(){a.A?console.warn(`%c[svelte] lifecycle_double_unmount
+%cTried to unmount a component that was not mounted
+https://svelte.dev/e/lifecycle_double_unmount`,o,s):console.warn("https://svelte.dev/e/lifecycle_double_unmount")}function v(e){a.A?console.warn(`%c[svelte] state_proxy_equality_mismatch
+%cReactive \`$state(...)\` proxies and the values they proxy have different identities. Because of this, comparisons with \`${e}\` will produce unexpected results
+https://svelte.dev/e/state_proxy_equality_mismatch`,o,s):console.warn("https://svelte.dev/e/state_proxy_equality_mismatch")}function u(){a.A?console.warn(`%c[svelte] state_proxy_unmount
+%cTried to unmount a state proxy, rather than a component
+https://svelte.dev/e/state_proxy_unmount`,o,s):console.warn("https://svelte.dev/e/state_proxy_unmount")}function w(){a.A?console.warn("%c[svelte] svelte_boundary_reset_noop\n%cA `<svelte:boundary>` `reset` function only resets the boundary the first time it is called\nhttps://svelte.dev/e/svelte_boundary_reset_noop",o,s):console.warn("https://svelte.dev/e/svelte_boundary_reset_noop")}},46(e,t,n){n.d(t,{GY:()=>r,If:()=>l,tW:()=>o});let a=/\r/g;function o(e){e=e.replace(a,"");let t=5381,n=e.length;for(;n--;)t=(t<<5)-t^e.charCodeAt(n);return(t>>>0).toString(36)}let s=["touchstart","touchmove"];function r(e){return s.includes(e)}function l(e){return e?.replace(/\//g,"/​")}}}]);
