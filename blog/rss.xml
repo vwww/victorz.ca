@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Victor&#39;s Blog</title>
+		<description></description>		
+		<link>https://victorz.ca/blog</link>
+		<atom:link href="https://victorz.ca/blog/feed.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Zeno&#39;s Paradox for a Bouncing Ball</title>
+				<description>&lt;p&gt;If a ball is thrown up to a height $h$, falls to the ground, and retains a certain fraction $a$ of its energy when it bounces, it will stop bouncing after a certain amount of time. This is paradoxical as it will have bounced an infinite number of times when it stops.&lt;/p&gt;
+&lt;!--more--&gt;
+&lt;p&gt;The fraction of retained kinetic energy is the same as the fraction of retained height:&lt;/p&gt;
+&lt;p&gt;$$E_n=aE_{n-1}$$&lt;br&gt;
+$$mgh_n=mgh_{n-1}a$$&lt;br&gt;
+$$h_n=h_{n-1}a$$&lt;br&gt;
+$$h_n=h_1a^{n-1}$$&lt;/p&gt;
+&lt;p&gt;The total distance traveled must be finite, as it is a geometric series that converges:
+$$d=\displaystyle\sum_{n=1}^\infty h_n=\displaystyle\sum_{n=0}^\infty a^nh_1=\frac{h_1}{1-a}$$&lt;/p&gt;
+&lt;p&gt;The time it takes for a ball to reach a certain height and come back down is:
+$$t_n=\sqrt{\frac{8h_n}{g}}=(\sqrt{a})^{n-1}\sqrt{\frac{8h_1}{g}}=t_1\sqrt{a}^{n-1}$$&lt;/p&gt;
+&lt;p&gt;Time also converges and the total time is also finite:
+$$T=\displaystyle\sum_{n=1}^\infty t_n=\sqrt{\frac{8h_1}{g}}\displaystyle\sum_{n=0}^\infty (\sqrt{a})^n=\sqrt{\frac{8h_1}{g}}\left(\frac{1}{1-\sqrt{a}}\right)=\frac{t_1}{1-\sqrt{a}}$$&lt;/p&gt;
+&lt;p&gt;After that amount of time, the ball has bounced an infinite number of times and has stopped bouncing. After each bounce, the ball’s distance is smaller, but the time is also smaller, so both the total time and distance converge to a finite value.&lt;/p&gt;
+</description>
+				<pubDate>Sun, 13 Jul 2014 01:42:00 +0000</pubDate>
+				<link>https://victorz.ca/blog/blog/2014/07/zeno-bounce</link>
+				<guid isPermaLink="true">https://victorz.ca/blog/blog/2014/07/zeno-bounce</guid>
+			</item>
+			<item>
+				<title>Uniformly Distributed Tweets</title>
+				<description>&lt;p&gt;For &lt;a href=&#34;https://victorz.ca/bots/grammar&#34;&gt;my Grammar bot&lt;/a&gt;, I added a new feature: &lt;mark&gt;GPS coordinates are added to the tweets&lt;/mark&gt;. This is &lt;mark&gt;just for fun&lt;/mark&gt; and serves no practical purpose.&lt;/p&gt;
+&lt;p&gt;However, I wanted the tweets to be &lt;mark&gt;uniformly distributed over a sphere&lt;/mark&gt;. Earth’s shape is not a sphere, but the error is under 1%.&lt;/p&gt;
+&lt;p&gt;$a$ and $b$ are random values uniformly distributed in $[-1,1]$
+$$latitude=\theta=\sin^{-1}(u)$$&lt;br&gt;
+$$longitude=\phi=\pi v=(180^{\circ}) v$$&lt;/p&gt;
+&lt;!--more--&gt;
+&lt;p&gt;According to &lt;a href=&#34;https://mathworld.wolfram.com/SpherePointPicking.html&#34;&gt;Wolfram MathWorld&lt;/a&gt;, points are randomly distributed over a sphere if:&lt;/p&gt;
+&lt;p&gt;$\theta$ represents latitude and $\phi$ longitude.&lt;br&gt;
+$u$ and $v$ are uniformly distributed in $[0,1]$&lt;/p&gt;
+&lt;p&gt;$$\theta=\cos^{-1}(2u-1)$$&lt;br&gt;
+$$\phi=2\pi v$$&lt;/p&gt;
+&lt;p&gt;Adjusting $u$ and $v$, now distributed in $[-1,1]$, we get:
+$$\theta=\cos^{-1}(u)$$&lt;br&gt;
+$$\phi=\pi (v + 1)$$&lt;/p&gt;
+&lt;p&gt;However, latitude is to be in -90 to 90 degrees, not 0 to 180 degrees, and longitude is to be in -180 to 180 degrees, not 0 to 360 degrees.
+$$\theta=\cos^{-1}(u)-\frac\pi2=-\sin^{-1}u$$&lt;br&gt;
+$$\phi=\pi v$$&lt;/p&gt;
+&lt;p&gt;By spherical symmetry, the negative sign can be removed from latitude, and the distribution will remain the same.&lt;/p&gt;
+</description>
+				<pubDate>Sat, 22 Mar 2014 01:49:00 +0000</pubDate>
+				<link>https://victorz.ca/blog/blog/2014/03/uniform-tweets</link>
+				<guid isPermaLink="true">https://victorz.ca/blog/blog/2014/03/uniform-tweets</guid>
+			</item>
+			<item>
+				<title>Buffalo buffalo ...</title>
+				<description>&lt;p&gt;Although I have already proven that &lt;mark&gt;a repetition of the word ‘buffalo’ $n$ times is grammatically correct&lt;/mark&gt;, if $n \geq 2$, a year ago, I am now publishing this finding.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;‘buffalo’ is a &lt;mark&gt;plural noun, allowing the use of zero articles&lt;/mark&gt;&lt;/li&gt;
+&lt;li&gt;‘buffalo’ is &lt;mark&gt;also a verb&lt;/mark&gt; that means to bully, confuse, deceive, or intimidate&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Theorem:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;mark&gt;Repeating $n$ times, where $n \geq 2$, any word that can be a noun or verb forms a grammatically valid sentence.&lt;/mark&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Proof:&lt;/p&gt;
+&lt;!--more--&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A sentence containing &lt;mark&gt;2 instances&lt;/mark&gt; of the word &lt;mark&gt;is grammatically valid&lt;/mark&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;[&lt;sub&gt;S&lt;/sub&gt; [&lt;sub&gt;N&lt;/sub&gt; I] [&lt;sub&gt;V&lt;/sub&gt; am]]&lt;/p&gt;
+&lt;p&gt;The first instance acts as a noun, and the second acts as an intransitive verb.&lt;/p&gt;
+&lt;p&gt;[&lt;mark&gt;subject verb&lt;/mark&gt;]&lt;br&gt;
+[&lt;sub&gt;S&lt;/sub&gt; [&lt;sub&gt;N&lt;/sub&gt; buffalo] [&lt;sub&gt;V&lt;/sub&gt; buffalo]]&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A sentence containing &lt;mark&gt;3 instances&lt;/mark&gt; of the word &lt;mark&gt;is grammatically valid&lt;/mark&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;[&lt;sub&gt;S&lt;/sub&gt; [&lt;sub&gt;N&lt;/sub&gt; I] [&lt;sub&gt;VP&lt;/sub&gt; [&lt;sub&gt;V&lt;/sub&gt; am] [&lt;sub&gt;N&lt;/sub&gt; here]]]&lt;/p&gt;
+&lt;p&gt;[&lt;mark&gt;subject verb object&lt;/mark&gt;]&lt;br&gt;
+[&lt;sub&gt;S&lt;/sub&gt; [&lt;sub&gt;N&lt;/sub&gt; buffalo] [&lt;sub&gt;VP&lt;/sub&gt; [&lt;sub&gt;V&lt;/sub&gt; buffalo] [&lt;sub&gt;N&lt;/sub&gt; buffalo]]]&lt;/p&gt;
+&lt;p&gt;The first instance acts as a noun, the second acts as a transitive verb, and the third acts as an object.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Adding 2 instances of the word to the first two examples allows it to remain valid–and potentially causes ambiguity–, but this process may be repeated.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This is accomplished by &lt;mark&gt;adding relative clauses&lt;/mark&gt;, whose head may be omitted when the modified noun acts as an object.&lt;/p&gt;
+&lt;p&gt;[&lt;sub&gt;N&lt;/sub&gt; person] -&amp;gt; [&lt;sub&gt;NP&lt;/sub&gt; [&lt;sub&gt;N&lt;/sub&gt; person] [&lt;sub&gt;CP&lt;/sub&gt; who/Ø [&lt;sub&gt;IP&lt;/sub&gt; [&lt;sub&gt;N&lt;/sub&gt; I] [&lt;sub&gt;V&lt;/sub&gt; am] ___]]]&lt;/p&gt;
+&lt;p&gt;Since &lt;mark&gt;the two previous examples have at least one noun&lt;/mark&gt;, and adding this kind of relative clause &lt;mark&gt;introduces another noun&lt;/mark&gt;, there will always be an &lt;mark&gt;available noun for a new relative clause&lt;/mark&gt;.&lt;/p&gt;
+&lt;p&gt;In the first example, this process may be repeated, as shown below:&lt;/p&gt;
+&lt;p&gt;[[subject [Ø noun verb ___]] verb]&lt;br&gt;
+[&lt;sub&gt;S&lt;/sub&gt; [&lt;sub&gt;NP&lt;/sub&gt; [&lt;sub&gt;N&lt;/sub&gt; buffalo] [&lt;sub&gt;CP&lt;/sub&gt; whom/Ø [&lt;sub&gt;IP&lt;/sub&gt; [&lt;sub&gt;N&lt;/sub&gt; buffalo] [&lt;sub&gt;V&lt;/sub&gt; buffalo] ___]]] [&lt;sub&gt;V&lt;/sub&gt; buffalo]]&lt;br&gt;
+[[subject [[Ø noun [Ø noun verb ___]] verb ___]] verb]&lt;br&gt;
+[&lt;sub&gt;S&lt;/sub&gt; [&lt;sub&gt;NP&lt;/sub&gt; [&lt;sub&gt;N&lt;/sub&gt; buffalo] [&lt;sub&gt;CP&lt;/sub&gt; Ø [&lt;sub&gt;IP&lt;/sub&gt; [&lt;sub&gt;NP&lt;/sub&gt; [&lt;sub&gt;N&lt;/sub&gt; buffalo] [&lt;sub&gt;CP&lt;/sub&gt; Ø [&lt;sub&gt;IP&lt;/sub&gt; [&lt;sub&gt;N&lt;/sub&gt; buffalo] [&lt;sub&gt;V&lt;/sub&gt; buffalo] ___]]] [&lt;sub&gt;V&lt;/sub&gt; buffalo] ___]]] [&lt;sub&gt;V&lt;/sub&gt; buffalo]]&lt;/p&gt;
+&lt;p&gt;In the second example, this process can be applied to either the subject or object, which results in ambiguity.&lt;/p&gt;
+&lt;p&gt;[[subject [Ø noun verb ___]] verb object] or&lt;br&gt;
+[subject verb [object [Ø noun verb ___]]]&lt;/p&gt;
+&lt;p&gt;It is proven that $n$ instances of the word is valid for&lt;/p&gt;
+&lt;p&gt;$$ n = 2 + 2x, x \in \mathbb Z_{\ge 0} $$&lt;br&gt;
+$$ n = 3 + 2x, x \in \mathbb Z_{\ge 0} $$&lt;br&gt;
+$$ \therefore n = 2 + x, x \in \mathbb Z_{\ge 0} $$&lt;/p&gt;
+&lt;p&gt;which shows what we wanted to prove:&lt;/p&gt;
+&lt;p&gt;$$ n \geq 2, n \in \mathbb Z $$&lt;/p&gt;
+</description>
+				<pubDate>Thu, 06 Mar 2014 23:06:00 +0000</pubDate>
+				<link>https://victorz.ca/blog/blog/2014/03/buffalo</link>
+				<guid isPermaLink="true">https://victorz.ca/blog/blog/2014/03/buffalo</guid>
+			</item>
+			<item>
+				<title>Partially Protecting Password Data in Transit</title>
+				<description>&lt;p&gt;&lt;mark&gt;&lt;strong&gt;HTTP does not encrypt&lt;/strong&gt; any traffic&lt;/mark&gt;. Any of the &lt;mark&gt;&lt;strong&gt;internet routers&lt;/strong&gt; can see and log your traffic&lt;/mark&gt;, and your passwords might be compromised if the server does nothing to alleviate this.&lt;/p&gt;
+&lt;p&gt;On my arcade, my login form requires JavaScript to be more secure, but it is not perfectly secure.&lt;/p&gt;
+&lt;div class=&#34;img-left&#34;&gt;
+&lt;img src=&#34;../../../assets/victorz/blog_images/2013/PasswordMessageHash1.png&#34; width=&#34;400&#34; alt=&#34;&#34; /&gt;
+&lt;span class=&#34;caption&#34;&gt;A diagram of the first transmission, &lt;mark&gt;&lt;strong&gt;unprotected&lt;/strong&gt; from interception&lt;/mark&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;p&gt;The &lt;mark&gt;&lt;strong&gt;first transmission of the password might be intercepted, which is a vulnerability&lt;/strong&gt; of this method&lt;/mark&gt;.&lt;/p&gt;
+&lt;!--more--&gt;
+&lt;p&gt;However, this is the only time when the password is at risk of interception. Also, the passwords cannot be protected at rest, since the password cannot be salted by the server. Comparing against salted hashes requires the original password to be transmitted. The hashing mere acts as a compression function, so &lt;mark&gt;it is &lt;strong&gt;as if the server stored its passwords in plaintext&lt;/strong&gt;&lt;/mark&gt;.&lt;/p&gt;
+&lt;div class=&#34;img-right&#34;&gt;
+&lt;img src=&#34;../../../assets/victorz/blog_images/2013/PasswordMessageHash2.png&#34; width=&#34;400&#34; alt=&#34;&#34; /&gt;
+&lt;span class=&#34;caption&#34;&gt;&lt;mark&gt;&lt;strong&gt;Protecting&lt;/strong&gt; passwords &lt;strong&gt;in transit&lt;/strong&gt;&lt;/mark&gt; by using a &lt;strong&gt;pre-shared secret&lt;/strong&gt;.&lt;/span&gt;
+&lt;/div&gt;
+&lt;p&gt;During authentication, instead of repeating the first, only &lt;mark&gt;&lt;strong&gt;a hash&lt;/strong&gt;&lt;/mark&gt; of [the password (for compression to make it easier to store at the server), fixed data, and a bunch of random data and timestamps] &lt;mark&gt;is sent, &lt;strong&gt;from which the original password is not easily derived&lt;/strong&gt;&lt;/mark&gt;. This &lt;mark&gt;prevents &lt;strong&gt;replay attacks&lt;/strong&gt;&lt;/mark&gt; as the timestamp must be recent (or exceed the last timestamp used, at risk of locking out), but users need to wait 1 second between logins, which is not an issue. Also, &lt;mark&gt;the request can also be denied if the &lt;strong&gt;random data matches the previous&lt;/strong&gt;&lt;/mark&gt; data, at the risk of a collision. The random data helps to &lt;mark&gt;add more entropy and to &lt;strong&gt;make reversing of the hash&lt;/strong&gt; more difficult&lt;/mark&gt;. Also, &lt;mark&gt;when the hash can be fully reversed, the &lt;strong&gt;hash algorithm can be changed at any time to increase security, but the passwords must also be changed&lt;/strong&gt;&lt;/mark&gt;.&lt;/p&gt;
+&lt;p&gt;This hash can be &lt;mark&gt;rebuilt at and compared against&lt;/mark&gt; by the server, since the timestamps and random parts are transmitted in the clear, but the password is not. Basically, &lt;mark&gt;&lt;strong&gt;this is a custom HMAC&lt;/strong&gt; that is used to sign a timestamp and a random number&lt;/mark&gt; that must not be the one previously used.&lt;/p&gt;
+</description>
+				<pubDate>Sat, 28 Sep 2013 02:39:00 +0000</pubDate>
+				<link>https://victorz.ca/blog/blog/2013/09/partially-protect-password-transit</link>
+				<guid isPermaLink="true">https://victorz.ca/blog/blog/2013/09/partially-protect-password-transit</guid>
+			</item>
+			<item>
+				<title>Python Goto Decorator Improved</title>
+				<description>&lt;p&gt;When I found &lt;a href=&#34;https://code.activestate.com/recipes/576944-the-goto-decorator/&#34;&gt;a &lt;mark&gt;nice hack to get GOTO statements&lt;/mark&gt; in Python&lt;/a&gt;, I decided to &lt;mark&gt;make my own version&lt;/mark&gt; of it. It has been &lt;mark&gt;tested on Python 2.7 but probably also works in Python 3&lt;/mark&gt;.&lt;/p&gt;
+&lt;p&gt;To use it, &lt;mark&gt;import goto from goto&lt;/mark&gt; and &lt;mark&gt;use the &lt;code&gt;@goto&lt;/code&gt; decorator&lt;/mark&gt;:&lt;/p&gt;
+&lt;pre class=&#34;language-py&#34; tabindex=&#34;0&#34; data-language=&#34;py&#34;&gt;&lt;code class=&#34;language-py&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;from&lt;/span&gt; goto &lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; goto
+&lt;span class=&#34;token decorator annotation punctuation&#34;&gt;@goto&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;test&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;
+  goto &lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;end
+  &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;token boolean&#34;&gt;False&lt;/span&gt;
+  label &lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;end
+  &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;token boolean&#34;&gt;True&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt; test&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# should be True&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;But first, you’ll need this code:&lt;/p&gt;
+&lt;p&gt;goto.py&lt;/p&gt;
+&lt;!--more--&gt;
+&lt;pre class=&#34;language-py&#34; tabindex=&#34;0&#34; data-language=&#34;py&#34;&gt;&lt;code class=&#34;language-py&#34;&gt;&lt;span class=&#34;token comment&#34;&gt;#!/usr/bin/env python&lt;/span&gt;
+&lt;span class=&#34;token comment&#34;&gt;# Copyright 2013 Victor Zheng&lt;/span&gt;
+&lt;span class=&#34;token comment&#34;&gt;# Licensed under the Apache License, Version 2.0 (the &#34;License&#34;);&lt;/span&gt;
+&lt;span class=&#34;token comment&#34;&gt;# you may not use this file except in compliance with the License.&lt;/span&gt;
+&lt;span class=&#34;token comment&#34;&gt;# You may obtain a copy of the License at&lt;/span&gt;
+
+   &lt;span class=&#34;token comment&#34;&gt;# https://www.apache.org/licenses/LICENSE-2.0&lt;/span&gt;
+
+&lt;span class=&#34;token comment&#34;&gt;# Unless required by applicable law or agreed to in writing, software&lt;/span&gt;
+&lt;span class=&#34;token comment&#34;&gt;# distributed under the License is distributed on an &#34;AS IS&#34; BASIS,&lt;/span&gt;
+&lt;span class=&#34;token comment&#34;&gt;# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.&lt;/span&gt;
+&lt;span class=&#34;token comment&#34;&gt;# See the License for the specific language governing permissions and&lt;/span&gt;
+&lt;span class=&#34;token comment&#34;&gt;# limitations under the License.&lt;/span&gt;
+
+&lt;span class=&#34;token comment&#34;&gt;# This is fast code that gives you GOTO functionality in functions with minimal start-up overhead!&lt;/span&gt;
+
+&lt;span class=&#34;token comment&#34;&gt;# Adapted from Carl Cerecke&#39;s MIT-licensed code:&lt;/span&gt;
+&lt;span class=&#34;token comment&#34;&gt;# https://code.activestate.com/recipes/576944-the-goto-decorator/&lt;/span&gt;
+
+&lt;span class=&#34;token comment&#34;&gt;# Caveats:&lt;/span&gt;
+&lt;span class=&#34;token comment&#34;&gt;# - With the block stack, you must push blocks for &#34;while&#34;, &#34;try&#34;&lt;/span&gt;
+&lt;span class=&#34;token comment&#34;&gt;# For example, to jump inside a while loop, a block must be simulated:&lt;/span&gt;
+&lt;span class=&#34;token comment&#34;&gt;# i = 10&lt;/span&gt;
+&lt;span class=&#34;token comment&#34;&gt;# while True:&lt;/span&gt;
+&lt;span class=&#34;token comment&#34;&gt;#  goto .insideLoop&lt;/span&gt;
+&lt;span class=&#34;token comment&#34;&gt;# i = 1 # dead code&lt;/span&gt;
+&lt;span class=&#34;token comment&#34;&gt;# while i &gt; 0:&lt;/span&gt;
+&lt;span class=&#34;token comment&#34;&gt;#  label .insideLoop&lt;/span&gt;
+&lt;span class=&#34;token comment&#34;&gt;#  print i&lt;/span&gt;
+&lt;span class=&#34;token comment&#34;&gt;# - entering a &#34;for&#34; or &#34;except&#34; block is probably not supported&lt;/span&gt;
+&lt;span class=&#34;token comment&#34;&gt;# - &#34;cannot create code objects in restricted execution mode&#34;&lt;/span&gt;
+
+&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; dis
+
+&lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;MissingLabelError&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;Exception&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;
+ &lt;span class=&#34;token triple-quoted-string string&#34;&gt;&#34;&#34;&#34;&#39;goto&#39; without matching &#39;label&#39;.&#34;&#34;&#34;&lt;/span&gt;
+ &lt;span class=&#34;token keyword&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;__init__&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;self&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; target&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;
+  &lt;span class=&#34;token builtin&#34;&gt;super&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;MissingLabelError&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; self&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;__init__&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;Invalid jump to label %s&#39;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;target&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;
+
+&lt;span class=&#34;token keyword&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;goto&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;fn&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;
+ &lt;span class=&#34;token triple-quoted-string string&#34;&gt;&#34;&#34;&#34;
+ A function decorator to add the goto command for a function.
+ Specify commands like so:
+ label .foo
+ goto .foo
+ &#34;&#34;&#34;&lt;/span&gt;
+
+ labels &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+ gotos &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+ i &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;
+ end &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token builtin&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;fn&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;func_code&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;co_code&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;
+ new_code &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token builtin&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;fn&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;func_code&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;co_code&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;
+
+ nop7 &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token builtin&#34;&gt;chr&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;dis&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;opmap&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;NOP&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;7&lt;/span&gt;
+ &lt;span class=&#34;token comment&#34;&gt;# scan through the bytecodes to find the labels and gotos&lt;/span&gt;
+ &lt;span class=&#34;token keyword&#34;&gt;while&lt;/span&gt; i &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt; end&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;
+  op &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token builtin&#34;&gt;ord&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;fn&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;func_code&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;co_code&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;i&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;
+  i &lt;span class=&#34;token operator&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;
+  &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; op &lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt; dis&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;HAVE_ARGUMENT&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;
+   i &lt;span class=&#34;token operator&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;
+   &lt;span class=&#34;token comment&#34;&gt;# foo .bar&lt;/span&gt;
+   &lt;span class=&#34;token comment&#34;&gt;# 0 LOAD_GLOBAL              0 (foo)&lt;/span&gt;
+   &lt;span class=&#34;token comment&#34;&gt;# 3 LOAD_ATTR                1 (bar)&lt;/span&gt;
+   &lt;span class=&#34;token comment&#34;&gt;# 6 POP_TOP&lt;/span&gt;
+   &lt;span class=&#34;token comment&#34;&gt;# = 7 bytes total&lt;/span&gt;
+   &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;i &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt; end &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;7&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;3&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;and&lt;/span&gt;
+    op &lt;span class=&#34;token operator&#34;&gt;==&lt;/span&gt; dis&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;opmap&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;LOAD_GLOBAL&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;and&lt;/span&gt;
+    &lt;span class=&#34;token builtin&#34;&gt;ord&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;fn&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;func_code&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;co_code&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;i&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;==&lt;/span&gt; dis&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;opmap&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;LOAD_ATTR&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;and&lt;/span&gt;
+    &lt;span class=&#34;token builtin&#34;&gt;ord&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;fn&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;func_code&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;co_code&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;i &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;==&lt;/span&gt; dis&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;opmap&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;POP_TOP&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;token comment&#34;&gt;# check for label/goto&lt;/span&gt;
+    &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; fn&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;func_code&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;co_names&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;
+     &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token builtin&#34;&gt;ord&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;fn&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;func_code&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;co_code&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;i &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt;
+     &lt;span class=&#34;token builtin&#34;&gt;ord&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;fn&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;func_code&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;co_code&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;i &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;label&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;
+     labels&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;fn&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;func_code&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;co_names&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;
+      &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token builtin&#34;&gt;ord&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;fn&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;func_code&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;co_code&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;i &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt;
+      &lt;span class=&#34;token builtin&#34;&gt;ord&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;fn&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;func_code&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;co_code&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;i &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;
+     &lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; i &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;3&lt;/span&gt;
+     &lt;span class=&#34;token comment&#34;&gt;# nop the code and move up&lt;/span&gt;
+     new_code&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;i&lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;i&lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; nop7
+     i &lt;span class=&#34;token operator&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;4&lt;/span&gt;
+    &lt;span class=&#34;token keyword&#34;&gt;elif&lt;/span&gt; fn&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;func_code&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;co_names&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;
+     &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token builtin&#34;&gt;ord&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;fn&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;func_code&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;co_code&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;i &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt;
+     &lt;span class=&#34;token builtin&#34;&gt;ord&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;fn&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;func_code&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;co_code&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;i &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;goto&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;
+     gotos&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;fn&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;func_code&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;co_names&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;
+      &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token builtin&#34;&gt;ord&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;fn&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;func_code&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;co_code&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;i &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt;
+      &lt;span class=&#34;token builtin&#34;&gt;ord&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;fn&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;func_code&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;co_code&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;i &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;
+     &lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; i &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;3&lt;/span&gt;
+     &lt;span class=&#34;token comment&#34;&gt;# move up only (resolve all gotos in the next loop)&lt;/span&gt;
+     i &lt;span class=&#34;token operator&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;4&lt;/span&gt;
+
+ &lt;span class=&#34;token comment&#34;&gt;# change gotos to jumps&lt;/span&gt;
+ &lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt; label&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;index &lt;span class=&#34;token keyword&#34;&gt;in&lt;/span&gt; gotos&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;items&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;
+  &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; label &lt;span class=&#34;token keyword&#34;&gt;not&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;in&lt;/span&gt; labels&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;
+   &lt;span class=&#34;token keyword&#34;&gt;raise&lt;/span&gt; MissingLabelError&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;Missing label: %s&#34;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;%&lt;/span&gt;label&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;
+
+  target &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; labels&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;label&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;7&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# skip NOPs&lt;/span&gt;
+  new_code&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;index&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token builtin&#34;&gt;chr&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;dis&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;opmap&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;JUMP_ABSOLUTE&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;
+  new_code&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;index &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token builtin&#34;&gt;chr&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;target &lt;span class=&#34;token operator&#34;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;255&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;
+  new_code&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;index &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token builtin&#34;&gt;chr&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;target &lt;span class=&#34;token operator&#34;&gt;&gt;&gt;&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;255&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;token comment&#34;&gt;# no need to patch the last 4 bytes: they are unreachable&lt;/span&gt;
+
+ &lt;span class=&#34;token comment&#34;&gt;# create new function from existing function&lt;/span&gt;
+ newcode &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token builtin&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;fn&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;func_code&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;fn&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;func_code&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;co_argcount&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+      fn&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;func_code&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;co_nlocals&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+      fn&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;func_code&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;co_stacksize&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+      fn&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;func_code&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;co_flags&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+      &lt;span class=&#34;token string&#34;&gt;&#39;&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;join&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;new_code&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+      fn&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;func_code&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;co_consts&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+      fn&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;func_code&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;co_names&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+      fn&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;func_code&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;co_varnames&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+      fn&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;func_code&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;co_filename&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+      fn&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;func_code&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;co_name&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+      fn&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;func_code&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;co_firstlineno&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+      fn&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;func_code&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;co_lnotab&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;
+ fn&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;func_code &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; newcode
+ &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; fn&lt;/code&gt;&lt;/pre&gt;
+</description>
+				<pubDate>Tue, 13 Aug 2013 23:15:00 +0000</pubDate>
+				<link>https://victorz.ca/blog/blog/2013/08/python-goto-decorator</link>
+				<guid isPermaLink="true">https://victorz.ca/blog/blog/2013/08/python-goto-decorator</guid>
+			</item>
+			<item>
+				<title>Rewriting the Grammar Bot</title>
+				<description>&lt;p&gt;I have rewritten &lt;a href=&#34;https://victorz.ca/bots/grammar&#34;&gt;my Grammar bot&lt;/a&gt;. Previously, it had used &lt;mark&gt;regular expressions&lt;/mark&gt; to find errors, which means that it must check every character against the rules. In addition, &lt;mark&gt;Python 2.7 doesn’t support variable-length lookbehinds&lt;/mark&gt;, which &lt;mark&gt;adds extra regular expression checks&lt;/mark&gt; for some rules. Also, &lt;mark&gt;it cannot provide good quotes if there is an overlap&lt;/mark&gt; between two matches.&lt;/p&gt;
+&lt;!--more--&gt;
+&lt;p&gt;The new system works by &lt;mark&gt;splitting the text into words&lt;/mark&gt;. Punctuation is included with the spacers. After that, the words are, in a loop, checked against the rules.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This would be parsed as&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[&lt;strong&gt;Lorem&lt;/strong&gt;, ( ), &lt;strong&gt;ipsum&lt;/strong&gt;, ( ), &lt;strong&gt;dolor&lt;/strong&gt;, ( ), &lt;strong&gt;sit&lt;/strong&gt;, ( ), &lt;strong&gt;amet&lt;/strong&gt;, (, ), &lt;strong&gt;consectetur&lt;/strong&gt;, ( ), &lt;strong&gt;adipisicing&lt;/strong&gt;, ( ), &lt;strong&gt;elit&lt;/strong&gt;, (, ), &lt;strong&gt;sed&lt;/strong&gt;, ( ), &lt;strong&gt;do&lt;/strong&gt;, ( ), &lt;strong&gt;eiusmod&lt;/strong&gt;, ( ), &lt;strong&gt;tempor&lt;/strong&gt;, ( ), &lt;strong&gt;incididunt&lt;/strong&gt;, ( ), &lt;strong&gt;ut&lt;/strong&gt;, ( ), &lt;strong&gt;labore&lt;/strong&gt;, ( ), &lt;strong&gt;et&lt;/strong&gt;, ( ), &lt;strong&gt;dolore&lt;/strong&gt;, ( ), &lt;strong&gt;magna&lt;/strong&gt;, ( ), &lt;strong&gt;aliqua&lt;/strong&gt;, (.), &lt;em&gt;(empty word)&lt;/em&gt;]&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;and then the words/spaces would be converted to objects so that flags can be set.&lt;/p&gt;
+&lt;p&gt;Each rule will check &lt;mark&gt;if the current word is a specific word, or in a small list&lt;/mark&gt;, so it can skip rules quickly. &lt;mark&gt;If a rule is matched&lt;/mark&gt;, it will &lt;mark&gt;mark the word as “modified” and some nearby words as “automatic stop words”, and the reason will be flagged&lt;/mark&gt;. Some rules will &lt;mark&gt;request a rerun&lt;/mark&gt; on specific other rules, which will result in another iteration over the rules list, but &lt;mark&gt;only some rules will be run the next time&lt;/mark&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;mark&gt;If at least one reason has been flagged&lt;/mark&gt;, it will proceed to &lt;mark&gt;build the correction list&lt;/mark&gt;. It will look at each correction and check a few nearby unflagged words and mark them as “stop words” and one “near word”, right beside the last stop word. If there is a &lt;mark&gt;one-word gap between two corrections, that gap will then be flagged&lt;/mark&gt;. Then it will build a list of corrections, which includes the &lt;mark&gt;continuous chains of flagged words and spaces in between&lt;/mark&gt; them.&lt;/p&gt;
+&lt;p&gt;The last step is to &lt;mark&gt;randomly generate a message for the user, and include an &lt;em&gt;english-join&lt;/em&gt;ed version&lt;/mark&gt; of the correction list.&lt;/p&gt;
+&lt;p&gt;Although I must admit that &lt;mark&gt;the new method is not as good as before performance-wise, it delivers more accurate results&lt;/mark&gt;, so the performance loss can be considered a trade-off for a more accurate algorithm. And the new method has an advantage over the previous method. For example, this text would have been reported improperly:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;*Their is you’re own. (The[re] is you[r] own.)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The old system would issue a correction for &lt;em&gt;“is [your] own” and “[there] is you’re”&lt;/em&gt;. But the problem is that &lt;mark&gt;the quotes are done with the order of the rules, rather than the order in which they appear&lt;/mark&gt; in the text and that the &lt;mark&gt;overlap is not merged&lt;/mark&gt;. The new system would be able to issue a quote for &lt;em&gt;“[there] is [your] own”&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;In addition, this text would not be fully corrected until now:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;*Your you’re own. (You[&#39;re] you[r] own.)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The old system would detect that the user should have said &lt;em&gt;“Your [your] own”&lt;/em&gt; instead. However, &lt;mark&gt;the new system can do a second pass&lt;/mark&gt; and report &lt;em&gt;“[you’re your] own”&lt;/em&gt;.&lt;/p&gt;
+</description>
+				<pubDate>Thu, 08 Aug 2013 18:53:00 +0000</pubDate>
+				<link>https://victorz.ca/blog/blog/2013/08/your_grammar-rewrite</link>
+				<guid isPermaLink="true">https://victorz.ca/blog/blog/2013/08/your_grammar-rewrite</guid>
+			</item>
+			<item>
+				<title>Hacking a Flash Payload Crypter with 1 line of code</title>
+				<description>&lt;p&gt;If the flash file puts everything into a binary section and encrypts it, is there any way to decrypt it? If &lt;mark&gt;they cut off the header, you won’t be able to memory-dump it&lt;/mark&gt;, but would you give up there? Of course not!&lt;/p&gt;
+&lt;p&gt;Somewhere, &lt;mark&gt;they have the decrypted data so that they can load it&lt;/mark&gt;. Just compile some code to &lt;mark&gt;intercept it&lt;/mark&gt;, and inject it:&lt;/p&gt;
+&lt;pre class=&#34;language-as3&#34; tabindex=&#34;0&#34; data-language=&#34;as3&#34;&gt;&lt;code class=&#34;language-as3&#34;&gt;(new FileReference()).save(_loc_2, &#34;dumped.swf&#34;);&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In RABCDAsm (AS3), it looks like this:&lt;/p&gt;
+&lt;pre class=&#34;language-nasm&#34; tabindex=&#34;0&#34; data-language=&#34;nasm&#34;&gt;&lt;code class=&#34;language-nasm&#34;&gt;findpropstrict      QName(PackageNamespace(&lt;span class=&#34;token string&#34;&gt;&#34;flash.net&#34;&lt;/span&gt;), &lt;span class=&#34;token string&#34;&gt;&#34;FileReference&#34;&lt;/span&gt;)
+constructprop       QName(PackageNamespace(&lt;span class=&#34;token string&#34;&gt;&#34;flash.net&#34;&lt;/span&gt;), &lt;span class=&#34;token string&#34;&gt;&#34;FileReference&#34;&lt;/span&gt;), &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;
+getlocal2
+pushstring          &lt;span class=&#34;token string&#34;&gt;&#34;dumped.swf&#34;&lt;/span&gt;
+callpropvoid        QName(PackageNamespace(&lt;span class=&#34;token string&#34;&gt;&#34;&#34;&lt;/span&gt;), &lt;span class=&#34;token string&#34;&gt;&#34;save&#34;&lt;/span&gt;), &lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;So just &lt;mark&gt;put that in the code before it is loaded (call to &lt;code&gt;loadBytes&lt;/code&gt;) and replace &lt;code&gt;getlocal2&lt;/code&gt;&lt;/mark&gt; with whatever will put the decrypted data onto the stack. &lt;mark&gt;Once the decrypted data is about to be loaded, you can save it to a file&lt;/mark&gt;.&lt;/p&gt;
+&lt;p&gt;In &lt;mark&gt;AS2, you’d have to create a server script to echo the file back with FileReference&lt;/mark&gt;, since it only accepts URL downloads. It’s &lt;mark&gt;still feasible&lt;/mark&gt; though, but &lt;mark&gt;writing to a SharedObject and extracting from that&lt;/mark&gt; might be easier.&lt;/p&gt;
+&lt;p&gt;In retrospection, I realized that &lt;mark&gt;I can also write a fake header&lt;/mark&gt; if I manage to locate the flash data.&lt;/p&gt;
+</description>
+				<pubDate>Tue, 23 Jul 2013 17:08:00 +0000</pubDate>
+				<link>https://victorz.ca/blog/blog/2013/07/hack-flash-as3-crypt</link>
+				<guid isPermaLink="true">https://victorz.ca/blog/blog/2013/07/hack-flash-as3-crypt</guid>
+			</item>
+			<item>
+				<title>Flasm (ActionScript 2) Bytecode Equivalents</title>
+				<description>&lt;p&gt;&lt;mark&gt;&lt;a href=&#34;https://nowrap.de/flasm&#34;&gt;Flasm&lt;/a&gt; allows people to disassemble flash files (.swf) into human-readable bytecode&lt;/mark&gt;. I have discovered some of the &lt;mark&gt;Flash compiler techniques and other interesting things&lt;/mark&gt;.&lt;/p&gt;
+&lt;p&gt;ActionScript // Flasm&lt;/p&gt;
+&lt;pre class=&#34;language-as3&#34; tabindex=&#34;0&#34; data-language=&#34;as3&#34;&gt;&lt;code class=&#34;language-as3&#34;&gt;Number.POSITIVE_INFINITY // POSITIVE_INFINITY or POSITIVE_INFINITYF
+Number.NAN // _NAN or _NANF
+return; // push UNDEF / return
+trace(x) // push x / trace
+// operators: push a / push b / [op]
+| // bitwiseOr
+^ // bitwiseXor
+&amp; // bitwiseAnd
+&lt;&lt; // shiftLeft
+&gt;&gt; // shiftRight
++ // add
+- // subtract
+* // multiply
+/ // divide
+% // modulo&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;What I find &lt;mark&gt;the most interesting is how it compiles logical expressions&lt;/mark&gt;:&lt;/p&gt;
+&lt;!--more--&gt;
+&lt;p&gt;(&lt;em&gt;a &amp;amp;&amp;amp; b&lt;/em&gt;) or (&lt;em&gt;a || b&lt;/em&gt;)&lt;/p&gt;
+&lt;pre class=&#34;language-nasm&#34; tabindex=&#34;0&#34; data-language=&#34;nasm&#34;&gt;&lt;code class=&#34;language-nasm&#34;&gt;push &lt;span class=&#34;token operator&#34;&gt;[&lt;/span&gt;a&lt;span class=&#34;token operator&#34;&gt;]&lt;/span&gt;
+dup
+not &lt;span class=&#34;token comment&#34;&gt;; only for &amp;amp;&amp;amp;&lt;/span&gt;
+branchIfTrue label1
+pop
+push &lt;span class=&#34;token operator&#34;&gt;[&lt;/span&gt;b&lt;span class=&#34;token operator&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;token label function&#34;&gt;label1:&lt;/span&gt;
+not
+branchIfTrue label2
+&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;[&lt;/span&gt;body if true&lt;span class=&#34;token operator&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt;
+branch label3 &lt;span class=&#34;token comment&#34;&gt;; only if else is present&lt;/span&gt;
+&lt;span class=&#34;token label function&#34;&gt;label2:&lt;/span&gt;
+&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;[&lt;/span&gt;body if false&lt;span class=&#34;token operator&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt;
+&lt;span class=&#34;token label function&#34;&gt;label3:&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;; only if else is present&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now, &lt;mark&gt;how does it compile a compound expression&lt;/mark&gt;?&lt;/p&gt;
+&lt;p&gt;Let’s start with (&lt;em&gt;a [op1] b [op2] c&lt;/em&gt;), special case: (&lt;em&gt;[op1] ≠ ||&lt;/em&gt;), (&lt;em&gt;[op2] ≠ &amp;amp;&amp;amp;&lt;/em&gt;)&lt;/p&gt;
+&lt;pre class=&#34;language-nasm&#34; tabindex=&#34;0&#34; data-language=&#34;nasm&#34;&gt;&lt;code class=&#34;language-nasm&#34;&gt;push &lt;span class=&#34;token operator&#34;&gt;[&lt;/span&gt;a&lt;span class=&#34;token operator&#34;&gt;]&lt;/span&gt;
+dup
+not &lt;span class=&#34;token comment&#34;&gt;; only for [op1] == &amp;amp;&amp;amp;&lt;/span&gt;
+branchIfTrue label1 &lt;span class=&#34;token comment&#34;&gt;; special case: branchIfTrue label2&lt;/span&gt;
+pop
+push &lt;span class=&#34;token operator&#34;&gt;[&lt;/span&gt;b&lt;span class=&#34;token operator&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;token label function&#34;&gt;label1:&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;; not in special case&lt;/span&gt;
+{dup}
+not &lt;span class=&#34;token comment&#34;&gt;; only for [op2] == &amp;amp;&amp;amp;&lt;/span&gt;
+branchIfTrue {new_label
+pop
+push &lt;span class=&#34;token operator&#34;&gt;[&lt;/span&gt;c&lt;span class=&#34;token operator&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;token label function&#34;&gt;new_label:&lt;/span&gt;
+not
+branchIfTrue label2}
+&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;[&lt;/span&gt;body if true&lt;span class=&#34;token operator&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt;
+branch label3 &lt;span class=&#34;token comment&#34;&gt;; only if else is present&lt;/span&gt;
+&lt;span class=&#34;token label function&#34;&gt;label2:&lt;/span&gt;
+&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;[&lt;/span&gt;body if false&lt;span class=&#34;token operator&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt;
+&lt;span class=&#34;token label function&#34;&gt;label3:&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;; only if else is present&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In the special case, operator precedence will cause (&lt;em&gt;b &amp;amp;&amp;amp; c&lt;/em&gt;) to be evaluated together. After testing (&lt;em&gt;a &amp;amp;&amp;amp; (b || c)&lt;/em&gt;), I have discovered that the same thing as the special case occurs above.&lt;/p&gt;
+&lt;p&gt;I’m still not so sure about why they compile the conditionals like this. But it is interesting how &lt;strong&gt;&lt;mark&gt;an &lt;em&gt;OR&lt;/em&gt; operator can become an &lt;em&gt;AND&lt;/em&gt; operator with one &lt;em&gt;not&lt;/em&gt;&lt;/mark&gt; instruction&lt;/strong&gt;.&lt;/p&gt;
+</description>
+				<pubDate>Sat, 20 Jul 2013 00:55:00 +0000</pubDate>
+				<link>https://victorz.ca/blog/blog/2013/07/as2-bytecode</link>
+				<guid isPermaLink="true">https://victorz.ca/blog/blog/2013/07/as2-bytecode</guid>
+			</item>
+			<item>
+				<title>Split Infinitives: a non-error</title>
+				<description>&lt;p&gt;Some people are &lt;mark&gt;hypercritical and think &lt;em&gt;to boldly go&lt;/em&gt; should be &lt;em&gt;to go boldly&lt;/em&gt; or even the awkward &lt;em&gt;boldly to go&lt;/em&gt;&lt;/mark&gt;. However, the argument is that English should follow Latin’s rules, but it is &lt;mark&gt;impossible to split infinitives in Latin, as there is no infinitive marker in Latin&lt;/mark&gt;, effectively making the argument invalid.&lt;/p&gt;
+&lt;p&gt;Also, &lt;mark&gt;wouldn’t the effect of some sentences be destroyed&lt;/mark&gt;? There is no way to reword these without forming an awkward sentence:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I need you all &lt;mark&gt;&lt;strong&gt;to really pull&lt;/strong&gt;&lt;/mark&gt; your weight.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;We are determined &lt;mark&gt;&lt;strong&gt;to completely and utterly eradicate&lt;/strong&gt;&lt;/mark&gt; the disease.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I expect him &lt;mark&gt;&lt;strong&gt;to completely and utterly fail&lt;/strong&gt;&lt;/mark&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;We are seeking a plan &lt;mark&gt;&lt;strong&gt;to gradually, systematically, and economically relieve&lt;/strong&gt;&lt;/mark&gt; the burden.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;We expect our output &lt;mark&gt;&lt;strong&gt;to more than double&lt;/strong&gt;&lt;/mark&gt; in a year.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I want &lt;mark&gt;&lt;strong&gt;to not see&lt;/strong&gt;&lt;/mark&gt; you anymore. (Well, maybe “I &lt;mark&gt;do not want to&lt;/mark&gt; see you anymore”)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Source: &lt;a href=&#34;https://en.wikipedia.org/wiki/Split_infinitive&#34;&gt;“Split infinitive” from &lt;em&gt;Wikipedia&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;mark&gt;Remember &lt;strong&gt;to, whenever you want, split&lt;/strong&gt; infinitives&lt;/mark&gt;. To, regardless of what some prescriptivists say, split an infinitive is perfectly valid.&lt;/p&gt;
+</description>
+				<pubDate>Thu, 13 Jun 2013 01:21:00 +0000</pubDate>
+				<link>https://victorz.ca/blog/blog/2013/06/split-infinitives</link>
+				<guid isPermaLink="true">https://victorz.ca/blog/blog/2013/06/split-infinitives</guid>
+			</item>
+			<item>
+				<title>Digital Roots</title>
+				<description>&lt;p&gt;What &lt;mark&gt;happens to the digital root&lt;/mark&gt; as the numbers increase?&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;n&lt;/th&gt;
+&lt;th&gt;dr(n)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;9&lt;/td&gt;
+&lt;td&gt;9&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;18&lt;/td&gt;
+&lt;td&gt;9&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;19&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;pre&gt;&lt;code&gt; n | dr(n)
+---+------
+ 0 | 0
+ 1 | 1
+ 2 | 2
+ 3 | 3
+ 9 | 9
+10 | 1
+11 | 2
+12 | 3
+18 | 9
+19 | 1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;It looks like it is really just &lt;mark&gt;a cycle that goes from 1-9 over and over again&lt;/mark&gt; (except 0). This can be represented using &lt;mark&gt;modulus&lt;/mark&gt;.&lt;/p&gt;
+&lt;p&gt;$$dr(x) = 1 + (x - 1) \bmod 9$$&lt;/p&gt;
+&lt;p&gt;What happens if n &amp;lt; 0? Well, &lt;mark&gt;I’ve decided to just use the absolute value&lt;/mark&gt; of it. That means that &lt;code&gt;dr(-1) = 1&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Here is some PHP code:&lt;/p&gt;
+&lt;pre class=&#34;language-php&#34; tabindex=&#34;0&#34; data-language=&#34;php&#34;&gt;&lt;code class=&#34;language-php&#34;&gt;&lt;span class=&#34;token php language-php&#34;&gt;&lt;span class=&#34;token delimiter important&#34;&gt;&amp;lt;?php&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token variable&#34;&gt;$i&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token variable&#34;&gt;$i&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;20&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;token variable&#34;&gt;$i&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;
+	&lt;span class=&#34;token keyword&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;token string double-quoted-string&#34;&gt;&#34;dr(&lt;span class=&#34;token interpolation&#34;&gt;&lt;span class=&#34;token variable&#34;&gt;$i&lt;/span&gt;&lt;/span&gt;) = &#34;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;abs&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token variable&#34;&gt;$i&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;See that? There is &lt;mark&gt;no need for looping and recursion (nor iteration)&lt;/mark&gt; to calculate the digital root. Why take O(≫ 1) time when you can take O(1) time?&lt;/p&gt;
+&lt;p&gt;Many languages handle negative modulus with truncation, but a special case must be created for some languages that use floored division:&lt;/p&gt;
+&lt;pre class=&#34;language-python&#34; tabindex=&#34;0&#34; data-language=&#34;python&#34;&gt;&lt;code class=&#34;language-python&#34;&gt;&lt;span class=&#34;token comment&#34;&gt;# Python&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;dr&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;i&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;
+  &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; i&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token builtin&#34;&gt;abs&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;i&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;9&lt;/span&gt;
+  &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;
+
+&lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt; i &lt;span class=&#34;token keyword&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;token builtin&#34;&gt;range&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;20&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;
+  &lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;dr(%d) = %d&#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;i&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; dr&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;i&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+</description>
+				<pubDate>Fri, 24 May 2013 00:56:00 +0000</pubDate>
+				<link>https://victorz.ca/blog/blog/2013/05/dr-digital-root</link>
+				<guid isPermaLink="true">https://victorz.ca/blog/blog/2013/05/dr-digital-root</guid>
+			</item>
+	</channel>
+</rss>
