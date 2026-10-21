@@ -1,0 +1,1 @@
+"use strict";(self.rspackChunkvwww=self.rspackChunkvwww||[]).push([[3],{58(s,t,u){u(4),u(8),u(12),u(38),u(40),u(24),u(11),u(6),u(9)},72(s,t,u){u(8),u(31),u(15),u(7),u(25)},40(s,t,u){let c=["touchstart","touchmove"];function e(s){return c.includes(s)}u.d(t,{GY:()=>e})}}]);
